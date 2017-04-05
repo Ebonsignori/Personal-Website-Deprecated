@@ -3,6 +3,319 @@
    author: Evan Bonsignori
 */
 
+/* Don't Display meta information */
 head { 
     display: none;
 }
+
+/* Page Wrapping */
+#name-wrapper {
+
+}
+
+#name-wrapper  {
+    background-color: lightcoral;
+    height: 2vh;
+    max-height: 40em;
+    min-height: 15em;
+    overflow: hidden;
+    width: 100%;
+}
+
+#name-wrapper .center-div {
+    position: relative;
+
+}
+
+#name-wrapper .losange {
+     overflow: hidden;
+position:absolute;
+left:33%;
+}
+
+#name-wrapper  h1 {
+    position:absolute;
+    margin-left: 2em;
+    color: white;
+    text-shadow: 0px 2px 3px #555;
+    font: 2.6em Tahoma, Helvetica, Arial, Sans-Serif;
+}
+
+
+
+/* Titles */
+.tiles {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    border-top: 0 !important;
+}
+
+.tiles + * {
+    border-top: 0 !important;
+}
+
+.tiles article {
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-transition: -moz-transform 0.25s ease, opacity 0.25s ease, -moz-filter 1s ease, -webkit-filter 1s ease;
+    -webkit-transition: -webkit-transform 0.25s ease, opacity 0.25s ease, -webkit-filter 1s ease, -webkit-filter 1s ease;
+    -ms-transition: -ms-transform 0.25s ease, opacity 0.25s ease, -ms-filter 1s ease, -webkit-filter 1s ease;
+    transition: transform 0.25s ease, opacity 0.25s ease, filter 1s ease, -webkit-filter 1s ease;
+    padding: 2em 2em 1em 2em ;
+    cursor: default;
+    height: 5vh;
+    max-height: 40em;
+    min-height: 25em;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.tiles article header {
+    margin:auto;
+    width: 50%;
+    padding-width: 1em;
+    z-index: 3;
+}
+
+.tiles article h3 {
+    text-align: center;
+    font-size: 8em;
+    margin: 0;
+}
+
+
+.tiles article h3 a:hover {
+    color: white !important;
+}
+
+.tiles article p {
+    text-align: center;
+    font-size: 2em;
+    margin: 0;
+}
+
+.tiles article a {
+    text-decoration: none;
+    color: black;
+}
+
+.tiles article .link.primary {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+}
+
+.tiles article:before {
+    -moz-transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0.85;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    text-align:center;
+}
+
+.tiles article:after {
+    background-color: rgba(36, 41, 67, 0.25);
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align:center;
+    z-index: 1;
+}
+
+.tiles article:hover:before {
+    opacity: 0;
+}
+
+.tiles article.is-transitioning {
+    -moz-transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+    -moz-filter: blur(0.5em);
+    -webkit-filter: blur(0.5em);
+    -ms-filter: blur(0.5em);
+    filter: blur(0.5em);
+    opacity: 0;
+}
+
+.tiles article:nth-child(6n - 5):before {
+    background-color: #10DABC;
+}
+
+.tiles article:nth-child(6n - 4):before {
+    background-color: #20BCDE;
+}
+
+.tiles article:nth-child(6n - 3):before {
+    background-color: #30DDEF;
+}
+
+.tiles article:nth-child(6n - 2):before {
+    background-color: #60DEFF;
+}
+
+@media screen and (max-width: 1280px) {
+
+    .tiles article {
+        text-align:center;
+        padding: 3em 3em 3em 3em ;
+        height: 30vh;
+        max-height: 30em;
+        min-height: 20em;
+    }
+    
+    .tiles article header {
+    margin:auto;
+    width: 50%;
+    z-index: 3;
+}
+
+}
+
+@media screen and (max-width: 980px) {
+
+    .tiles article {
+        text-align:center;
+        width: 100% !important;
+    }
+    
+    .tiles article header {
+    margin:auto;
+    width: 50%;
+}
+
+}
+
+@media screen and (max-width: 736px) {
+
+    .tiles article {
+        text-align:center;
+        padding: 1.5em 1.5em 1em 1.5em ;
+        height: 15em;
+        max-height: none;
+        min-height: 0;
+        left: 0;
+    }
+    
+    .tiles article header {
+    margin:auto;
+    width: 50%;
+}
+
+    .tiles article h3 {
+        font-size: 2.8em;
+    }
+    
+    .tiles article p {
+        font-size: 1.3em;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+     .tiles article {
+        text-align:center;
+        padding: 1.5em 1.5em 1em 1.5em ;
+        height: 15em;
+        max-height: none;
+        min-height: 0;
+        left: 0;
+    }
+    
+    .tiles article header {
+    margin:auto;
+    width: 50%;
+}
+
+    .tiles article h3 {
+        font-size: 2.8em;
+    }
+    
+    .tiles article p {
+        font-size: 1.3em;
+    }
+
+}
+
+/* Images */
+#profile-image {
+ }
+ 
+ .losange, .losange div {
+  margin: 0 auto;
+  transform-origin: 50% 50%;
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+}
+
+.losange {
+  transform: rotate(45deg) translateY(10px);
+}
+
+.losange .los1 {
+  width: 355px;
+  height: 355px;
+  transform: rotate(-45deg) translateY(-74px);
+}
+
+.losange .los1 img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+/*
+@media screen and (max-width: 1280px) {
+
+    
+
+}
+
+@media screen and (max-width: 980px) {
+
+    
+
+}
+
+@media screen and (max-width: 736px) {
+
+
+}
+
+@media screen and (max-width: 480px) {
+
+     
+}
+*/
