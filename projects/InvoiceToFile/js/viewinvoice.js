@@ -160,7 +160,7 @@ function viewInvoice(everything) {
      //Update status if invoice not correctly loaded from $Post data
     } else {
         status.innerHTML = "Error: Invoice Not Loaded Correctly";
-        alert(everything);
+        alert("Contact Admin at evanbonsignori@yahoo.com");
 }
 }
 

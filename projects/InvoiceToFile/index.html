@@ -4,6 +4,7 @@
 <head>
     <title>Editable Invoice</title>
     <link rel='stylesheet' type='text/css' href='css/main.css' />
+
 </head>
 
 <body>
@@ -121,9 +122,9 @@
                       style="display:inline;"> 
                     <input type="button" id="bt-db" onclick="thankYouDB()" value="Save to Database" />
                 </form>    
-                <form id="hiddenform" name="hiddenform" method="post" action="php/thankyou.php"
+                <form id="hiddenform" name="hiddenform" method="post" action="php/thankyou"
                       style="display:inline;">
-                    <input type="hidden" name="total" id="total" value="">
+                    <input type="hidden" name="total" id="total" value="" />
                     <input onclick="thankYou()" type="button" id="bt-file"  value="Save to File" />
                 </form>
                 <br />

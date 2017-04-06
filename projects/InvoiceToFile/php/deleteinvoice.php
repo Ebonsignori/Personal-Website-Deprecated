@@ -12,7 +12,10 @@
             <div id="header">Delete Invoice Page </div>
             <?PHP
             //Use unlink to delete invoice file, display error if unable
-            if (unlink("./invoice" . $_POST['invoiceNumDel'] . ".txt")) {
+            $filepath = "./invoice" . $_POST['invoiceNumDel'] . ".txt";
+            fclose($filepath);
+            chown($filepath, 666); 
+            if (unlink($filepath)) {
                 echo '<h2> Invoice Deleted Successfully </h2>';
             } else {
                 echo '<h2> There was an error  deleting your file </h2>';

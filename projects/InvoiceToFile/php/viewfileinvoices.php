@@ -40,17 +40,19 @@
                     echo
                     '<div>
                     <form id="invoice' . $fileNum . 'Select" name="invoiceSelect"
-                        method="post" action="viewinvoice.php"> 
+                        method="post" action="viewinvoice"> 
                            <input type="hidden" name="invoiceNum" value="'
                     . $fileNum . '" />
-                           <input style="float:left;" class="select-button" 
+                           <input style="float:left;" 
+                           class="select-button" 
                            type="submit" value="View Invoice' . $fileNum . '" />
                    </form> 
                    <form id="invoice' . $fileNum . 'Delete" name="invoiceSelect"
-                       method="post" action="deleteinvoice.php"> 
-                           <input type="hidden"  name="invoiceNumDel" value="' .
+                       method="post" action="deleteinvoice"> 
+                           <input type="hidden"  value="' .
                     $fileNum . '" />
-                           <input style="float:right;" class="select-button" 
+                           <input style="float:right;" name="invoiceNumDel"
+                           class="select-button" 
                            type="submit" value="Delete Invoice' . $fileNum . '" />
                    </form> 
                 </div>';
@@ -68,14 +70,14 @@
                         echo
                         '<div>
                     <form id="invoice' . $fileNum . 'Select" name="invoiceSelect"
-                        method="post" action="viewinvoice.php"> 
+                        method="post" action="viewinvoice"> 
                            <input type="hidden" name="invoiceNum" value="'
                         . $fileNum . '" />
                            <input style="float:left;" class="select-button" 
                            type="submit" value="View Invoice' . $fileNum . '" />
                    </form> 
                    <form id="invoice' . $fileNum . 'Delete" name="invoiceSelect"
-                       method="post" action="deleteinvoice.php"> 
+                       method="post" action="deleteinvoice"> 
                            <input type="hidden"  name="invoiceNumDel" value="' .
                         $fileNum . '" />
                            <input style="float:right;" class="select-button" 
@@ -98,14 +100,14 @@
                         echo
                         '<div>
                     <form id="invoice' . $fileNum . 'Select" name="invoiceSelect"
-                        method="post" action="viewinvoice.php"> 
+                        method="post" action="viewinvoice"> 
                            <input type="hidden" name="invoiceNum" value="'
                         . $fileNum . '" />
                            <input style="float:left;" class="select-button" 
                            type="submit" value="View Invoice' . $fileNum . '" />
                    </form> 
                    <form id="invoice' . $fileNum . 'Delete" name="invoiceSelect"
-                       method="post" action="deleteinvoice.php"> 
+                       method="post" action="deleteinvoice"> 
                            <input type="hidden"  name="invoiceNumDel" value="' .
                         $fileNum . '" />
                            <input style="float:right;" class="select-button" 

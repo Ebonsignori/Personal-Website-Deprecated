@@ -9,54 +9,99 @@
         <meta name="url" content="https://ebonsignori.com/portfolio">
 
         <meta name="rating" content="General">
-        
+
         <title> About Me </title>
         <meta name="author" content="Evan Bonsignori">
-        <meta name="description" content="About Evan Bonsignori">
+        <meta name="description" content="Evan Bonsignori's Portfolio">
 
         <!-- Open Graph Data -->
         <meta property="og:image" content="img/evan_running_waterfall.jpg">
-        <meta property="og:description" content="About Evan Bonsignori">
+        <meta property="og:description" content="Evan Bonsignori' Portfolio">
         <meta property="og:title" content="Ebonsignori">
 
         <link rel="stylesheet" type="text/css" href="../css/main.css">
     </head>
-    
+
     <body>
         <h1> Portfolio </h1>
         <h2> Middle-Tier Web Development </h2>
-        <a href="projects/InvoiceToFile/index.html"> 
-            Invoice Forms With Middle-Tier Storage 
-        </a>        
-        <p> An invoice form for a web development course. </p>
+
+        <p> An invoice form that I made for a web development course. </p>
+        <button id="resize" onclick="toggleFullScreen()">Enlarge</button>
+        <iframe id="iFrameWin" src="projects/InvoiceToFile/index" 
+                width="850" height="600" >
+            <!-- Display Link If Browser Doesn't Support iframe -->
+            <p><a href="projects/InvoiceToFile/index"> 
+                    Invoice Forms With Middle-Tier Storage  </a></p>
+        </iframe>
+
         <h3> Features: </h3>
         <ul>
             <li> Save invoices to text file on server 
-                <i> Implemented using Javascript to encode a string and PHP to
-                    store the string on the middle-tier server. </i>
+                <i> Implemented using JavaScript to encode a string and PHP to
+                    store the string on the middle-tier server </i>
             </li>
             <li> Form validation on all text fields
-                <i> Javascript for value checking and HTML5 for character 
+                <i> JavaScript for value checking and HTML5 for character 
                     count control </i>
             </li>
-            <li> Add and remove rows <i> Implemented using javascript </i></li>
+            <li> Add and remove rows <i> Implemented using JavaScript </i></li>
             <li> Reset user data but not user information or reset entire form. 
-                <i>Implemented using javascript</i>  
+                <i>Implemented using JavaScript</i>  
+            </li>
+            <li> Responsive Price Updating and Current Date Display
+                <i>Implemented using JavaScript</i>  
+            </li>
+            <li> Fill form
+                <i>Implemented using JavaScript</i>  
             </li>
         </ul>
-        
-        <p> 
-            Derived from <a href="https://html5up.net/dimension"> this </a> 
-            template. My first independent project creating and deploying a website 
-        </p>
-        
+
+
         <h2> Front-Tier Web Development </h2>
         <a href="http://georgetteford.com/"> Static Essential Oils Marketing Site </a>        
         <p> 
             Derived from <a href="https://html5up.net/dimension"> this </a> 
             template. My first independent project creating and deploying a website 
         </p>
-        
+
+        <script>
+            function getDocWidth() {
+                var D = document;
+                return Math.max(
+                        Math.max(D.body.scrollWidth, D.documentElement.scrollWidth),
+                        Math.max(D.body.offsetWidth, D.documentElement.offsetWidth),
+                        Math.max(D.body.clientWidth, D.documentElement.clientWidth)
+                        );
+            }
+            function getDocHeight() {
+                var D = document;
+                return Math.max(
+                        Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),
+                        Math.max(D.body.offsetHeight, D.documentElement.offsetHeight),
+                        Math.max(D.body.clientHeight, D.documentElement.clientHeight)
+                        );
+            }
+
+            var isFullScreen = false;
+            var orgDimensions = new Array();
+
+            function toggleFullScreen() {
+                ifr = document.getElementById("iFrameWin");
+                if (!isFullScreen) {
+                    document.getElementById("resize").innerHTML = "Shrink";
+                    orgDimensions[0] = ifr.style.width;
+                    orgDimensions[1] = ifr.style.height;
+                    ifr.style.width = (getDocWidth()-400) + "px";
+                    ifr.style.height = (getDocHeight()-400) + "px";
+                } else {
+                    document.getElementById("resize").innerHTML = "Enlarge";
+                    ifr.style.width = orgDimensions[0];
+                    ifr.style.height = orgDimensions[1];
+                }
+                isFullScreen = !isFullScreen;
+            }
+        </script>
     </body>
-    
+
 </html>

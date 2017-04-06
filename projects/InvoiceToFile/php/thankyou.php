@@ -30,12 +30,21 @@
         } else {
             $fileNumber = 0;
         }
+        $filename = 'invoice' . ++$fileNumber . '.txt';
         //Creates a file with filenumber one greater than highest invoice
-        if ($fileHandle = fopen('invoice' . ++$fileNumber . '.txt', "w")) {
+        if ($fileHandle = fopen($filename, "w")) {
+            if (flock($fileHandle,LOCK_EX)) {
+                
             $content = $_POST['total'];
             fwrite($fileHandle, $fileNumber . $content);
-
+            flock($fileHandle,LOCK_UN);
+            } else {
+                echo '<h1> Error Locking Resourses Please Try Again.</h1>';
+                DIE;
+            }
+            
             if (fclose($fileHandle)) {
+                chmod($filename, 0777); 
                 echo '
 		<div id="wrapper-thank-you">
 		

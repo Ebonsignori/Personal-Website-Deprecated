@@ -84,7 +84,7 @@ into each HTML div tage.-->
             <div id="actionbuttons">
                 <!-- Buttons delete or redirect to new form-->
                 <form id="invoice'.$fileNum.'Delete" name="invoiceSelect" 
-                      method="post" action="deleteinvoice.php" 
+                      method="post" action="deleteinvoice" 
                       style="margin-right: 15px;"> 
                     <input type="hidden"  name="invoiceNumDel" 
                            value="<?php echo $_POST['invoiceNum']; ?>" />
@@ -97,7 +97,7 @@ into each HTML div tage.-->
                 <form style="margin-right: 15px;">
                     <input class="thanks-button" style="width: 100%; 
                            display: inline-block;" type="button"
-                           onclick="location.href = '../index.html';" 
+                           onclick="location.href = '../index';" 
                            value="Create New Form" />
                 </form>
             </div>
@@ -146,7 +146,10 @@ into each HTML div tage.-->
     <script>
         function onLoad() {
             var everything = "<?php
-                           echo file_get_contents('invoice' . $_POST['invoiceNum'] . '.txt');
+                           $filename = 'invoice' . $_POST['invoiceNum'] . '.txt';
+                           fclose($filename);
+                           chown($filename, 666);
+                           echo file_get_contents($filename);
                            ?>";
             viewInvoice(everything);
         }
