@@ -27,13 +27,18 @@
         <h2> Middle-Tier Web Development </h2>
 
         <p> An invoice form that I made for a web development course. </p>
-        <button id="resize" onclick="toggleFullScreen()">Enlarge</button>
-        <iframe id="iFrameWin" src="projects/InvoiceToFile/index" 
-                width="850" height="600" >
-            <!-- Display Link If Browser Doesn't Support iframe -->
-            <p><a href="projects/InvoiceToFile/index"> 
-                    Invoice Forms With Middle-Tier Storage  </a></p>
-        </iframe>
+        <button onclick="toggleShow(this)" value="fileinvoice-container">
+            View Project</button>
+        <div id="fileinvoice-container" style="display: none;">           
+            <iframe id="fileinvoice-window" src="projects/InvoiceToFile/index" 
+                    width="850" height="600" >
+                <!-- Display Link If Browser Doesn't Support iframe -->
+                <p><a href="projects/InvoiceToFile/index"> 
+                        Invoice Forms With Middle-Tier Storage  </a></p>
+            </iframe>
+            <button id="fileinvoice-resize" value="fileinvoice-window"
+                    onclick="toggleResize(this)">Enlarge</button>
+        </div>
 
         <h3> Features: </h3>
         <ul>
@@ -59,13 +64,36 @@
 
 
         <h2> Front-Tier Web Development </h2>
-        <a href="http://georgetteford.com/"> Static Essential Oils Marketing Site </a>        
+        <button onclick="toggleShow(this)" value='georgetteford-container'>
+            View Project</button>
+        <div id="georgetteford-container" style="display: none;">           
+            <iframe id="georgetteford-window" src="http://georgetteford.com/" 
+                    width="850" height="850" >
+                <!-- Display Link If Browser Doesn't Support iframe -->
+                <p><a href="http://georgetteford.com/"> 
+                        Invoice Forms With Middle-Tier Storage  </a></p>
+            </iframe>
+            <button id="georgetteford-resize" value="georgetteford-window"
+                    onclick="toggleResize(this)">Enlarge</button>
+        </div>   
         <p> 
             Derived from <a href="https://html5up.net/dimension"> this </a> 
             template. My first independent project creating and deploying a website 
         </p>
 
         <script>
+            function toggleShow(element) {
+                var container = document.getElementById(element.value); 
+                
+                if (container.style.display === 'none') {
+                    container.style.display = 'block';
+                    element.innerHTML = "Hide Project";
+                } else {
+                    container.style.display = 'none';
+                    element.innerHTML = "View Project";
+                }
+            }
+
             function getDocWidth() {
                 var D = document;
                 return Math.max(
@@ -86,16 +114,17 @@
             var isFullScreen = false;
             var orgDimensions = new Array();
 
-            function toggleFullScreen() {
-                ifr = document.getElementById("iFrameWin");
+            function toggleResize(element) {
+                var ifr = document.getElementById(element.value);
+                
                 if (!isFullScreen) {
-                    document.getElementById("resize").innerHTML = "Shrink";
+                    element.innerHTML = "Shrink";
                     orgDimensions[0] = ifr.style.width;
                     orgDimensions[1] = ifr.style.height;
-                    ifr.style.width = (getDocWidth()-400) + "px";
-                    ifr.style.height = (getDocHeight()-400) + "px";
+                    ifr.style.width = (getDocWidth() - 400) + "px";
+                    ifr.style.height = (getDocHeight() - 400) + "px";
                 } else {
-                    document.getElementById("resize").innerHTML = "Enlarge";
+                    element.innerHTML = "Enlarge";
                     ifr.style.width = orgDimensions[0];
                     ifr.style.height = orgDimensions[1];
                 }
