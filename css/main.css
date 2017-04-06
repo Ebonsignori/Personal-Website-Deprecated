@@ -30,7 +30,7 @@ display: inline-block;
 .losange {
   transform: rotate(45deg) translateY(10px);
 }
-
+ 
 .losange .los1 {
   width: 355px;
   height: 355px;
