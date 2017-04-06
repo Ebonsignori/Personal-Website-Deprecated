@@ -23,8 +23,8 @@ display: inline-block;
  position: relative;
   transform-origin: 50% 50%;
   overflow: hidden;
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
 }
 
 .losange {

@@ -1,4 +1,4 @@
-<!-- Ebonsignori About Me Page -->
+<!-- Ebonsignori Contact Page -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -22,12 +22,18 @@
     </head>
 
     <body>
+        <h1> Get in touch </h1>
+       <!-- Lookup Captcha Tutorial -->
        
-        <ul class="icons">
-            <li><a href="#" ><span class="label">GitHub</span></a></li>
-            <li><a href="#" ><span class="label">LinkedIn</span></a></li>
-            <li><a href="#" ><span class="label">Facebook</span></a></li>
-            <li><a href="#" ><span class="label">Instagram</span></a></li>
+         <ul class="icons">
+            <li><a href="https://github.com/Ebonsignori">
+                    <span class="label">GitHub</span></a></li>
+            <li><a href="https://www.linkedin.com/in/evan-bonsignori-33167787">
+                    <span class="label">LinkedIn</span></a></li>
+            <li><a href="https://www.facebook.com/ebonsignori">
+                    <label>Facebook</label></a></li>
+            <li><a href="https://www.instagram.com/ebonsignori/">
+                    <span class="label">Instagram</span></a></li>
         </ul>
         
     </body>
