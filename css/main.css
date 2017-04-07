@@ -8,6 +8,45 @@ head {
     display: none;
 }
 
+/* Social Media Icons */
+.icons {
+	overflow: auto;
+}
+
+.icons  li {
+	list-style-type: none;
+	float: left;
+}
+
+.icons li a span {
+	color: #fff;
+	width: 1.3em;
+	height: 1.3em;
+	border-radius: 20px;
+	font-size: 25px;
+	text-align: center;
+	margin-right: 10px;
+	padding-top: 15%;
+}
+
+.icons  .fa-facebook {
+    background: #3b5998;
+} 
+.icons  .fa-linkedin {
+    background: #007bb6;
+}
+.icons  .fa-github {
+    background: #205D7A;
+}
+.icons  .fa-instagram {
+    background: #8a3ab9;
+}
+
+.icons  li a i:hover {
+    opacity: .7;
+}
+
+
 /* Page Wrapping */
 #name-wrapper {
 display: inline-block;
@@ -18,7 +57,7 @@ display: inline-block;
     display: inline-block
 }
 
-/* Images */
+/* Losange Images */
  .losange, .losange div {
  position: relative;
   transform-origin: 50% 50%;
