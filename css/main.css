@@ -23,8 +23,9 @@ head {
     display:flex;
     justify-content:center;
     position: relative;
-    left: 25px;
+    left: 2empx;
 }
+
 .content-center {
     display:flex;
     justify-content:center;
@@ -62,7 +63,7 @@ head {
     justify-content:center;
     position: relative;
     right: 0px;
-    left: 45px;
+    left: 1em;
     padding: 5px;
     zoom: 0.6;
     -moz-transform: scale(0.6);
@@ -70,15 +71,20 @@ head {
 
 /* Index Naviagation */
 #index-select {
+    padding-left: .5em;
     letter-spacing: 7px;
     font-size: 35px;
     list-style-type: none;
 }
 
+
 #index-select li {
    text-align: center;
     border: solid grey;
     margin: 30px;
+    text-indent: 0px ;
+    padding-left: 0px ;
+    margin-left: 0px ;
 }
 
 #index-select li:hover {
