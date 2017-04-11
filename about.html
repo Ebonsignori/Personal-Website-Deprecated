@@ -23,29 +23,26 @@
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
-    <body>
+    <body class="bg-triangle">
         <div class="content-center-children-center">
+            <div id="page-header" >
             <h1> About Me </h1>
+            </div>
 
 
             <img src="img/evan_profile.jpg" title="Me"
-                 alt="Me Holding a Bird" 
-                 style="height:25em; width:auto; display:block; margin:auto;" />
+                 alt="Me Holding a Bird" id="page-image" />
+        </div>
+            <div class="bg-text">
             <p> 
                 My name is Evan Bonsignori and I'm currently a computer science <br />
                 student at Armstrong State University. I began my education as an <br />
                 electrical engineer and finished my associates before switching to  <br />
-                computer science. This website contains all things I want public. 
-                <br /> <br />  Such as my.. <br />
-            </p>
-            
-            <a href="php/blog">Opinion</a> 
-            <a href="portfolio">Work</a>  
-            <a href="php/contact">Contact Info</a> 
-
-            <p> Everything public not found here can be found at one of the <br />
-                icons found at the bottom of this page. 
-        </div>
+                computer science. This website contains all things I want public. <br />
+                The rest of my online publicity can be found at any of the  <br />
+                icons at the bottom of this page. 
+            </div>
+        
 
         <ul class="icons">
             <li><a href="https://www.facebook.com/ebonsignori">
@@ -60,10 +57,9 @@
         
         <div class="home">
         <span>
-            <a class="fa fa-home" href="../index">Home</a>
+            <button class="fa fa-home" onclick="location.href = '../index'">Home</button>
         </span>
         </div>
-
 
     </body>
 

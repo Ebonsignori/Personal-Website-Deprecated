@@ -23,34 +23,35 @@
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
-    <body>
-        <div class="content-center-children">
+    <body class="bg-triangle">
+        <div class="content-center-children" style="margin-bottom: -25px;">
         <h1> Contact Me </h1>
-        <p id="contact-info"> Click <button class="bt" 
-            onclick="showContactInfo()"> here</button> 
-            to show contact info <p>
+        </div>
+        <div id="contact-show" />
+        <p id="contact-info" class="before"> Click for contact info: <br />
+            <button class="bt" 
+            onclick="showContactInfo()">My Information</button> <p>
         </div>
             
-        <div style="display:flex;">     
-        <form id="contact-form" style="margin:auto;" method="post" 
-              action="contact"
+        <div id="contact-form">     
+        <form style="margin:auto;" method="post" action="contact"
               onsubmit="return validateForm()">
             <label> Name: </label>
             <input type="text" placeholder="Robin Pecknold" id="contact-name"  
-                   name="name" style="display: block; width: 400px;" 
+                   name="name" style="display: block;" 
                    maxlength="40"/>
             <label> Email: </label>
             <input type="email" placeholder="robinpecknold@gmail.com" 
-                   style="width: 400px; display: block;" id="contact-email" 
+                   style="display: block;" id="contact-email" 
                    maxlength="40"/>
             <label> Message: </label>
-            <textarea style="height: 200px; width: 400px; display: block;" 
+            <textarea style="height: 200px; display: block;" 
                       placeholder="Your Message Here!" id="contact-msg" 
                       maxlength="1000"></textarea>
             <textarea style="display: none;" 
                       placeholder="If You Can See This. Please Leave It Blank... 
                       It's To Stop Bots." id="contact-trap"></textarea>
-            <input type="submit" style="display: block;" />      
+            <input id="bt" type="submit" style="display: block;" />      
         </form>
         </div>
         <?php
@@ -80,7 +81,7 @@
 
         <div class="home">
         <span>
-            <a class="fa fa-home" href="../index">Home</a>
+            <button class="fa fa-home" onclick="location.href = '../index'">Home</button>
         </span>
         </div>
 

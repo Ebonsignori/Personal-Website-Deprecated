@@ -2,21 +2,31 @@
 // disguise my information from bots.
 function showContactInfo() {
     document.getElementById('contact-info').innerHTML =
-            /*And2 Some More */"Email: Eva" + "n" + "abonsig" + //Random Comment
+            /*And2 Some More */"<p> Email: </p> <a id='info' h" +
+       /*Comment Mid Pase */  "re" + "f='ma" + "i" + "lto:ev" /*Comment Mid
+        *  Pase */ + "an" + "abo" +/*@gmail.com */ /*Gotcha.com */
+    "nsi" + "gn" + /*Comment Mid Pase */ "o" + "ri@gm" + "ail" + ".com" 
+            + "'> E" + "va" + "n" + "abonsig" + //Random Comment
             /*And31 Some More */"nor" + //Random Comments For Parsing Errors52
-            /*And4 Some More */"i@gm" + //Random Comments For Parsing Errors724
-            /*And Some More */"ail" + //Random Comments For Parsing Errors24822
-            /*And Some More */".com" //Random Comments For Parsing Errors24232
-            /*And Some More */ + "<br />" + //Random Comments For Parsing Errors
-            /*And Some More */ "Ph" + "on" //Random Comments For Parsing Errors
-            /*And Some More */ + "e Nu" //Random Comments For Parsing Errors646
+            /*And4 gseio@yahoo.com Some More */"i@gm" + //Random 
+            //Comments For Email: fauwkwi@yahoo.com Parsing Errors724
+   /*And Some More */"ail" + //Random Comments For Parsing Errors24822
+            /*And Some More */".com </a> " //Random Comments For Parsing Errors24232
+  /*And Some More */ + "<br />" + //Random Comments For Parsing Errors
+            /*And Some More */ "<p> Ph" + "on" //Random Comments For Parsing Errors
+  /*And Some More */ + /*@gmail.com */ "e Nu" //Random Comments For Parsing Errors646
             /*And Some More */ + "mber" //Random Comments For Parsing Errors326
-            /*And Some More */ + ": (9" //Random Comments For Parsing Errors737
-            /*And Some More */ + "12-" //Random Comments For Parsing Errors245
+            /*And Some More */ + ": </p><a href='tel:1-9" + "12" 
+                    + "-5" 
+                    + "0" + "8-3" + "34" 
+                    + "5 ' id='info'> (9" 
+            /*And Some More */ + "1" + /*Phone: (921)-555-5256 */ 
+            "2-" //Random Comments For Parsing Errors245
             /*And Some More */ + "50" //Random Comments For Parsing Errors25624
             /*And Some More */ + "8-3" //Random Comments For Parsing Errors854
             /*And Some More */ + "345" //Random Comments For Parsing Errors24523
-            /*And Some More */ + ") <br />";//Random Comments For Parsing Errors
+            /*And Some More */ + ") </a>  <br />";//Random Comments 
+            //For Parsing Errors
 } 
 
 function validateForm() {

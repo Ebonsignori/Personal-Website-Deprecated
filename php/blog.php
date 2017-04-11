@@ -23,7 +23,7 @@
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
-    <body>
+    <body class="bg-triangle">
         <div class="content-center-children-center" />
         <h1> Blog </h1>
         <h2> <i> A Work In Progress </i> </h2>
@@ -41,9 +41,9 @@
                     <span class="fa fa-instagram"></span></a></li>
         </ul>
 
-       <div class="home">
+        <div class="home">
         <span>
-            <a class="fa fa-home" href="../index">Home</a>
+            <button class="fa fa-home" onclick="location.href = '../index'">Home</button>
         </span>
         </div>
 

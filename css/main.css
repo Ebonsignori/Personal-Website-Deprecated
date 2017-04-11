@@ -1,30 +1,11 @@
-/*
-   Main Style Sheet for index.html
-   author: Evan Bonsignori
-*/
+/*   Main Style Sheet for index.html ||  author: Evan Bonsignori */
 
-/* Don't Display meta information */
-head { 
+/* Global */
+head { /* Don't Display meta information */
     display: none;
 }
 
-.bt {
-  margin-left: 5px; 
-  margin-right: 5px; 
-  border-radius: 95%;
-  background-color: lightcyan;
-}
-
-.bt:hover {
-  background-color: wheat;
-}
-
-#header {
-    display:flex;
-    justify-content:center;
-    position: relative;
-    left: 2empx;
-}
+/* Div Wrapper Sizing */
 
 .content-center {
     display:flex;
@@ -37,7 +18,6 @@ head {
     display:flex;
     justify-content:center;
 }
-
 
 .content-center-children-center {
 }
@@ -57,19 +37,122 @@ head {
     text-align:center;
 }
 
+/* Header */
+
+#header {
+    margin-top: -50px;
+    display:flex;
+    justify-content:center;
+    position: relative;
+    letter-spacing: 8px;
+    font-size: 40px;
+}
+
+/* Profile Picture Wrapper */
 
 #pic-wrapper {
     display:flex;
     justify-content:center;
     position: relative;
     right: 0px;
-    left: 1em;
-    padding: 5px;
-    zoom: 0.6;
-    -moz-transform: scale(0.6);
+    left: .3em;
+    margin-top: -25px;
+    padding-bottom: 20px;
+    zoom: 0.9;
+    -moz-transform: scale(0.9);
+}
+/* Responsive Scaling for header and picture */
+
+@media screen and (max-width: 1280px) {
+#header {
+    letter-spacing: 8px;
+    font-size: 40px;
+}
+
+#pic-wrapper {
+    left: 2em;
+    padding-bottom: 15px;
+    zoom: .8;
+    -moz-transform: scale(.8);
+    } 
+
+}
+
+@media screen and (max-width: 980px) {
+#header {
+    letter-spacing: 8px;
+    font-size: 40px;
+}
+
+#pic-wrapper {
+    left: 2em;
+    padding-bottom: 15px;
+    zoom: .75;
+    -moz-transform: scale(.75);
+    } 
+
+    
+
+}
+
+@media screen and (max-width: 736px) {
+#header {
+    letter-spacing: 7px;
+    font-size: 30px;
+}
+
+#pic-wrapper {
+    left: 2em;
+    padding-bottom: 15px;
+    zoom: .7;
+    -moz-transform: scale(.7);
+    } 
+
+
+}
+
+@media screen and (max-width: 580px) {
+#header {
+    letter-spacing: 6px;
+    font-size: 25px;
+}
+
+
+}
+
+@media screen and (max-width: 480px) {
+#header {
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+#pic-wrapper {
+    left: 2em;
+    padding-bottom: 15px;
+    zoom: .5;
+    -moz-transform: scale(.5);
+    } 
+
+}
+
+@media screen and (max-width: 380px) {
+#header {
+    margin-top: -30px;
+    letter-spacing: 4px;
+    font-size: 15px;
+}
+
+#pic-wrapper {
+    left: 2em;
+    padding-bottom: 15px;
+    zoom: .4;
+    -moz-transform: scale(.4);
+    } 
+
 }
 
 /* Index Naviagation */
+
 #index-select {
     padding-left: .5em;
     letter-spacing: 7px;
@@ -79,28 +162,41 @@ head {
 
 
 #index-select li {
-   text-align: center;
-    border: solid grey;
-    margin: 30px;
+    text-align: center;    
+    border: solid black;
+    border-width: 3px;
+    margin: 20px;
     text-indent: 0px ;
     padding-left: 0px ;
     margin-left: 0px ;
 }
 
-#index-select li:hover {
-   background-color: beige;
+#index-select #a {
+   background-color: #e0b38f;
 }
+#index-select #b {
+   background-color: #f57d5d;
+}
+#index-select #c {
+   background-color: #c76651;
+}
+#index-select #d {
+   background-color: #674647;
+}
+
 
 
 #index-select li a {
     display:block;
     text-decoration: none;
-    color: darkred;
-    padding: 25px;
+    color: black;
+    padding: 27px;
 }
 
 #index-select li a:hover {
-    color: red;
+    color: black;
+    font-size: 125%;
+    letter-spacing: 20px;
 }
 
 @media screen and (max-width: 1280px) {
@@ -151,35 +247,205 @@ head {
     list-style-type: none;
 }
 
-
 #index-select li {
-    margin: 25px;
+    margin: 13px;
 }
 
 
 #index-select li a {
-    padding: 30px;
+    padding: 20px;
 }
-    
+
+
 }
 
 @media screen and (max-width: 480px) {
 #index-select {
-    letter-spacing: 6spx;
+    letter-spacing: 6px;
     font-size: 25px;
     list-style-type: none;
 }
 
 
 #index-select li {
-    margin: 25px;
+    margin: 15px;
 }
 
 
 #index-select li a {
-    padding: 30px;
+    padding: 25px;
 }
      
+}
+
+
+/* Header for other pages */
+
+#page-header {
+    margin-top: -50px;
+    margin-bottom: -40px;
+    display:flex;
+    justify-content:center;
+    position: relative;
+    letter-spacing: 8px;
+    font-size: 25px;
+}
+
+/* Into image for other pages */
+#page-image {
+height:20em;
+width:auto;
+display:block;
+margin:auto;
+border-radius: 20px;
+
+border: solid black;
+}
+
+/* Button Styling */
+
+.bt {
+  width: 80%;
+  margin-left: 5px; 
+  margin-right: 5px; 
+  border-radius: 15px;
+  border: solid #DDBD96;
+  background-color: #C35A54;
+}
+
+.bt:hover {
+  background-color: #EFAB7A;
+  letter-spacing: 3px;
+}
+
+/* Contact Form */
+
+#contact-form {
+  display:flex; 
+}
+  #contact-form form input:not(#bt) {
+        width: 400px;
+        border: solid black;
+        background-color: #DDBD96;
+    }
+    
+    #contact-form form #bt {
+        width: 100px;
+        border: solid #314244;
+        border-width: 1px;
+        background-color: #767678;
+    }
+    
+    #contact-form form #bt:hover {
+        width: 105px;
+        background-color: #DDBD96;
+        letter-spacing: 5px;
+    }
+    
+    
+    #contact-form form textarea {
+       resize: none;
+       width: 400px;
+       border: solid black;
+       background-color: #DDBD96;
+    }
+
+
+@media screen and (max-width: 1280px) {
+    #contact-form form input {
+        width: 400px;
+    }
+    
+    #contact-form form textarea {
+        width: 400px;
+    }
+
+}
+
+@media screen and (max-width: 980px) {
+ #contact-form form input {
+        width: 400px;
+    }
+    
+    #contact-form form textarea {
+        width: 400px;
+    }
+
+    
+
+}
+
+@media screen and (max-width: 736px) {
+
+
+}
+
+@media screen and (max-width: 480px) {
+  #contact-form form input {
+        width:300px;
+    }
+    
+    #contact-form form textarea {
+        width:300px;
+    }
+
+}
+
+/* Contact Info Toggle */
+#contact-show {
+    margin-bottom: 25px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    width:50%;
+}
+
+#contact-show .before {
+    display: inline-block;
+    font-size: large;
+}
+
+#contact-show p:not(.before) {
+    display: inline-block;
+    margin-bottom: -5px;
+    font-size: small;
+}
+
+#contact-show p #info {
+    display: inline-block;
+    font-size: large;
+    font-family: monospace;
+     background-color:rgba(204,204,0,.6)
+}
+
+
+/* Background  */
+.bg-triangle {
+    background-image: url("../img/triangle_sky.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top;
+    background-size:cover;
+    background-repeat: repeat-y;
+}
+
+/* Need to figure out How to remove image from iframe */
+.portfolio {
+    background-image: none;
+}
+
+.bg-text {
+    border: solid black;
+    border-radius: 20px;
+    width:45%;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 5px;
+    background-color:rgba(72,81,90,0.8);
+    color : white;
+    text-align: center; 
+    font-size: 15px;
+    font-weight: 600;
 }
 
 
@@ -255,10 +521,11 @@ display: inline-block;
   height: auto;
 }
 
+
 /* Home Redirect */
 .home {
     position: relative;
-    left: -1em;
+    left: -1.4em;
     display:flex;
     justify-content:center;
     overflow: auto;
@@ -275,16 +542,12 @@ display: inline-block;
 }
 
 .home .fa-home {
-    background: wheat;
+    background: beige;
+    border: solid black;
 }
 
-.home span a {
-    text-decoration: none;
-    color: black;
-}
-
-.home span a:hover {
-    opacity: .7;
+.home span button:hover {
+    background-color: rgba(226,170,121,.5);
 }
 
 

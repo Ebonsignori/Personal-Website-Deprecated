@@ -24,17 +24,18 @@
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
-    <body>
+    <body class="bg-triangle">
         
         <h1> Portfolio </h1>
         <h2> Middle-Tier Web Development </h2>
-
+        
         <p> An invoice form that I made for a web development course. </p>
+        <!-- Button Toggles Invoice Project In New iframe -->
         <button onclick="toggleShow(this)" value="fileinvoice-container">
             View Project</button>
-        <div id="fileinvoice-container" style="display: none;">           
+        <div id="fileinvoice-container" class="portfolio" style="display: none;">           
             <iframe id="fileinvoice-window" src="projects/InvoiceToFile/index" 
-                    width="850" height="600" >
+                    class="portfolio">
                 <!-- Display Link If Browser Doesn't Support iframe -->
                 <p><a href="projects/InvoiceToFile/index"> 
                         Invoice Forms With Middle-Tier Storage  </a></p>
@@ -65,13 +66,12 @@
             </li>
         </ul>
 
-
+        <!-- Button Toggles Georgetteford.com Project In New iframe -->
         <h2> Front-Tier Web Development </h2>
         <button onclick="toggleShow(this)" value='georgetteford-container'>
             View Project</button>
         <div id="georgetteford-container" style="display: none;">           
-            <iframe id="georgetteford-window" src="http://georgetteford.com/" 
-                    width="850" height="850" >
+            <iframe id="georgetteford-window" src="http://georgetteford.com/">
                 <!-- Display Link If Browser Doesn't Support iframe -->
                 <p><a href="http://georgetteford.com/"> 
                         Invoice Forms With Middle-Tier Storage  </a></p>
@@ -97,7 +97,7 @@
 
        <div class="home">
         <span>
-            <a class="fa fa-home" href="../index">Home</a>
+            <button class="fa fa-home" onclick="location.href = '../index'">Home</button>
         </span>
         </div>
 
