@@ -474,6 +474,10 @@ border: solid black;
 	padding-top: 15%;
 }
 
+.icons li a span:hover {
+	opacity: .7;
+}
+
 .icons  .fa-facebook {
     background: #3b5998;
 } 
@@ -485,10 +489,6 @@ border: solid black;
 }
 .icons  .fa-instagram {
     background: #8a3ab9;
-}
-
-.icons  li a i:hover {
-    opacity: .7;
 }
 
 
