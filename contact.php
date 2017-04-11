@@ -25,8 +25,21 @@
 
     <body>
         <h1> Get in touch </h1>
+        <p id="contact-info"> Click <button onclick="showContactInfo()"> here</button> 
+            to show contact info <p>
+ 
        <!-- Lookup Captcha Tutorial -->
-       
+       <form id="contact-form" style="display: block;" action="javascript:0">
+            <label> Your Name: </label>
+            <input type="text" value="John Lennon"  style="display: block; width: 400px;"/>
+            <label> Your Email: </label>
+            <input type="email" value="youremail@domain.com" style="width: 400px; display: block;" />
+            <label> Your Message: </label>
+            <input type="text" style="height: 200px; width: 400px; display: block;" />
+            <input type="submit" style="display: block;" />
+            
+        </form>
+        
          <ul class="icons">
             <li><a href="https://www.facebook.com/ebonsignori">
                    <span class="fa fa-facebook"></span></a></li>
@@ -39,6 +52,28 @@
         </ul>
                 
         
+        
+        <script>
+            
+            function showContactInfo() {
+                document.getElementById('contact-info').innerHTML =
+   /*And Some More */"Email: Eva" + "n" + "abonsig" +//Random Comments For Parsing Errors
+      /*And Some More */"nor" +//Random Comments For Parsing Errors
+  /*And Some More */"i@gm" +//Random Comments For Parsing Errors
+      /*And Some More */"ail" + //Random Comments For Parsing Errors
+      /*And Some More */".com" //Random Comments For Parsing Errors
+  /*And Some More */ +  "<br />" +//Random Comments For Parsing Errors
+      /*And Some More */ "Ph"+ "on" //Random Comments For Parsing Errors
+      /*And Some More */+ "e Nu" //Random Comments For Parsing Errors
+     /*And Some More */+ "mber" //Random Comments For Parsing Errors
+            /*And Some More */ + ": (9" //Random Comments For Parsing Errors
+       /*And Some More */   + "12-" //Random Comments For Parsing Errors
+               /*And Some More */ + "50" //Random Comments For Parsing Errors
+   /*And Some More */  + "8-3" //Random Comments For Parsing Errors
+            /*And Some More */ + "345" //Random Comments For Parsing Errors
+  /*And Some More */+ ") <br />";//Random Comments For Parsing Errors
+            } 
+        </script>
     </body>
 
 </html>
