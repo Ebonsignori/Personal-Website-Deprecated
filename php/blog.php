@@ -17,29 +17,36 @@
         <meta property="og:image" content="img/evan_running_waterfall.jpg">
         <meta property="og:description" content="Evan Bonsignori's Blog">
         <meta property="og:title" content="Ebonsignori Blog">
-        
+
         <link rel="stylesheet" type="text/css" href="../css/main.css">
         <link rel="stylesheet" 
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
+        <div class="content-center-children-center" />
         <h1> Blog </h1>
+        <h2> <i> A Work In Progress </i> </h2>
+        <p> Coming Soon </p>
+    </div>
 
-
-        
         <ul class="icons">
             <li><a href="https://www.facebook.com/ebonsignori">
-                   <span class="fa fa-facebook"></span></a></li>
+                    <span class="fa fa-facebook"></span></a></li>
             <li><a href="https://github.com/Ebonsignori">
-                   <span class="fa fa-github"></span></a></li>
+                    <span class="fa fa-github"></span></a></li>
             <li><a href="https://www.linkedin.com/in/evan-bonsignori-33167787">
-                   <span class="fa fa-linkedin"></span></a></li>
+                    <span class="fa fa-linkedin"></span></a></li>
             <li><a href="https://www.instagram.com/ebonsignori/">
                     <span class="fa fa-instagram"></span></a></li>
         </ul>
-                
-        
+
+       <div class="home">
+        <span>
+            <a class="fa fa-home" href="../index">Home</a>
+        </span>
+        </div>
+
     </body>
 
 </html>

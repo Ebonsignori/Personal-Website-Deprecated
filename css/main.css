@@ -8,14 +8,185 @@ head {
     display: none;
 }
 
+.bt {
+  margin-left: 5px; 
+  margin-right: 5px; 
+  border-radius: 95%;
+  background-color: lightcyan;
+}
+
+.bt:hover {
+  background-color: wheat;
+}
+
+#header {
+    display:flex;
+    justify-content:center;
+    position: relative;
+    left: 25px;
+}
+.content-center {
+    display:flex;
+    justify-content:center;
+}
+
+.content-center-children {
+}
+.content-center-children *{
+    display:flex;
+    justify-content:center;
+}
+
+
+.content-center-children-center {
+}
+.content-center-children-center *{
+    display:flex;
+    justify-content:center;
+}
+.content-center-children-center a{
+    text-decoration: none;
+    color:#007bb6;
+}
+.content-center-children-center a:hover{
+    color: darkgreen;
+}
+
+.content-center-children-center p{
+    text-align:center;
+}
+
+
+#pic-wrapper {
+    display:flex;
+    justify-content:center;
+    position: relative;
+    right: 0px;
+    left: 45px;
+    padding: 5px;
+    zoom: 0.6;
+    -moz-transform: scale(0.6);
+}
+
+/* Index Naviagation */
+#index-select {
+    letter-spacing: 7px;
+    font-size: 35px;
+    list-style-type: none;
+}
+
+#index-select li {
+   text-align: center;
+    border: solid grey;
+    margin: 30px;
+}
+
+#index-select li:hover {
+   background-color: beige;
+}
+
+
+#index-select li a {
+    display:block;
+    text-decoration: none;
+    color: darkred;
+    padding: 25px;
+}
+
+#index-select li a:hover {
+    color: red;
+}
+
+@media screen and (max-width: 1280px) {
+   
+#index-select {
+    letter-spacing: 7px;
+    font-size: 35px;
+    list-style-type: none;
+}
+
+
+#index-select li {
+    margin: 25px;
+}
+
+
+#index-select li a {
+    padding: 30px;
+}
+    
+
+}
+
+@media screen and (max-width: 980px) {
+#index-select {
+    letter-spacing: 7px;
+    font-size: 35px;
+    list-style-type: none;
+}
+
+
+#index-select li {
+    margin: 25px;
+}
+
+
+#index-select li a {
+    padding: 30px;
+}
+
+}
+
+@media screen and (max-width: 736px) {
+
+#index-select {
+    letter-spacing: 6px;
+    font-size: 30px;
+    list-style-type: none;
+}
+
+
+#index-select li {
+    margin: 25px;
+}
+
+
+#index-select li a {
+    padding: 30px;
+}
+    
+}
+
+@media screen and (max-width: 480px) {
+#index-select {
+    letter-spacing: 6spx;
+    font-size: 25px;
+    list-style-type: none;
+}
+
+
+#index-select li {
+    margin: 25px;
+}
+
+
+#index-select li a {
+    padding: 30px;
+}
+     
+}
+
+
+
 /* Social Media Icons */
 .icons {
+    display:flex;
+    justify-content:center;
 	overflow: auto;
 }
 
 .icons  li {
 	list-style-type: none;
-	float: left;
 }
 
 .icons li a span {
@@ -52,11 +223,6 @@ head {
 display: inline-block;
 }
 
-#content-select {
-    margin: 45px;
-    display: inline-block
-}
-
 /* Losange Images */
  .losange, .losange div {
  position: relative;
@@ -81,6 +247,35 @@ display: inline-block;
   height: auto;
 }
 
+/* Home Redirect */
+.home {
+    display:flex;
+    justify-content:center;
+    overflow: auto;
+}
+
+.home span {
+	color: #fff;
+	width: 1.3em;
+	height: 1.3em;
+	border-radius: 20px;
+	font-size: 25px;
+	text-align: center;
+	margin-right: 27px;
+}
+
+.home .fa-home {
+    background: wheat;
+}
+
+.home span a {
+    text-decoration: none;
+    color: black;
+}
+
+.home span a:hover {
+    opacity: .7;
+}
 
 
 /*

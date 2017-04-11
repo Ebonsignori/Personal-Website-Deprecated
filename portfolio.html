@@ -20,11 +20,12 @@
         <meta property="og:title" content="Ebonsignori">
 
         <link rel="stylesheet" type="text/css" href="../css/main.css">
-         <link rel="stylesheet" 
+        <link rel="stylesheet" 
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
+        
         <h1> Portfolio </h1>
         <h2> Middle-Tier Web Development </h2>
 
@@ -83,68 +84,24 @@
             template. My first independent project creating and deploying a website 
         </p>
 
-        <script>
-            function toggleShow(element) {
-                var container = document.getElementById(element.value); 
-                
-                if (container.style.display === 'none') {
-                    container.style.display = 'block';
-                    element.innerHTML = "Hide Project";
-                } else {
-                    container.style.display = 'none';
-                    element.innerHTML = "View Project";
-                }
-            }
-
-            function getDocWidth() {
-                var D = document;
-                return Math.max(
-                        Math.max(D.body.scrollWidth, D.documentElement.scrollWidth),
-                        Math.max(D.body.offsetWidth, D.documentElement.offsetWidth),
-                        Math.max(D.body.clientWidth, D.documentElement.clientWidth)
-                        );
-            }
-            function getDocHeight() {
-                var D = document;
-                return Math.max(
-                        Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),
-                        Math.max(D.body.offsetHeight, D.documentElement.offsetHeight),
-                        Math.max(D.body.clientHeight, D.documentElement.clientHeight)
-                        );
-            }
-
-            var isFullScreen = false;
-            var orgDimensions = new Array();
-
-            function toggleResize(element) {
-                var ifr = document.getElementById(element.value);
-                
-                if (!isFullScreen) {
-                    element.innerHTML = "Shrink";
-                    orgDimensions[0] = ifr.style.width;
-                    orgDimensions[1] = ifr.style.height;
-                    ifr.style.width = (getDocWidth() - 400) + "px";
-                    ifr.style.height = (getDocHeight() - 400) + "px";
-                } else {
-                    element.innerHTML = "Enlarge";
-                    ifr.style.width = orgDimensions[0];
-                    ifr.style.height = orgDimensions[1];
-                }
-                isFullScreen = !isFullScreen;
-            }
-        </script>
-        
         <ul class="icons">
             <li><a href="https://www.facebook.com/ebonsignori">
-                   <span class="fa fa-facebook"></span></a></li>
+                    <span class="fa fa-facebook"></span></a></li>
             <li><a href="https://github.com/Ebonsignori">
-                   <span class="fa fa-github"></span></a></li>
+                    <span class="fa fa-github"></span></a></li>
             <li><a href="https://www.linkedin.com/in/evan-bonsignori-33167787">
-                   <span class="fa fa-linkedin"></span></a></li>
+                    <span class="fa fa-linkedin"></span></a></li>
             <li><a href="https://www.instagram.com/ebonsignori/">
                     <span class="fa fa-instagram"></span></a></li>
         </ul>
-                
+
+       <div class="home">
+        <span>
+            <a class="fa fa-home" href="../index">Home</a>
+        </span>
+        </div>
+
+        <script type="text/javascript" src="../js/portfolio.js"></script>
     </body>
 
 </html>

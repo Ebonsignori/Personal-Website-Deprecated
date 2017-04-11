@@ -29,6 +29,10 @@ function validateForm() {
         alert("Please fill out all fields.");
         return false;
     }
+    if (name.match(/[0-9]/g)) {
+        alert("Please fill out a valid name.");
+        return false;
+    }
     // Email field must be a valid email. Checked using regex
     if (!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
         alert("Please enter a valid email address.");
