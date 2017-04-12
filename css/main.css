@@ -437,17 +437,53 @@ border: solid black;
 .bg-text {
     border: solid black;
     border-radius: 20px;
-    width:45%;
+    width:725px;
     position: relative;
     margin: 0 auto;
     margin-top: 5px;
     background-color:rgba(72,81,90,0.8);
     color : white;
     text-align: center; 
-    font-size: 15px;
+
+}
+
+.bg-text p{
+    justify-content: auto;
+    font-size: 18px;
     font-weight: 600;
 }
 
+@media screen and (max-width: 800px) {
+.bg-text {
+    width: 600px;
+    height: auto;
+}
+}
+@media screen and (max-width: 650px) {
+.bg-text {
+    width: 400px;
+    height: auto;
+}
+
+}
+
+@media screen and (max-width: 400px) {
+.bg-text {
+    width: 200px;
+    height: auto;
+}
+
+}
+
+@media screen and (max-width: 736px) {
+
+
+}
+
+@media screen and (max-width: 480px) {
+
+     
+}
 
 
 /* Social Media Icons */
