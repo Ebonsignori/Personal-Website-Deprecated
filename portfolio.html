@@ -30,18 +30,14 @@
         <h2> Middle-Tier Web Development </h2>
         
         <p> An invoice form that I made for a web development course. </p>
-        <!-- Button Toggles Invoice Project In New iframe -->
-        <button onclick="toggleShow(this)" value="fileinvoice-container">
             View Project</button>
-        <div id="fileinvoice-container" class="portfolio" style="display: none;">           
-            <iframe id="fileinvoice-window" src="projects/InvoiceToFile/index" 
+        <div id="fileinvoice-container" class="portfolio">           
+            <iframe id="fileinvoice-window" src="projects/InvoiceToFile/index" style="width:80%; height:500px;"
                     class="portfolio">
                 <!-- Display Link If Browser Doesn't Support iframe -->
                 <p><a href="projects/InvoiceToFile/index"> 
                         Invoice Forms With Middle-Tier Storage  </a></p>
             </iframe>
-            <button id="fileinvoice-resize" value="fileinvoice-window"
-                    onclick="toggleResize(this)">Enlarge</button>
         </div>
 
         <h3> Features: </h3>
@@ -68,16 +64,12 @@
 
         <!-- Button Toggles Georgetteford.com Project In New iframe -->
         <h2> Front-Tier Web Development </h2>
-        <button onclick="toggleShow(this)" value='georgetteford-container'>
-            View Project</button>
-        <div id="georgetteford-container" style="display: none;">           
-            <iframe id="georgetteford-window" src="http://georgetteford.com/">
+        <div id="georgetteford-container" >           
+            <iframe id="georgetteford-window" src="http://georgetteford.com/" style="width:80%; height:500px;">
                 <!-- Display Link If Browser Doesn't Support iframe -->
                 <p><a href="http://georgetteford.com/"> 
                         Invoice Forms With Middle-Tier Storage  </a></p>
             </iframe>
-            <button id="georgetteford-resize" value="georgetteford-window"
-                    onclick="toggleResize(this)">Enlarge</button>
         </div>   
         <p> 
             Derived from <a href="https://html5up.net/dimension"> this </a> 
