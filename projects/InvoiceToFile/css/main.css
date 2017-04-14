@@ -4,6 +4,35 @@ body {
     font-family: "Times New Roman", Georgia, Serif;
 }
 
+button {
+    background-color: lightblue;
+}
+
+input {
+    background-color: lightblue;
+}
+
+
+button:hover,input:hover {
+    background-color: #007bb6; 
+}
+
+textarea { 
+    border: 0;
+    font-family: "Times New Roman", Georgia, Serif;
+    overflow: hidden;
+    resize: none; 
+}
+
+textarea::-webkit-input-placeholder {
+    color: black;
+}
+
+textarea:hover { 
+    background-color: #E5E5E5;
+}
+
+
 #wrapper {
     width: 800px;
     margin: 0 auto; 
@@ -39,42 +68,6 @@ body {
     width: 50%;
     margin: auto;
     text-align: center;
-}
-
-.select-button {
-    background-color: #E3E1B8; 
-    min-width:125px;
-}
-
-.select-buttonn:hover {
-    background-color: lightskyblue; 
-}
-
-.thanks-button {
-    background-color: #E3E1B8; 
-}
-.thanks-button:hover {
-    background-color: lightskyblue; 
-}
-
-textarea { 
-    border: 0;
-    font-family: "Times New Roman", Georgia, Serif;
-    overflow: hidden;
-    resize: none; 
-    background-color: #E5BF99;
-}
-
-textarea::-webkit-input-placeholder {
-    color: black;
-}
-
-textarea:hover { 
-    background-color: #E5805C;
-}
-
-button {
-    background-color: #E3E1B8; 
 }
 
 table {
@@ -202,11 +195,6 @@ table td, table th {
 
 #actionbuttons input,button {
     margin: 5px;
-    background-color: #E3E1B8; 
-}
-
-#actionbuttons input:hover,button:hover {
-    background-color: lightskyblue;
 }
 
 #viewdata a:visited,a:active,a:link {

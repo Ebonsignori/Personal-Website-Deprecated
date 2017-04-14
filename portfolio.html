@@ -10,7 +10,7 @@
 
         <meta name="rating" content="General">
 
-        <title> About Me </title>
+        <title> Portfolio </title>
         <meta name="author" content="Evan Bonsignori">
         <meta name="description" content="Evan Bonsignori's Portfolio">
 
@@ -24,22 +24,23 @@
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
-    <body class="bg-triangle">
-        
+    <body class="bg-portfolio">
+        <div class="content-center-children">
         <h1> Portfolio </h1>
+        
         <!-- Invoice-Forms With Save To File -->
         <h2> Middle-Tier Web Development </h2>
         <p> An invoice form that I made for a web development course. </p>
-  
-        <div id="fileinvoice-container" class="portfolio">           
-            <iframe id="fileinvoice-window" src="projects/InvoiceToFile/index"
-                    class="portfolio">
+        <div id="invoice-wrap" >           
+            <iframe id="invoice-frame" src="projects/InvoiceToFile/index"
+                    class="iframe-style">
                 <!-- Display Link If Browser Doesn't Support iframe -->
                 <p><a href="projects/InvoiceToFile/index"> 
                         Invoice Forms With Middle-Tier Storage  </a></p>
             </iframe>
+        
         </div>
-
+        <!-- Replace With Table -->
         <h3> Features: </h3>
         <ul>
             <li> Save invoices to text file on server 
@@ -61,21 +62,25 @@
                 <i>Implemented using JavaScript</i>  
             </li>
         </ul>
-
+        </div>
+         
         <!-- Georgetteford.com Project -->
-        <h2> Front-Tier Web Development </h2>
-        <div id="georgetteford-container" >           
-            <iframe id="georgetteford-window" src="http://georgetteford.com/" style="width:80%; height:700px;  background-image: none; " >
+        <h2 class="content-center"> Front-Tier Web Development </h2>
+        <div id="georgetteford-wrap" >           
+            <iframe id="georgetteford-frame" src="http://georgetteford.com/"
+                    class="iframe-style">
                 <!-- Display Link If Browser Doesn't Support iframe -->
                 <p><a href="http://georgetteford.com/"> 
                         Invoice Forms With Middle-Tier Storage  </a></p>
             </iframe>
         </div>   
+        <div class="content-center-children">
         <p> 
             Derived from <a href="https://html5up.net/dimension"> this </a> 
             template. My first independent project creating and deploying a website 
         </p>
-
+        </div>
+        
         <ul class="icons">
             <li><a href="https://www.facebook.com/ebonsignori">
                     <span class="fa fa-facebook"></span></a></li>
@@ -92,7 +97,7 @@
             <button class="fa fa-home" onclick="location.href = '../index'">Home</button>
         </span>
         </div>
-
+        
         <script type="text/javascript" src="../js/portfolio.js"></script>
     </body>
 
