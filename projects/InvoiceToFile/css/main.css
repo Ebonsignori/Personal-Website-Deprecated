@@ -1,7 +1,6 @@
 /* CSS for invoice index.HTML */
 
-body { 
-    font: 13px; 
+body {  
     font-family: "Times New Roman", Georgia, Serif;
 }
 
@@ -11,14 +10,8 @@ body {
 }
 
 #wrapper-thank-you {
-    width: 900px;
-    margin: 0 auto; 
-}
-
-#wrapper-thank-you *:not(#header) {
-    width: 50%;
-    margin: 10 auto;
-    text-align: center;
+    display:flex;
+    justify-content:center;
 }
 
 #wrapper-buttons {
@@ -28,7 +21,7 @@ body {
 
 #wrapper-buttons *:not(#header) {
     width: 50%;
-    margin: 10 auto;
+    margin: auto;
     text-align: center;
 }
 
@@ -44,13 +37,12 @@ body {
 
 #invoice-wrapper *:not(#header) {
     width: 50%;
-    margin: 15 auto;
+    margin: auto;
     text-align: center;
 }
 
 .select-button {
     background-color: #E3E1B8; 
-    text-size-adjust: auto;
     min-width:125px;
 }
 
@@ -67,14 +59,18 @@ body {
 
 textarea { 
     border: 0;
-    font: 13px; 
     font-family: "Times New Roman", Georgia, Serif;
     overflow: hidden;
     resize: none; 
+    background-color: #E5BF99;
+}
+
+textarea::-webkit-input-placeholder {
+    color: black;
 }
 
 textarea:hover { 
-    background-color: yellow;
+    background-color: #E5805C;
 }
 
 button {
@@ -134,7 +130,7 @@ table td, table th {
 
 .tables td.title { 
     text-align: left; 
-    background: #eee; 
+    background: grey; 
 }
 
 .tables td { 
@@ -154,7 +150,7 @@ table td, table th {
     border: 1px solid black;
 }
 #items th { 
-    background: #eee;
+    background: grey;
 }
 
 #items textarea {
@@ -253,4 +249,14 @@ table td, table th {
     font-size: 17px;
     resize: none; 
     height: 14px;
+}
+
+#thank-you-buttons {
+    display:flex;
+    justify-content:center;
+}
+
+#thank-you-buttons button{
+    border-radius: 5px;
+    border: solid black;
 }

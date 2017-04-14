@@ -8,12 +8,13 @@
     </head>
 
     <body>
-        <div id="wrapper-thank-you" style="width: 75%;">
+        <div id="wrapper-thank-you">
 
             <div id="header">Invoices Stored In Files</div>
-
+        </div>
+        <div id="wrapper-thank-you"
             <h1> Invoices: </h1>
-
+        </div>
             <?PHP
             //Scan through directory to find all invoice files
             $numberOfInvoices = 0;
@@ -38,7 +39,7 @@
                 if ($fileExt == ".txt") {
                     $numberOfInvoices++;
                     echo
-                    '<div>
+                    '<div id="thank-you-buttons">
                     <form id="invoice' . $fileNum . 'Select" name="invoiceSelect"
                         method="post" action="viewinvoice"> 
                            <input type="hidden" name="invoiceNum" value="'
@@ -68,7 +69,7 @@
                     if ($fileExt == ".txt") {
                         $numberOfInvoices++;
                         echo
-                        '<div>
+                        '<div id="thank-you-buttons">
                     <form id="invoice' . $fileNum . 'Select" name="invoiceSelect"
                         method="post" action="viewinvoice"> 
                            <input type="hidden" name="invoiceNum" value="'
@@ -98,7 +99,7 @@
                     if ($fileExt == ".txt") {
                         $numberOfInvoices++;
                         echo
-                        '<div>
+                        '<div id="thank-you-buttons">
                     <form id="invoice' . $fileNum . 'Select" name="invoiceSelect"
                         method="post" action="viewinvoice"> 
                            <input type="hidden" name="invoiceNum" value="'
@@ -124,7 +125,7 @@
             ?>
 
             <!-- Navigation Button -->
-            <div >
+            <div id="wrapper-thank-you" >
                 <input class="select-button" style="min-width:200px;" type="button" 
                        onclick="location.href = '../index.html';" 
                        value="Go Back To New Invoice Page" />

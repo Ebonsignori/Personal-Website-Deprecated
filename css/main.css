@@ -181,7 +181,7 @@ head { /* Don't Display meta information */
    background-color: #c76651;
 }
 #index-select #d {
-   background-color: #674647;
+   background-color: #AD4B4E;
 }
 
 
@@ -431,7 +431,11 @@ border: solid black;
 
 /* Need to figure out How to remove image from iframe */
 .portfolio {
-    background-image: none;
+     width:1000px;
+     height:550px;
+     background-color: #E5BF99;
+     
+     
 }
 
 .bg-text {

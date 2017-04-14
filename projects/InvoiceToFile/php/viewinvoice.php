@@ -127,7 +127,7 @@ into each HTML div tage.-->
                 <td colspan="2">Amount Paid</td>
                 <td ><div class="sumTable">NULL</div></td>
             </tr>
-            <tr style="background: #eee; ">
+            <tr>
                 <td colspan="2">Balance Due</td>
                 <td><div class ="totals" >NULL</div></td>
             </tr>
