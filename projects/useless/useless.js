@@ -1,12 +1,13 @@
 // Useless
 
+//For uselesssite.html
 function chooseSite() {
    var iframe = document.getElementById('frame');
-   iframe.src = sitesList[Math.floor(Math.random() * sitesList.length)];
+   iframe.src = siteList[Math.floor(Math.random() * sitesList.length)];
 }
 
 
-var sitesList = [
+var siteList = [
   ['http://isfycsmn.ytmnd.com/'],
   ['http://yeahboi.me/'],
   ['http://adultcatfinder.com/']
@@ -90,3 +91,52 @@ var sitesList = [
   ['http://burnie.com/'],
   ['http://www.sealspin.com/']
 ];
+
+//For uselessvideo.html
+function chooseVideo() {
+   return videoList[Math.floor(Math.random() * videoList.length)].toString();
+}
+
+
+var videoList = [
+  ["q6EoRBvdVPQ"],
+  ["-w-58hQ9dLk"],
+  ["zoYS005VsA4"],
+  ["jEcuFIU7Cb0"]
+];
+
+//Youtube API
+// 2. This code loads the IFrame Player API code asynchronously.
+     var tag = document.createElement('script');
+
+     tag.src = "https://www.youtube.com/iframe_api";
+     var firstScriptTag = document.getElementsByTagName('script')[0];
+     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+     // 3. This function creates an <iframe> (and YouTube player)
+     //    after the API code downloads.
+     var player;
+     function onYouTubeIframeAPIReady() {
+       player = new YT.Player('player', {
+         height: '100%',
+         width: '100%',
+         videoId: chooseVideo(),
+         events: {
+           'onReady': function() {
+             player.setVolume(100);
+             player.playVideo();
+           },
+           'onStateChange': onPlayerStateChange
+         }
+       });
+     }
+     // Play new random video when previous one finishes
+     function onPlayerStateChange(event) {
+       if (player.getPlayerState() === 0) {
+         player.loadVideoById(chooseVideo(),5,"large");
+       }
+      }
+
+      function changeVideo() {
+         player.loadVideoById(chooseVideo(),5,"large");
+      }
