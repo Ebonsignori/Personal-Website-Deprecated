@@ -1,7 +1,8 @@
 // Useless
 
 function chooseSite() {
-   window.location.replace(sitesList[Math.floor(Math.random() * sitesList.length)]);
+   var iframe = document.getElementById('frame');
+   iframe.src = sitesList[Math.floor(Math.random() * sitesList.length)];
 }
 
 
