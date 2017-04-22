@@ -19,7 +19,7 @@
           $dropTable = 'DROP TABLE invoices';
 
             //Server info encapsulated for security
-            include("../.-/.+.php");
+            include("../.-/.+");
 
             // Connect to Server
             $conn = mysqli_connect($server, $user, $pwd, $db);
@@ -58,7 +58,7 @@
  		</div>
  		<div>
  			<input class="thanks-button" style="min-width:150px;" type="button"
- 						 onclick="location.href = './php/viewdbinvoices.php';"
+ 						 onclick="location.href = './php/viewdbinvoices';"
  						 value="View Invoices From Database" />
  				 </div>
 

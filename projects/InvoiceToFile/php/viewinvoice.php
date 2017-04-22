@@ -87,7 +87,7 @@ into each HTML div tage.-->
                 // If invoice is from file
                 if (isset($_POST['invoiceNum'])) {
                     echo '<form name="invoiceSelect" style="margin-right: 15px;"
-                      method="post" action="deleteinvoice.php" >
+                      method="post" action="deleteinvoice" >
                     <input type="hidden"  name="invoiceNumDel"
                            value="'.$_POST['invoiceNum'].'" />
                     <input type="submit" style="width:100%;"
@@ -96,7 +96,7 @@ into each HTML div tage.-->
                  // If invoice is from database
                 } elseif (isset($_POST['invoice-number'])) {
                     echo '<form name="invoiceSelect" style="margin-right: 15px;"
-                         method="post" action="deleteinvoice.php">
+                         method="post" action="deleteinvoice">
                        <input type="hidden"  name="invoice-number"
                               value="'.$_POST['invoice-number'].'" />
                        <input type="submit" style="width:100%;"
@@ -117,9 +117,9 @@ into each HTML div tage.-->
             </div>
 
             <div id="viewdata">
-                <a href="viewdbinvoices.php" > View Invoices from Database </a>
+                <a href="viewdbinvoices" > View Invoices from Database </a>
                 </br>
-                <a href="viewfileinvoices.php" > View Invoices from Files </a>
+                <a href="viewfileinvoices" > View Invoices from Files </a>
             </div>
 
         </div>

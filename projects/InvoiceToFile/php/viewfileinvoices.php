@@ -41,7 +41,7 @@
                     '<div id="thank-you-buttons">
                     <span>
                     <form id="invoice' . $fileNum . 'Select" name="invoiceSelect"
-                        method="post" action="viewinvoice.php">
+                        method="post" action="viewinvoice">
                            <input type="hidden" name="invoiceNum" value="'
                     . $fileNum . '" />
                            <input style="float:left; margin: 5px;"
@@ -50,7 +50,7 @@
                    </form>
                    _
                    <form id="invoice' . $fileNum . 'Delete" name="invoiceSelect"
-                       method="post" action="deleteinvoice.php">
+                       method="post" action="deleteinvoice">
                        <input type="hidden"  name="invoiceNumDel"
                               value="'. $fileNum .'" />
                       <input id="delete-bt" name="del"
@@ -74,7 +74,7 @@
                         '<div id="thank-you-buttons">
                         <span>
                     <form id="invoice' . $fileNum . 'Select" name="invoiceSelect"
-                        method="post" action="viewinvoice.php">
+                        method="post" action="viewinvoice">
                            <input type="hidden" name="invoiceNum" value="'
                         . $fileNum . '" />
                            <input style="float:left; margin: 5px;" class="select-button"
@@ -82,7 +82,7 @@
                    </form>
                    _
                    <form id="invoice' . $fileNum . 'Delete" name="invoiceSelect"
-                       method="post" action="deleteinvoice.php">
+                       method="post" action="deleteinvoice">
                            <input type="hidden"  name="invoiceNumDel" value="' .
                         $fileNum . '" />
                            <input id="delete-bt" class="select-button" style="float:right; margin: 5px;"
@@ -114,7 +114,7 @@
                            type="submit" value="View Invoice' . $fileNum . '" />
                    </form>
                    _
-                   <form name="invoiceSelect" method="post" action="deleteinvoice.php">
+                   <form name="invoiceSelect" method="post" action="deleteinvoice">
                            <input type="hidden"  name="invoiceNumDel" value="' .
                         $fileNum . '" />
                            <input  id="delete-bt"  style="float:left; margin: 5px;"
@@ -153,7 +153,7 @@
                   <p> Confirming will remove all of you current file invoices. </p>
                     <p> Proceed with deletion? </p>
                     <div>
-                  <button onclick="location.href = '../clearfileinvoices.php'" class="yes-bt">
+                  <button onclick="location.href = '../clearfileinvoices'" class="yes-bt">
                      Yes </button>
                   <button id="close-win-populateDB" class="no-bt" onclick="closeWindow2()">
                     No </button>

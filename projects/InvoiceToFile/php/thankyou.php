@@ -55,7 +55,7 @@
                         been written to a file. </p>
                     <div id="wrapper-center-children">
                         <input class="thanks-button" type="button"
-                            onclick="location.href = \'../php/viewfileinvoices.php\';"
+                            onclick="location.href = \'../php/viewfileinvoices\';"
                             value="View File Invoice List" />
                          </br>
                     </div>
@@ -87,7 +87,7 @@
                         </p>
                         <div>
                             <input class="thanks-button" type="button"
-                                onclick="location.href = \'../php/viewfileinvoices.php\';"
+                                onclick="location.href = \'../php/viewfileinvoices\';"
                                 value="View File Invoice List" />
                              </br>
                              </div>
@@ -117,7 +117,7 @@
 
                     <div>
                         <input class="thanks-button" type="button"
-                            onclick="location.href = \'../php/viewfileinvoices.php\';"
+                            onclick="location.href = \'../php/viewfileinvoices\';"
                             value="View File Invoice List" />
                          </br>
                     </div>
@@ -155,7 +155,7 @@
 
                     <div class="wrapper-center-children">
                         <input class="thanks-button" type="button"
-                            onclick="location.href = \'../php/viewdbinvoices.php\';"
+                            onclick="location.href = \'../php/viewdbinvoices\';"
                             value="View Database Invoice List" />
                          </br>
                          </div>
@@ -168,7 +168,7 @@
             //TODO: Secure MySql login info
 
             //Server info encapsulated for security
-            include("../../.-/.+.php");
+            include("../../.-/.+");
 
             $conn = mysqli_connect($server, $user, $pwd, $db);
 
@@ -196,7 +196,7 @@
                         been written to the database. </p>
                     <div id="wrapper-center-children">
                         <input class="thanks-button" type="button"
-                            onclick="location.href = \'../php/viewdbinvoices.php\';"
+                            onclick="location.href = \'../php/viewdbinvoices\';"
                             value="View Database Invoice List" />
                          </br>
                          </div>

@@ -22,13 +22,13 @@
                 }
                 echo '<div>
                     <input class="thanks-button" style="min-width:200px;" type="button"
-                           onclick="location.href = \'viewfileinvoices.php\';"
+                           onclick="location.href = \'viewfileinvoices\';"
                            value="Go Back to Invoice List" />
                     </br>
                   </div>';
             } elseif (isset($_POST['invoice-number'])) {
                 //Server info encapsulated for security
-              include("../../.-/.+.php");
+              include("../../.-/.+");
 
                 $conn = mysqli_connect($server, $user, $pwd, $db);
                 if (mysqli_connect_errno()) {
@@ -43,7 +43,7 @@
                 }
                 echo '<div>
                    <input class="thanks-button" style="min-width:200px;" type="button"
-                          onclick="location.href = \'viewdbinvoices.php\';"
+                          onclick="location.href = \'viewdbinvoices\';"
                           value="Go Back to Invoice List" />
                    </br>
                  </div>';

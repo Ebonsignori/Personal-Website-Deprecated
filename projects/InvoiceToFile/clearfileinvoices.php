@@ -52,7 +52,7 @@
    </div>
    <div>
      <input class="thanks-button" style="min-width:150px;" type="button"
-            onclick="location.href = './php/viewfileinvoices.php';"
+            onclick="location.href = './php/viewfileinvoices';"
             value="View Invoices From File" />
         </div>
   </body>
