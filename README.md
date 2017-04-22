@@ -1,24 +1,22 @@
-# Ebonsignori.com 
+# Invoice Forms
 *By Evan Bonsignori*
 
-My working portfolio and blog planned for ebonsignori.com
-
-Currently very much a work in progress.
+Invoice form that can save to file or database.
 
 ## Goals:
 - [ ] Add consistent stying to each page
-- [ ] Implement Blog
-- [ ] Implement Contact Forms
-- [ ] Learn how to imbed a java application into site and include it on portfolio
+- [ ] Blog
+- [ ] Contact Forms
+- [ ] Learn how to embedded a Java application into site and include it on portfolio
 
 ## Long Term:
 - [ ] Add git server on hosting site
 - [ ] Start hosting site from scratch using amazon web services or similar
-- [ ] Complete and add additional projects to portfolio 
+- [ ] Complete and add projects to portfolio
 
 ## Ideas:
 - Colored/Themed Box that acts as the "How I did this" for each element.
-  - Kind of like a tour of a site or program that highlights each feature and lets you press next, a guided tour persay.
+  - Kind of like a tour of a site or program that highlights each feature and lets you press next, a guided tour.
   - Have Option to turn off and on the guide on every page. Start the page prompting if the user desires to use the guide.
 
 - Blog
@@ -28,6 +26,5 @@ Currently very much a work in progress.
   - Split into content section
 
 - Contact Forms
-  - Self made Captcha 
+  - Self made Captcha
   - Email database option
-  
