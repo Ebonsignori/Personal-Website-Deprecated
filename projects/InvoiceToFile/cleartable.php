@@ -19,7 +19,7 @@
           $dropTable = 'DROP TABLE invoices';
 
             //Server info encapsulated for security
-            include("../.-/.+");
+            include("../.-/.+.php");
 
             // Connect to Server
             $conn = mysqli_connect($server, $user, $pwd, $db);

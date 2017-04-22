@@ -28,7 +28,7 @@
                   </div>';
             } elseif (isset($_POST['invoice-number'])) {
                 //Server info encapsulated for security
-              include("../../.-/.+");
+              include("../../.-/.+.php");
 
                 $conn = mysqli_connect($server, $user, $pwd, $db);
                 if (mysqli_connect_errno()) {

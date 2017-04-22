@@ -168,7 +168,7 @@
             //TODO: Secure MySql login info
 
             //Server info encapsulated for security
-            include("../../.-/.+");
+            include("../../.-/.+.php");
 
             $conn = mysqli_connect($server, $user, $pwd, $db);
 
