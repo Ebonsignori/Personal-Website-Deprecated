@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- SiteList from http://www.theuselessweb.com/ Using to Prank Friends-->
+<!-- Large portion of the siteList is from http://www.theuselessweb.com/ -->
 <html>
   <head>
     <meta charset="utf-8">
@@ -12,7 +12,7 @@
     <meta name="author" content="Evan Bonsignori">
     <meta name="description" content="Absolutely Useless Sites">
     <!-- Open Graph Data -->
-    <meta property="og:image" content="its-useless.jpg">
+    <meta property="og:image" content="img/its-useless.jpg">
     <meta property="og:description" content="Absolutely Useless Sites">
     <meta property="og:title" content="Useless">
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAs7OzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEREREAAAAAEREREQAAAAARARARAAAAABEBEBEAAAAAEQEQEQAAAAARARARAAAAABEBEBEAAAAAEQEQEQAAAAARARARAAAAAREREREQAAAAAAAAAAAAAAEREREREAAAAAABEAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA8A8AAPAPAADyTwAA8k8AAPJPAADyTwAA8k8AAPJPAADyTwAA4AcAAP//AADgBwAA/n8AAP//AAD//wAA" rel="icon" type="image/x-icon" />
@@ -21,7 +21,12 @@
   <body onload="chooseSite()">
     <div class="first-row">
       <div class="header">
-        <a href="javascript:chooseSite()" class="button">Another!<i class="icon-chevron-right"></i></a>
+        <a style="display:inline-block;" href="javascript:chooseSite()" class="button">
+          Another!
+        </a>
+        <a href="javascript:aboutSite()" style="display:inline-block;"
+          class="button">What?
+        </a>
       </div>
     </div>
 
@@ -29,7 +34,17 @@
       <iframe src="initial.html" id="frame">  </iframe>
     </div>
 
+    <div id="window" class="window">
+        <h2> What is the site below? </h2>
+        <a id="site-display"> </a>
+        <h2> No no, what is this site? </h2>
+        <p> It's made by <a href="http://ebonsignori.hopto.org/"> Evan Bonsignori </a> for fun. </p>
+        <p> It cycles through a list of useless sites. </p>
+        <p> If a site is down please report it to evanabonsignori@gmail.com </p>
+        <button onclick="closeWindow()"> Ok </button>
+    </div>
 
-    <script type="text/javascript" src="useless.js"> </script>
+
+    <script type="text/javascript" src="js/useless_site.js"> </script>
   </body>
 </html>

@@ -470,6 +470,26 @@ hr {
 
 }
 
+/* Useless Project Display */
+
+.useless-portfolio {
+  display: flex;
+  justify-content:center;
+  text-align: center;
+}
+
+.useless-portfolio a img{
+  border: 3px grey double;
+  border-radius: 15px;
+  width: 20em;
+  height: 20em;
+}
+
+.useless-portfolio a img:hover{
+  width: 22em;
+  height: 22em;
+}
+
 /* Contact Info Toggle */
 #contact-show {
     margin-bottom: 25px;

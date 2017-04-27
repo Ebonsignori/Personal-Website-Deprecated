@@ -5,6 +5,11 @@ body, html {
   padding: 0
 }
 
+a {
+  margin-left: .1em;
+  margin-right: .1em;
+}
+
 .first-row {
   position: absolute;
   top: 0;
@@ -55,17 +60,64 @@ body, html {
 	}
 
 .second-row {
+  z-index: 0;
   position: absolute;
   top: 45px;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: black
+  background-color: white;
 }
 
 .second-row iframe {
+  z-index: 0;
   display: block;
   width: 100%;
   height: 100%;
   border: none;
+}
+
+/* What Window */
+.window {
+    display: none;
+    background-color: grey;
+    position: fixed;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    margin-top: -175px;
+    margin-left: -160px;
+    width: 276px;
+    height: 300px;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.window *:NOT(button) {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.window p {
+  text-align: center;
+}
+
+.window button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px white solid;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+
+
+.window button:hover {
+  background-color: white;
+  color: black;
 }
