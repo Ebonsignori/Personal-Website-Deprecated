@@ -174,9 +174,17 @@ hr {
     border: solid black;
     border-width: 3px;
     margin: 20px;
-    text-indent: 0px ;
-    padding-left: 0px ;
-    margin-left: 0px ;
+    text-indent: 0;
+    padding-left: 0;
+    margin-left: 0;
+
+    -webkit-transition: 1s ease-in-out;
+	   transition: 1s ease-in-out;
+}
+
+#index-select li:hover {
+  -webkit-transform: scale(.95);
+  transform: scale(.95);
 }
 
 #index-select #a {
@@ -198,13 +206,14 @@ hr {
     display:block;
     text-decoration: none;
     color: black;
-    padding: 27px;
+    padding: .5em;
+    -webkit-transition: .3s ease-in-out;
+	   transition: .3s ease-in-out;
 }
 
 #index-select li a:hover {
     color: black;
-    font-size: 125%;
-    letter-spacing: 20px;
+    letter-spacing: 1em;
 }
 
 @media screen and (max-width: 1280px) {
@@ -423,15 +432,6 @@ hr {
     background-color: white;
 }
 
-.frame-wrap::-webkit-scrollbar {
-    background-color: white;
-}
-.frame-wrap::-webkit-scrollbar-thumb {
-    background-color: grey;
-    border-radius: 10px;
-    border: solid black .1px;
-}
-
 @media screen and (max-width: 865px) {
   .frame-wrap iframe {
       width: 736px;
@@ -449,9 +449,21 @@ hr {
   }
 }
 
+@media screen and (max-width: 550px) {
+  .frame-wrap iframe {
+      width: 460px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .frame-wrap iframe {
-      width: 350px;
+      width: 375px;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  .frame-wrap iframe {
+      width: 310px;
   }
 }
 
@@ -470,8 +482,8 @@ hr {
 
 }
 
-/* Useless Project Display */
 
+/* Useless Project Display */
 .useless-portfolio {
   display: flex;
   justify-content:center;
@@ -479,15 +491,47 @@ hr {
 }
 
 .useless-portfolio a img{
-  border: 3px grey double;
+  border: 3px black double;
   border-radius: 15px;
   width: 20em;
-  height: 20em;
+  height:auto;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
 
 .useless-portfolio a img:hover{
-  width: 22em;
-  height: 22em;
+  -webkit-transform: scale(1);
+	transform: scale(.8);
+}
+
+@media screen and (max-width: 763px) {
+  .useless-portfolio a img{
+    width: 17em;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .useless-portfolio a img{
+    width: 16em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .useless-portfolio a img{
+    width: 14em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .useless-portfolio a img{
+    width: 12em;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  .useless-portfolio a img{
+    width: 8em;
+  }
 }
 
 /* Contact Info Toggle */
@@ -593,7 +637,9 @@ hr {
     left: -1em;
     display:flex;
     justify-content:center;
-    overflow: auto;
+    overflow: hidden;
+    height: 2.8em;
+    padding-top: .4em;
 }
 
 .icons  li {
@@ -609,10 +655,14 @@ hr {
     text-align: center;
     margin-right: 10px;
     padding-top: 15%;
+
+  	-webkit-transition: .3s ease-in-out;
+  	transition: .3s ease-in-out;
 }
 
 .icons li a span:hover {
-    opacity: .7;
+  -webkit-transform: scale(1.3);
+	transform: scale(1.3);
 }
 
 .icons  .fa-facebook {
@@ -656,6 +706,20 @@ hr {
 .losange .los1 img {
     width: 100%;
     height: auto;
+    cursor: pointer;
+}
+
+.losange .los1 a{
+  cursor: pointer;
+  -webkit-transition: 3s ease-in-out;
+  transition: 3s ease-in-out;
+}
+
+.losange .los1 a:hover {
+  cursor: pointer;
+  -webkit-transition: 5s ease-in-out;
+  transition: 5s ease-in-out;
+  opacity: .1;
 }
 
 
@@ -681,9 +745,11 @@ hr {
 .home .fa-home {
     background: beige;
     border: solid black;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
 }
-
 .home span button:hover {
+    cursor: pointer;
     background-color: rgba(226,170,121,.5);
 }
 
