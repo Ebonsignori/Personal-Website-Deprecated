@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, 
+        <meta name="viewport" content="width=device-width, initial-scale=1,
               user-scalable=no" />
         <meta name="url" content="https://ebonsignori.com/contact">
         <meta name="rating" content="General">
@@ -19,7 +19,7 @@
         <meta property="og:title" content="Ebonsignori">
 
         <link rel="stylesheet" type="text/css" href="../css/main.css">
-        <link rel="stylesheet" 
+        <link rel="stylesheet"
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
@@ -29,29 +29,29 @@
         </div>
         <div id="contact-show" />
         <p id="contact-info" class="before"> Click for contact info: <br />
-            <button class="bt" 
+            <button class="bt"
             onclick="showContactInfo()">My Information</button> <p>
         </div>
-            
-        <div id="contact-form">     
+
+        <div id="contact-form">
         <form style="margin:auto;" method="post" action="contact"
               onsubmit="return validateForm()">
             <label> Name: </label>
-            <input type="text" placeholder="Robin Pecknold" id="contact-name"  
-                   name="name" style="display: block;" 
+            <input type="text" placeholder="Robin Pecknold" id="contact-name"
+                   name="name" style="display: block;"
                    maxlength="40"/>
             <label> Email: </label>
-            <input type="email" placeholder="robinpecknold@gmail.com" 
-                   style="display: block;" id="contact-email" 
-                   maxlength="40"/>
+            <input type="email" placeholder="robinpecknold@gmail.com"
+                   style="display: block;" id="contact-email"
+                   maxlength="40" name="email"/>
             <label> Message: </label>
-            <textarea style="height: 200px; display: block;" 
-                      placeholder="Your Message Here!" id="contact-msg" 
-                      maxlength="1000"></textarea>
-            <textarea style="display: none;" 
-                      placeholder="If You Can See This. Please Leave It Blank... 
+            <textarea style="height: 200px; display: block;"
+                      placeholder="Your Message Here!" id="contact-msg"
+                      maxlength="1000" name="msg"></textarea>
+            <textarea style="display: none;"
+                      placeholder="If You Can See This. Please Leave It Blank...
                       It's To Stop Bots." id="contact-trap"></textarea>
-            <input id="bt" type="submit" style="display: block;" />      
+            <input id="bt" type="submit" style="display: block;" />
         </form>
         </div>
         <?php
@@ -60,8 +60,11 @@
             $subject = "MessageFromEbonsignori.com";
             $message = "Name: " . $_POST["name"] . "Email: " . $_POST["email"]
                     . "Message: " . $_POST["msg"];
-            mail($to, $subject, $message);
+            if (mail($to, $subject, $message)) {
             echo '<p> Your message has been sent! </p>';
+          } else {
+            echo '<p> Failed to send message.</p>';
+          }
         }
         ?>
 
@@ -75,7 +78,7 @@
             <li><a href="https://www.linkedin.com/in/evan-bonsignori-33167787">
                     <span class="fa fa-linkedin"></span></a></li>
             <li><a href="https://www.instagram.com/ebonsignori/">
-                    <span class="fa fa-instagram"></span></a></li> 
+                    <span class="fa fa-instagram"></span></a></li>
         </ul>
 
 

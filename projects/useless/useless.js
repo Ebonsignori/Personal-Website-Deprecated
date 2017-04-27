@@ -92,11 +92,25 @@ var siteList = [
   ['http://www.sealspin.com/']
 ];
 
-//For uselessvideo.html
-function chooseVideo() {
-   return videoList[Math.floor(Math.random() * videoList.length)].toString();
-}
+var usedVideoList = ["q6EoRBvdVPQ", "-w-58hQ9dLk"];
 
+//For uselessvideo.html
+function chooseVideo(occurance) {
+  vid = videoList[Math.floor(Math.random() * videoList.length)];
+  alert(usedVideoList.indexOf(vid));
+  if (occurance === 0) {
+    usedVideoList.push(vid);
+    return vid.toString();
+  } else if (usedVideoList.length-1 == videoList.length) {
+      usedVideoList = [];
+      return vid.toString();
+   }  else if (usedVideoList.indexOf(vid) > -1) {
+     chooseVideo(1);
+   } else {
+     usedVideoList.push(vid);
+     return vid.toString();
+   }
+}
 
 var videoList = [
   ["q6EoRBvdVPQ"],
@@ -120,7 +134,7 @@ var videoList = [
        player = new YT.Player('player', {
          height: '100%',
          width: '100%',
-         videoId: chooseVideo(),
+         videoId: chooseVideo(0),
          events: {
            'onReady': function() {
              player.setVolume(100);
@@ -133,10 +147,10 @@ var videoList = [
      // Play new random video when previous one finishes
      function onPlayerStateChange(event) {
        if (player.getPlayerState() === 0) {
-         player.loadVideoById(chooseVideo(),5,"large");
+         player.loadVideoById(chooseVideo(1),0,"large");
        }
       }
 
       function changeVideo() {
-         player.loadVideoById(chooseVideo(),5,"large");
+         player.loadVideoById(chooseVideo(1),0,"large");
       }
