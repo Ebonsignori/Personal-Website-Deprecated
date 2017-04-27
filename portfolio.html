@@ -1,10 +1,10 @@
-<!-- Ebonsignori Portfolio Page -->
 <!DOCTYPE html>
+<!-- Ebonsignori Portfolio Page -->
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, 
+        <meta name="viewport" content="width=device-width, initial-scale=1,
               user-scalable=no" />
         <meta name="url" content="https://ebonsignori.com/portfolio">
 
@@ -15,72 +15,94 @@
         <meta name="description" content="Evan Bonsignori's Portfolio">
 
         <!-- Open Graph Data -->
-        <meta property="og:image" content="img/evan_running_waterfall.jpg">
+        <meta property="og:image" content="img/open_graph/portfolio.jpeg">
         <meta property="og:description" content="Evan Bonsignori' Portfolio">
-        <meta property="og:title" content="Ebonsignori">
+        <meta property="og:title" content="Ebonsignori.com">
 
         <link rel="stylesheet" type="text/css" href="../css/main.css">
-        <link rel="stylesheet" 
+        <link rel="stylesheet"
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Favicon Icon made by http://www.flaticon.com/authors/madebyoliver from www.flaticon.com -->
+        <link rel="icon" type="image/png" href="img/favicons/folder.png" />
     </head>
 
     <body class="bg-portfolio">
+      <div class="content-center-children">
+        <h1> My Portfolio </h1>
+      </div>
+      <hr />
+
+      <!-- Invoice-Forms With Save To File -->
+      <div class="project">
         <div class="content-center-children">
-        <h1> Portfolio </h1>
-        
-        <!-- Invoice-Forms With Save To File -->
-        <h2> Much Good. Very Develop </h2>
-        <p> An invoice form that I made for a web development course. </p>
-        <div id="invoice-wrap" >           
-            <iframe id="invoice-frame" src="projects/InvoiceToFile/index"
-                    class="iframe-style">
+        <h2> Invoice Forms </h2>
+        <p> Try it! Create a new invoice and view it from whatever you saved it to.</p>
+        </div>
+        <div class="frame-wrap">
+            <iframe src="projects/InvoiceToFile/index">
                 <!-- Display Link If Browser Doesn't Support iframe -->
-                <p><a href="projects/InvoiceToFile/index"> 
+                <p><a href="projects/InvoiceToFile/index">
                         Invoice Forms With Middle-Tier Storage  </a></p>
             </iframe>
-        
         </div>
-        <!-- Replace With Table -->
-        <h3> Features: </h3>
+
+        <div class="bg-text" style="text-align:left;">
         <ul>
-            <li> Save invoices to text file on server 
-                <i> Implemented using JavaScript to encode a string and PHP to
-                    store the string on the middle-tier server </i>
-            </li>
-            <li> Form validation on all text fields
-                <i> JavaScript for value checking and HTML5 for character 
-                    count control </i>
-            </li>
-            <li> Add and remove rows <i> Implemented using JavaScript </i></li>
-            <li> Reset user data but not user information or reset entire form. 
-                <i>Implemented using JavaScript</i>  
-            </li>
-            <li> Responsive Price Updating and Current Date Display
-                <i>Implemented using JavaScript</i>  
-            </li>
-            <li> Fill form
-                <i>Implemented using JavaScript</i>  
-            </li>
+            <li> Save invoices to text file on the server or to a MySQL database </li>
+            <li> View saved invoices</li>
+            <li> Remove all saved invoices with one button</li>
+            <li> Add and remove rows </li>
+            <li> Responsive Price Updating and Current Date Display </li>
+            <li> Generate 100 invoices or randomize all values (for demonstration)</li>
         </ul>
         </div>
-         
+      </div>
+      <div class="project-replace">
+        <div class="content-center-children">
+        <h2> Invoice Forms </h2>
+        <p > Mobile experience not recommended, but <a target="_blank" href="projects/InvoiceToFile/index"> here it is. </a></p>
+        <p> <em> Please View This Page On A Larger Screen </em> </p>
+        </div>
+      </div>
+        <br />
+        <hr />
+
         <!-- Georgetteford.com Project -->
-        <h2 class="content-center"> Front-Tier Web Development </h2>
-        <div id="georgetteford-wrap" >           
-            <iframe id="georgetteford-frame" src="http://georgetteford.com/"
-                    class="iframe-style">
+        <h2 class="content-center"> Essential Oils Distributer Site </h2>
+        <div class="content-center-children">
+          <p> The personal distribution site of <a target="_blank" href="http://georgetteford.com/"> Georgette Ford </a> </p>
+        </div>
+        <div class="frame-wrap">
+            <iframe src="http://georgetteford.com/">
                 <!-- Display Link If Browser Doesn't Support iframe -->
-                <p><a href="http://georgetteford.com/"> 
+                <p><a href="http://georgetteford.com/">
                         Invoice Forms With Middle-Tier Storage  </a></p>
             </iframe>
-        </div>   
-        <div class="content-center-children">
-        <p> 
-            Derived from <a href="https://html5up.net/dimension"> this </a> 
-            template. My first independent project creating and deploying a website 
-        </p>
         </div>
-        
+        <div class="bg-text" style="text-align:left;">
+        <ul>
+            <li> Derived from  <a href="https://html5up.net/dimension"> this template </a></li>
+            <li> Responsive and compatible with Iphone 5 and up screensizes </li>
+            <li> Working Contact Forms and Email Signup </li>
+        </ul>
+        </div>
+        <br />
+        <hr />
+
+        <div class="content-center-children">
+        <h2 > Useles Sites </h2>
+          <p> Really, these are quite useless. </p>
+          </div>
+          <div class="content-center">
+          <ol>
+            <li><a href="projects/useless/uselesssite">Useless Sites</a></li>
+            <li><a href="projects/useless/uselessvideo">Useless Videos</a></li>
+          </ol>
+        </div>
+        <br />
+        <hr />
+
+
         <ul class="icons">
             <li><a href="https://www.facebook.com/ebonsignori">
                     <span class="fa fa-facebook"></span></a></li>
@@ -97,7 +119,7 @@
             <button class="fa fa-home" onclick="location.href = '../index'">Home</button>
         </span>
         </div>
-        
+
         <script type="text/javascript" src="../js/portfolio.js"></script>
     </body>
 

@@ -21,7 +21,9 @@
         <link rel="stylesheet" type="text/css" href="../css/main.css">
         <link rel="stylesheet"
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
+        <!-- Favicon Icon made by http://www.freepik.com from www.flaticon.com -->
+        <link rel="icon" type="image/png" href="../img/favicons/id-card.png" />
+      </head>
 
     <body class="bg-triangle">
         <div class="content-center-children" style="margin-bottom: -25px;">
@@ -54,12 +56,13 @@
             <input id="bt" type="submit" style="display: block;" />
         </form>
         </div>
+        <div class="content-center-children">
         <?php
         if (isset($_POST["name"])) {
             $to = "evanabonsignori@gmail.com";
             $subject = "MessageFromEbonsignori.com";
-            $message = "Name: " . $_POST["name"] . "Email: " . $_POST["email"]
-                    . "Message: " . $_POST["msg"];
+            $message = "Name: " . $_POST["name"] . "\n\nEmail: " . $_POST["email"]
+                    . "\n\nMessage:\n" . $_POST["msg"];
             if (mail($to, $subject, $message)) {
             echo '<p> Your message has been sent! </p>';
           } else {
@@ -67,8 +70,7 @@
           }
         }
         ?>
-
-
+        </div>
 
         <ul class="icons">
             <li><a href="https://www.facebook.com/ebonsignori">

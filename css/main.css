@@ -5,6 +5,18 @@ head { /* Don't Display meta information */
     display: none;
 }
 
+a {
+  display: inline-block;
+  margin-left: .1em;
+  margin-right: .1em;
+}
+
+hr {
+  height: 6px;
+	background: url(http://ibrahimjabbari.com/english/images/hr-11.png) repeat-x 0 0;
+  border: 0;
+}
+
 /* Div Wrapper Sizing */
 
 .content-center {
@@ -70,7 +82,7 @@ head { /* Don't Display meta information */
         padding-bottom: 15px;
         zoom: .8;
         -moz-transform: scale(.8);
-    } 
+    }
 
 }
 
@@ -85,7 +97,7 @@ head { /* Don't Display meta information */
         padding-bottom: 15px;
         zoom: .75;
         -moz-transform: scale(.75);
-    } 
+    }
 
 
 
@@ -102,7 +114,7 @@ head { /* Don't Display meta information */
         padding-bottom: 15px;
         zoom: .7;
         -moz-transform: scale(.7);
-    } 
+    }
 
 
 }
@@ -127,7 +139,7 @@ head { /* Don't Display meta information */
         padding-bottom: 15px;
         zoom: .5;
         -moz-transform: scale(.5);
-    } 
+    }
 
 }
 
@@ -143,7 +155,7 @@ head { /* Don't Display meta information */
         padding-bottom: 15px;
         zoom: .4;
         -moz-transform: scale(.4);
-    } 
+    }
 
 }
 
@@ -158,7 +170,7 @@ head { /* Don't Display meta information */
 
 
 #index-select li {
-    text-align: center;    
+    text-align: center;
     border: solid black;
     border-width: 3px;
     margin: 20px;
@@ -302,8 +314,8 @@ head { /* Don't Display meta information */
 
 .bt {
     width: 80%;
-    margin-left: 5px; 
-    margin-right: 5px; 
+    margin-left: 5px;
+    margin-right: 5px;
     border-radius: 15px;
     border: solid #DDBD96;
     background-color: #C35A54;
@@ -317,7 +329,7 @@ head { /* Don't Display meta information */
 /* Contact Form */
 
 #contact-form {
-    display:flex; 
+    display:flex;
 }
 #contact-form form input:not(#bt) {
     width: 400px;
@@ -346,6 +358,14 @@ head { /* Don't Display meta information */
     background-color: #DDBD96;
 }
 
+#contact-form form textarea::-webkit-scrollbar {
+    background-color: #DDBD96;
+}
+#contact-form form textarea::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 10px;
+    border: solid black .1px;
+}
 
 @media screen and (max-width: 1280px) {
     #contact-form form input {
@@ -388,36 +408,67 @@ head { /* Don't Display meta information */
 }
 
 /* Portfolio iframe styling */
-#invoice-wrap { 
-    width: 865px;
+.frame-wrap {
+    display: relative;
+    overflow: hidden;
+}
+
+.frame-wrap iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 840px;
     height: 600px;
-    padding: 0; 
-    overflow: hidden; 
-    margin: 0 auto;
-}
-
-#invoice-frame { 
-    width: 840px; 
-    height: 575px; 
-    border: 3px solid black; 
+    border: 5px solid black;
     background-color: white;
 }
 
-#georgetteford-wrap { 
-    width: 865px;
-    height: 950px;
-    padding: 0; 
-    overflow: hidden; 
-    margin: 0 auto;
-}
-
-#georgetteford-frame { 
-    width: 840px; 
-    height: 925px; 
-    border: 5px solid black; 
+.frame-wrap::-webkit-scrollbar {
     background-color: white;
 }
+.frame-wrap::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 10px;
+    border: solid black .1px;
+}
 
+@media screen and (max-width: 865px) {
+  .frame-wrap iframe {
+      width: 736px;
+  }
+}
+@media screen and (max-width: 763px) {
+  .frame-wrap iframe {
+      width: 610px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .frame-wrap iframe {
+      width: 480px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .frame-wrap iframe {
+      width: 350px;
+  }
+}
+
+/* Project Hide When Screen Too Small */
+.project-replace {
+          display:none;
+        }
+
+@media screen and (max-width: 865px) {
+  .project {
+            display: none;
+          }
+  .project-replace {
+            display:block;
+          }
+
+}
 
 /* Contact Info Toggle */
 #contact-show {
@@ -473,7 +524,7 @@ head { /* Don't Display meta information */
     margin-top: 5px;
     background-color:rgba(72,81,90,0.8);
     color : white;
-    text-align: center; 
+    text-align: center;
 
 }
 
@@ -509,19 +560,9 @@ head { /* Don't Display meta information */
 
 @media screen and (max-width: 400px) {
     .bg-text {
-        width: 200px;
+        width: 300px;
         height: auto;
     }
-
-}
-
-@media screen and (max-width: 736px) {
-
-
-}
-
-@media screen and (max-width: 480px) {
-
 
 }
 
@@ -556,7 +597,7 @@ head { /* Don't Display meta information */
 
 .icons  .fa-facebook {
     background: #3b5998;
-} 
+}
 .icons  .fa-linkedin {
     background: #007bb6;
 }
@@ -630,13 +671,13 @@ head { /* Don't Display meta information */
 /*
 @media screen and (max-width: 1280px) {
 
-    
+
 
 }
 
 @media screen and (max-width: 980px) {
 
-    
+
 
 }
 
@@ -647,6 +688,6 @@ head { /* Don't Display meta information */
 
 @media screen and (max-width: 480px) {
 
-     
+
 }
 */

@@ -97,7 +97,6 @@ var usedVideoList = ["q6EoRBvdVPQ", "-w-58hQ9dLk"];
 //For uselessvideo.html
 function chooseVideo(occurance) {
   vid = videoList[Math.floor(Math.random() * videoList.length)];
-  alert(usedVideoList.indexOf(vid));
   if (occurance === 0) {
     usedVideoList.push(vid);
     return vid.toString();
