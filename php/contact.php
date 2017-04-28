@@ -11,12 +11,12 @@
 
         <title> Contact Evan Bonsignori</title>
         <meta name="author" content="Evan Bonsignori">
-        <meta name="description" content="About Evan Bonsignori">
+        <meta name="description" content="Reach Evan Bonsignori by leaving a message, or view his phone number and email address.">
 
         <!-- Open Graph Data -->
-        <meta property="og:image" content="img/evan_running_waterfall.jpg">
-        <meta property="og:description" content="Contact Evan Bonsignori">
-        <meta property="og:title" content="Ebonsignori">
+        <meta property="og:image" content="img/open_graph/contact.jpg">
+        <meta property="og:description" content="Reach Evan Bonsignori by leaving a message, or view his phone number and email address.">
+        <meta property="og:title" content="Contact Evan Bonsignori">
 
         <link rel="stylesheet" type="text/css" href="../css/main.css">
         <link rel="stylesheet"

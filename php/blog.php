@@ -11,12 +11,12 @@
 
         <title> Evan's Blog </title>
         <meta name="author" content="Evan Bonsignori">
-        <meta name="description" content="Evan Bonsignori's Blog">
+        <meta name="description" content="Currently A Work In Progress.">
 
         <!-- Open Graph Data -->
-        <meta property="og:image" content="img/evan_running_waterfall.jpg">
-        <meta property="og:description" content="Evan Bonsignori's Blog">
-        <meta property="og:title" content="Ebonsignori Blog">
+        <meta property="og:image" content="img/evan_profile_redrocks_headcrop.jpg">
+        <meta property="og:description" content="Currently A Work In Progress.">
+        <meta property="og:title" content="Evan Bonsignori's Blog">
 
         <link rel="stylesheet" type="text/css" href="../css/main.css">
         <link rel="stylesheet"
