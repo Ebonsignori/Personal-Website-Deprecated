@@ -1,5 +1,5 @@
-<!-- Ebonsignori Contact Page -->
 <!DOCTYPE html>
+<!-- Ebonsignori Contact Page -->
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -9,7 +9,7 @@
         <meta name="url" content="https://ebonsignori.com/contact">
         <meta name="rating" content="General">
 
-        <title> Contact </title>
+        <title> Contact Evan Bonsignori</title>
         <meta name="author" content="Evan Bonsignori">
         <meta name="description" content="About Evan Bonsignori">
 
