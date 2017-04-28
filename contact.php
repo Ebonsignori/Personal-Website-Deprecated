@@ -18,11 +18,11 @@
         <meta property="og:description" content="Reach Evan Bonsignori by leaving a message, or view his phone number and email address.">
         <meta property="og:title" content="Contact Evan Bonsignori">
 
-        <link rel="stylesheet" type="text/css" href="../css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet"
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Favicon Icon made by http://www.freepik.com from www.flaticon.com -->
-        <link rel="icon" type="image/png" href="../img/favicons/id-card.png" />
+        <link rel="icon" type="image/png" href="img/favicons/id-card.png" />
       </head>
 
       <body class="bg-triangle">
@@ -92,10 +92,10 @@
 
         <!-- Home Naviagation -->
         <div class="home">
-            <button class="fa fa-home" onclick="location.href = '../index'">Home</button>
+            <button class="fa fa-home" onclick="location.href = 'index'">Home</button>
         </div>
 
-        <script type="text/javascript" src="../js/contact.js"></script>
+        <script type="text/javascript" src="js/contact.js"></script>
     </body>
 
 </html>
