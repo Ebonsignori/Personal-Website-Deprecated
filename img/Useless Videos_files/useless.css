@@ -128,14 +128,7 @@ a {
 }
 
 /* Resize Buttons on mobile */
-@media screen and (max-width: 415px) {
-  .first-row {
-    height: 75px;
-  }
-  .header {
-    height: 75px;
-  }
-  .second-row {
-    top: 75px;
-  }
+@media screen and (max-width: 480px) {
+
+
 }
