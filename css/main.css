@@ -304,83 +304,14 @@ hr {
   border-radius: 15px;
   border: solid #DDBD96;
   background-color: #C35A54;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .bt:hover {
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
   background-color: #EFAB7A;
-  letter-spacing: 3px;
-}
-
-
-/* Contact Form */
-
-#contact-form {
-  display: flex;
-}
-
-#contact-form form input:not(#bt) {
-  width: 400px;
-  border: solid black;
-  background-color: #DDBD96;
-}
-
-#contact-form form #bt {
-  width: 100px;
-  border: solid #314244;
-  border-width: 1px;
-  background-color: #767678;
-}
-
-#contact-form form #bt:hover {
-  width: 105px;
-  background-color: #DDBD96;
-  letter-spacing: 5px;
-}
-
-#contact-form form textarea {
-  resize: none;
-  width: 400px;
-  border: solid black;
-  background-color: #DDBD96;
-}
-
-#contact-form form textarea::-webkit-scrollbar {
-  background-color: #DDBD96;
-}
-
-#contact-form form textarea::-webkit-scrollbar-thumb {
-  background-color: grey;
-  border-radius: 10px;
-  border: solid black .1px;
-}
-
-@media screen and (max-width: 1280px) {
-  #contact-form form input {
-    width: 400px;
-  }
-  #contact-form form textarea {
-    width: 400px;
-  }
-}
-
-@media screen and (max-width: 980px) {
-  #contact-form form input {
-    width: 400px;
-  }
-  #contact-form form textarea {
-    width: 400px;
-  }
-}
-
-@media screen and (max-width: 736px) {}
-
-@media screen and (max-width: 480px) {
-  #contact-form form input {
-    width: 300px;
-  }
-  #contact-form form textarea {
-    width: 300px;
-  }
 }
 
 
@@ -512,31 +443,100 @@ hr {
 /* Contact Info Toggle */
 
 #contact-show {
-  margin-bottom: 25px;
+  margin-bottom: 0;
   position: relative;
-  margin: 0 auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   width: 50%;
-}
-
-#contact-show .before {
-  display: inline-block;
   font-size: large;
 }
 
-#contact-show p:not(.before) {
-  display: inline-block;
-  margin-bottom: -5px;
-  font-size: small;
+#contact-show button {
+  width: 125px;
 }
 
-#contact-show p #info {
-  display: inline-block;
+#contact-show div * {
+  margin:3px;
+}
+
+#contact-show div a{
+  text-align: center;
   font-size: large;
   font-family: monospace;
   background-color: rgba(204, 204, 0, .6)
 }
 
+@media screen and (max-width: 480px) {
+ #contact-show div p {
+   margin-left: -1em;
+   font-size: medium;
+ }
+}
+
+
+/* Contact Form */
+
+#contact-form {
+  display: flex;
+}
+
+#contact-form form input:not(#bt) {
+  width: 400px;
+  border: solid black;
+  background-color: #DDBD96;
+}
+
+#contact-form form #bt {
+  width: 100px;
+  border: solid #314244;
+  border-width: 1px;
+  background-color: #767678;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+#contact-form form #bt:hover {
+  width: 105px;
+  background-color: #DDBD96;
+  letter-spacing: 5px;
+}
+
+#contact-form form textarea {
+  resize: none;
+  width: 400px;
+  border: solid black;
+  background-color: #DDBD96;
+}
+
+#contact-form form textarea::-webkit-scrollbar {
+  background-color: #DDBD96;
+}
+
+#contact-form form textarea::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 10px;
+  border: solid black .1px;
+}
+
+@media screen and (max-width: 480px) {
+  #contact-form form input:not(#bt) {
+    width: 300px;
+  }
+  #contact-form form textarea {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  #contact-form form input:not(#bt) {
+    width: 250px;
+  }
+  #contact-form form textarea {
+    width: 250px;
+  }
+}
 
 /* Page backgrounds  */
 
@@ -710,32 +710,28 @@ hr {
 /* Home Redirect */
 
 .home {
+  margin: 0;
   position: relative;
-  left: -1.4em;
-  display: flex;
-  justify-content: center;
   overflow: hidden;
-}
-
-.home span {
-  color: #fff;
-  width: 1.3em;
-  height: 1.3em;
-  border-radius: 20px;
-  font-size: 25px;
-  text-align: center;
-  margin-right: 27px;
 }
 
 .home .fa-home {
   background: beige;
   border: solid black;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
-.home span button:hover {
-  cursor: pointer;
+.home button {
+  width: auto;
+  height: 1.3em;
+  font-size: 25px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.home button:hover {
   background-color: rgba(226, 170, 121, .5);
 }
 

@@ -25,16 +25,20 @@
         <link rel="icon" type="image/png" href="../img/favicons/id-card.png" />
       </head>
 
-    <body class="bg-triangle">
-        <div class="content-center-children" style="margin-bottom: -25px;">
+      <body class="bg-triangle">
+        <!-- Page Heading -->
+        <div class="content-center-children" style="margin-bottom: -20px;">
         <h1> Contact Me </h1>
         </div>
+
+        <!-- Contact info hidden in javascript to prevent spam bots -->
         <div id="contact-show" />
-        <p id="contact-info" class="before"> Click for contact info: <br />
+        <p> Click for contact info: <br />
             <button class="bt"
-            onclick="showContactInfo()">My Information</button> <p>
+            onclick="showContactInfo()">My Information</button> </div> </p>
         </div>
 
+        <!-- Contact Form -->
         <div id="contact-form">
         <form style="margin:auto;" method="post" action="contact"
               onsubmit="return validateForm()">
@@ -56,6 +60,8 @@
             <input id="bt" type="submit" style="display: block;" />
         </form>
         </div>
+
+        <!-- Process input and email -->
         <div class="content-center-children">
         <?php
         if (isset($_POST["name"])) {
@@ -64,14 +70,15 @@
             $message = "Name: " . $_POST["name"] . "\n\nEmail: " . $_POST["email"]
                     . "\n\nMessage:\n" . $_POST["msg"];
             if (mail($to, $subject, $message)) {
-            echo '<p> Your message has been sent! </p>';
-          } else {
-            echo '<p> Failed to send message.</p>';
-          }
+                echo '<p> Your message has been sent! </p>';
+            } else {
+                echo '<p> Failed to send message.</p>';
+            }
         }
         ?>
         </div>
 
+        <!-- Social Media Icons -->
         <ul class="icons">
             <li><a href="https://www.facebook.com/ebonsignori">
                     <span class="fa fa-facebook"></span></a></li>
@@ -83,11 +90,9 @@
                     <span class="fa fa-instagram"></span></a></li>
         </ul>
 
-
+        <!-- Home Naviagation -->
         <div class="home">
-        <span>
             <button class="fa fa-home" onclick="location.href = '../index'">Home</button>
-        </span>
         </div>
 
         <script type="text/javascript" src="../js/contact.js"></script>
