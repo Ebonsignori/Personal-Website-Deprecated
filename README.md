@@ -18,3 +18,9 @@ Invoice form that can save to file or database.
 
 ## Ideas:
 - Guided Tour
+
+## Blog Ideas:
+- Political News site ranking using page scanner and bias phrase selecting in two categories (right/left leaning)
+- Micro vs Macro life improvement
+- Onion Like Articles and fun stuff
+- Categories: Political, self improvement, CS tutorials, comedy 
