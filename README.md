@@ -4,27 +4,17 @@
 Invoice form that can save to file or database.
 
 ## Goals:
-- [ ] Add consistent stying to each page
-- [ ] Blog
-- [ ] Contact Forms
-- [ ] Learn how to embedded a Java application into site and include it on portfolio
+- [ ] Blog With Bootstrap and Python
+- [ ] Add Menu Navigation to each page
+- [ ] Star wars intro to first page- volume option off/on transition to corner
+- [ ] SEO
 
-## Long Term:
-- [ ] Add git server on hosting site
-- [ ] Start hosting site from scratch using amazon web services or similar
-- [ ] Complete and add projects to portfolio
+## Fix:
+- [ ] Useless sites default load page
+
+## Add:
+- [ ] Usless Games: Space game
+- [ ] Credits to footer
 
 ## Ideas:
-- Colored/Themed Box that acts as the "How I did this" for each element.
-  - Kind of like a tour of a site or program that highlights each feature and lets you press next, a guided tour.
-  - Have Option to turn off and on the guide on every page. Start the page prompting if the user desires to use the guide.
-
-- Blog
-  - Self make CMS from PHP
-  - Create Wordpress based blog for portfolio example
-  - Most Popular Tab
-  - Split into content section
-
-- Contact Forms
-  - Self made Captcha
-  - Email database option
+- Guided Tour
