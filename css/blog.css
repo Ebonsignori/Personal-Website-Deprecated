@@ -1,0 +1,23 @@
+/* CSS for Bootstrap Blog */
+
+
+.navbar {
+
+}
+.nav-tabs > li > a{
+  background-color: lightgray;
+  color: black;
+}
+
+.nav-tabs > li.active > a{
+  color: black;
+  background-color: #EFF0F1 !important;
+}
+
+.nav-tabs > li > .dropdown-menu{
+  background-color: lightgray !important;
+}
+
+.jumbotron {
+  background-color:#EFF0F1 !important;
+}

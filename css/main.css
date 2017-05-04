@@ -1,6 +1,5 @@
 /* Main Style Sheet for ebonsignori.com ||  author: Evan Bonsignori */
 
-
 /* Global Styling */
 
 head {
@@ -554,6 +553,9 @@ hr {
   background-color: #C6BEB1;
 }
 
+.bg-blog {
+  background-color: white;
+}
 
 /* Text Backgound */
 
@@ -616,7 +618,6 @@ hr {
   left: -1em;
   display: flex;
   justify-content: center;
-  overflow: hidden;
   height: 2.8em;
   padding-top: .4em;
 }
