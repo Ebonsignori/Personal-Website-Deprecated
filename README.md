@@ -9,6 +9,7 @@
 
 ## Fix:
 - [ ] Useless sites default load page
+- [ ] Load background image before page
 
 ## Add:
 - [ ] Usless Games: Space game
