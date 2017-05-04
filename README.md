@@ -1,7 +1,5 @@
-# Invoice Forms
-*By Evan Bonsignori*
-
-Invoice form that can save to file or database.
+# Ebonsignori.com 
+*A site with content by Evan Bonsignori*
 
 ## Goals:
 - [ ] Blog With Bootstrap and Python
