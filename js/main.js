@@ -2,7 +2,7 @@
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     var rightSide = document.getElementsByClassName("dim")[0];
-    rightSide.style.marginLeft = "250px";
+    rightSide.style.marginLeft = "265px";
     rightSide.style.opacity = ".4";
 }
 

@@ -1,14 +1,5 @@
 /* CSS for Bootstrap Blog */
 
-body {
-  background-image: url("../img/triangle_sky.png");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: top;
-  background-size: cover;
-  background-repeat: repeat-y;
-}
-
 .navbar {
 
 }

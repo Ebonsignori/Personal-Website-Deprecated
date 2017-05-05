@@ -30,11 +30,11 @@
         <!-- Navbar Content -->
         <nav id="mySidenav" class="sidenav">
           <a href="index" class="home">Evan Bonsignori</a>
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <a href="blog" >Blog</a>
           <a href="portfolio" >Portfolio</a>
           <a href="about" >About</a>
           <a href="contact" class="active">Contact</a>
+          <button class="closebtn" onclick="closeNav()">&#x21B1;</button>
         </nav>
 
         <!-- Navbar Icon -->
