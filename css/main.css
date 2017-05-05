@@ -1,6 +1,10 @@
 /* Main Style Sheet for ebonsignori.com ||  author: Evan Bonsignori */
 
 /* Global Styling */
+body {
+  background-color: black;
+}
+
 
 head {
   /* Don't Display meta information */
@@ -291,7 +295,9 @@ hr {
     left: 0;
     background-color: #111;
     overflow-x: hidden;
-    transition: 0.5s;
+    -webkit-transform: translateZ(0);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
     overflow: hidden;
 }
 
@@ -635,6 +641,7 @@ hr {
 .dim {
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
+  -webkit-transform: translateZ(0);
 }
 
 
