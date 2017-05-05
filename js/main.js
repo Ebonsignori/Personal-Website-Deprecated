@@ -1,20 +1,20 @@
 /* Navbar JS */
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+    var panel = document.getElementById("mySidenav");
     var rightSide = document.getElementsByClassName("dim")[0];
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+      panel.style.width = "100%";
     } else {
       rightSide.style.marginLeft = "265px";
+      panel.style.width = "250px";
     }
     rightSide.style.opacity = ".4";
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+    var panel = document.getElementById("mySidenav");
     var rightSide = document.getElementsByClassName("dim")[0];
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-    } else {
-      rightSide.style.marginLeft = "0";
-    }
+    panel.style.width = "0";
+    rightSide.style.marginLeft = "0";
     rightSide.style.opacity = "1";
 }
