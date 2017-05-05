@@ -1,8 +1,5 @@
 /* CSS for Bootstrap Blog */
 
-.navbar {
-
-}
 .nav-tabs > li > a{
   background-color: lightgray;
   color: black;
@@ -19,4 +16,117 @@
 
 .jumbotron {
   background-color:#EFF0F1 !important;
+}
+
+.jumbotron a {
+  color: black;
+}
+
+.jumbotron .post-title a:hover:nth-of-type(1){
+  color: #D4C2A8;
+  text-decoration: none;
+}
+
+.jumbotron .post-title a:hover:nth-of-type(2){
+  color: #E4C299;
+  text-decoration: none;
+}
+
+.jumbotron .post-title a:hover:nth-of-type(3){
+  color: #FFA36F;
+  text-decoration: none;
+}
+
+.jumbotron .post-title:nth-of-type(3) a:hover{
+  color: #FF7C5D;
+  text-decoration: none;
+}
+
+.jumbotron .post-title:nth-of-type(3) a:hover{
+  color: #D4C2A8;
+  text-decoration: none;
+}
+
+.jumbotron .btn {
+  color: white;
+  background-color: #39424B;
+}
+
+.jumbotron .btn:hover:nth-of-type(1){
+  color: black;
+  background-color: #D4C2A8;
+}
+
+.jumbotron .btn:hover:nth-of-type(2){
+  background-color: #E4C299;
+  color: black;
+}
+
+.jumbotron .btn:hover:nth-of-type(3){
+  background-color: #FFA36F;
+  color: black;
+}
+
+.jumbotron .btn:hover:nth-of-type(4){
+  background-color: #FF7C5D;
+  color: black;
+}
+
+.jumbotron .btn:hover:nth-of-type(5){
+  background-color: #414E58;
+  color: black;
+}
+
+.jumbotron .pager li > a{
+  color: black;
+}
+
+.jumbotron .pager li > a:hover{
+  color: black;
+}
+
+/* Coffee Demo Styling */
+.abt-left img{
+	width:100%;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+}
+.abt-left h6 {
+	color: #999;
+	font-size: 13px;
+	border-bottom: 1px solid #999;
+	width: 26%;
+	font-family: 'Raleway-Regular';
+	margin: 6% 0 0 0;
+}
+.abt-left h3{
+	font-size: 23px;
+	margin: 10px 0 0 0;
+	color: #212121;
+}
+.abt-left h3 a{
+	color: #3d1a1b;
+}
+.abt-left p{
+	font-size: 14px;
+	font-family: 'Raleway-Regular';
+	color: #999;
+	line-height: 1.8em;
+	margin-top: 4%;
+}
+.about-btn {
+	margin-top:3%;
+}
+.a-1{
+	margin-top:5%;
+}
+.abt-left label{
+	float: right;
+	font-size: 13px;
+	font-family: 'Raleway-Regular';
+	color: #999;
+	margin-top: 4%;
 }
