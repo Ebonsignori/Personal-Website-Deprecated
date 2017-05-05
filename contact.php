@@ -26,16 +26,33 @@
       </head>
 
       <body class="bg-triangle">
+
+        <!-- Navbar Content -->
+        <nav id="mySidenav" class="sidenav">
+          <a href="index" class="home">Evan Bonsignori</a>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="blog" >Blog</a>
+          <a href="portfolio" >Portfolio</a>
+          <a href="about" >About</a>
+          <a href="contact" class="active">Contact</a>
+        </nav>
+
+        <!-- Navbar Icon -->
+        <span class="sidenav-icon" onclick="openNav()">&#9776;</span>
+
+          <! -- Page Content -->
+          <div class="dim">
+
         <!-- Page Heading -->
         <div class="content-center-children" style="margin-bottom: -20px;">
         <h1> Contact Me </h1>
         </div>
 
         <!-- Contact info hidden in javascript to prevent spam bots -->
-        <div id="contact-show" />
+        <div id="contact-show">
         <p> Click for contact info: <br />
             <button class="bt"
-            onclick="showContactInfo()">My Information</button> </div> </p>
+            onclick="showContactInfo()">My Information</button></p>
         </div>
 
         <!-- Contact Form -->
@@ -95,7 +112,11 @@
             <button class="fa fa-home" onclick="location.href = 'index'">Home</button>
         </div>
 
+      <!-- Dim wrapper -->
+      </div>
         <script type="text/javascript" src="js/contact.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+
     </body>
 
 </html>

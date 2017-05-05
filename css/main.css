@@ -268,10 +268,82 @@ hr {
   }
 }
 
+/* Navbar */
+.sidenav-icon {
+  font-size:30px;
+}
+
+.sidenav-icon:hover {
+  cursor:pointer;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .active{
+  pointer-events: none;
+  color: wheat;
+}
+
+.sidenav .active:hover {
+  cursor: not-allowed;
+}
+
+.sidenav .home {
+    position: absolute;
+    white-space: nowrap;
+    top: 5px;
+    left: -22px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.sidenav .home:hover {
+    color: rgba(226, 170, 121, .5);
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    display: inline;
+    top: 0;
+    right: -1px;
+    font-size: 36px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 
 /* Header for other pages */
 
 #page-header {
+  z-index: -1;
   margin-top: -50px;
   margin-bottom: -40px;
   display: flex;
@@ -538,6 +610,11 @@ hr {
 }
 
 /* Page backgrounds  */
+.dim {
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
 
 .bg-triangle {
   background-image: url("../img/triangle_sky.png");
