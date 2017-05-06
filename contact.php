@@ -29,12 +29,12 @@
 
         <!-- Navbar Content -->
         <nav id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <a href="index" class="home">Evan Bonsignori</a>
           <a href="blog" >Blog</a>
           <a href="portfolio" >Portfolio</a>
           <a href="about" >About</a>
           <a href="contact" class="active">Contact</a>
-          <button class="closebtn" onclick="closeNav()">&#x21B1;</button>
         </nav>
 
         <!-- Navbar Icon -->
@@ -114,9 +114,11 @@
 
       <!-- Dim wrapper -->
       </div>
-        <script type="text/javascript" src="js/contact.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
 
+      <!-- Js and Jquery -->
+      <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/contact.js"></script>
+      <script type="text/javascript" src="js/main.js">  </script>
     </body>
 
 </html>

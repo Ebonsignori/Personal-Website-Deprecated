@@ -1,7 +1,7 @@
 //On click of id=contact-info displays my email an phone number. Code tries to
 // disguise my information from bots.
 function showContactInfo() {
-    document.getElementById('contact-show').innerHTML =
+      var info =
             /*And2 Some More */"<div><p> Email: </p> <p><a h" +
        /*Comment Mid Pase */  "re" + "f='ma" + "i" + "lto:ev" /*Comment Mid
         *  Pase */ + "an" + "abo" +/*@gmail.com */ /*Gotcha.com */
@@ -27,6 +27,11 @@ function showContactInfo() {
             /*And Some More */ + "345" //Random Comments For Parsing Errors24523
             /*And Some More */ + ") </a> </p> </div>";//Random Comments
             //For Parsing Errors
+
+            $('#contact-show').fadeOut("slow", function(){
+              $('#contact-show').html(info);
+              $('#contact-show').fadeIn("slow");
+            });
 }
 
 function validateForm() {

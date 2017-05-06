@@ -18,3 +18,6 @@ function closeNav() {
     rightSide.style.marginLeft = "0";
     rightSide.style.opacity = "1";
 }
+
+/* Close nav if clicked off of nav */
+$(".dim").eq(0).click(closeNav);

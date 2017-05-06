@@ -1,5 +1,6 @@
 /* CSS for Bootstrap Blog */
 
+/* Nav Tabs */
 .nav-tabs > li > a{
   background-color: lightgray;
   color: black;
@@ -14,6 +15,25 @@
   background-color: lightgray !important;
 }
 
+.dropdown-menu {
+    min-width: 118px !important;
+}
+
+.navtab-collapse-container {
+  display: none;
+}
+
+/* Change Tab for mobile */
+@media screen and (max-width: 540px) {
+  .navtab-collapse-container {
+    display: block;
+  }
+  .navtab-container {
+    display: none;
+  }
+}
+
+/* Jumbotron post displays */
 .jumbotron {
   background-color:#EFF0F1 !important;
 }
@@ -84,6 +104,14 @@
 .jumbotron .pager li > a:hover{
   color: black;
 }
+
+.pageination .disabled {
+  background-color: grey !important;
+}
+
+
+
+
 
 /* Coffee Demo Styling */
 .abt-left img{
