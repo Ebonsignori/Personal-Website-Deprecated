@@ -302,6 +302,7 @@ hr {
 }
 
 .sidenav a {
+    text-align: center;
     padding: 8px 8px 8px 32px;
     padding-bottom: 1em;
     text-decoration: none;
