@@ -1,0 +1,190 @@
+/* Portfolio Styling */
+
+body {
+  background-color: #E6E6E6;
+}
+
+/* Page */
+  @media screen and (min-width: 960px) {
+    .page{
+    background-color: #FFFFFF;
+    padding: 0 40px 40px;
+    padding: 0 2.857142857rem 2.857142857rem;
+    margin-top: 48px;
+    margin-top: 3.428571429rem;
+    margin-bottom: 48px;
+    margin-bottom: 3.428571429rem;
+    box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .page {
+      max-width: 1270px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .page {
+      margin: 0 auto;
+      max-width: 960px;
+      max-width: 68.571428571rem;
+      overflow: hidden;
+  }
+}
+.page {
+    padding: 0 24px 24px;
+    padding: 0 1.714285714rem 1.714285714rem;
+    background-color: #fff;
+}
+
+.page .header {
+  margin: auto;
+  text-align: center;
+  border-radius: 15px;
+
+}
+
+.header .title {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+.header .description {
+  margin-top: 0;
+  font-weight: normal;
+  font-size: 1.8rem;
+  color: #757575;
+}
+
+
+/* Gridsystem */
+.grid-container {
+      width: 100%;
+      max-width : 1200px;
+    }
+
+/*-- setting border box on all elements inside the grid --*/
+.grid-container *{
+    box-sizing: border-box;
+}
+
+.row:before,
+.row:after {
+    content:"";
+    display: table ;
+     clear:both;
+}
+
+[class*='col-'] {
+       position: relative;
+       overflow: hidden;
+       float: left;
+       min-height: 1px;
+       height: 100%;
+       width: 50%;
+       border: solid grey 1px;
+       border-radius: 10px;
+       box-shadow: 0 5px 15px rgba(100, 100, 100, 0.3);
+       /*-- our gutter --*/
+       padding: 0;
+   }
+
+ .col-1{
+    width: 50%;
+    margin-left: 25%;
+  }
+
+ .col-2{
+     width: 48%;
+     margin: 2.5% 1% 2.5% 1%;
+ }
+
+@media all and (max-width:500px){
+      .col-2{ width: 100%; margin-left: 0;}
+  }
+
+/* Grid Content */
+.grid-container a {
+  padding: 0;
+  margin: 0;
+}
+.grid-container a img {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border-radius: 10px;
+
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
+}
+
+.grid-container .hover-box {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .5s, opacity .5s linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.grid-container #georgetteford {
+  background-color: purple;
+  color: white;
+}
+
+.grid-container #ethansportfolio {
+  background-color: skyblue;
+  color: white;
+}
+
+.grid-container #invoice {
+  background-color: black;
+  color: white;
+}
+
+.grid-container #useless {
+  background-color: brown;
+  color: white;
+}
+
+.grid-container .hover-box a {
+  text-decoration: none;
+  margin-left: 0;
+}
+
+.grid-container a:hover + .hover-box{
+  visibility: visible;
+  opacity: .8;
+  transition: visibility .5s, opacity .5s linear;
+}
+
+.grid-container .hover-box:hover{
+  visibility: visible;
+  opacity: .8;
+}
+
+.grid-container .hover-box button {
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+  color: inherit;
+  margin-top: 40%;
+  height: 30px;
+  font-size: large;
+}
+
+.grid-container .hover-box i {
+  margin-right: 5px;
+}
+
+.grid-container .hover-box button:hover {
+  border: 2px white solid;
+  margin-right: -2px;
+}

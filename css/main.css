@@ -303,7 +303,7 @@ hr {
 
 .sidenav a {
     text-align: center;
-    padding: 8px 8px 8px 32px;
+    padding-top: 1em;
     padding-bottom: 1em;
     text-decoration: none;
     font-size: 25px;
@@ -342,8 +342,8 @@ hr {
 
 .sidenav .closebtn {
     position: absolute;
-    top: -10px;
-    right: -5px;
+    top: -45px;
+    right: -1px;
     font-size: 36px;
     margin-left: 50px;
 }
@@ -834,6 +834,13 @@ hr {
 
 .home button:hover {
   background-color: rgba(226, 170, 121, .5);
+}
+
+
+.click-div{
+    display: block;
+    height: 100%;
+    width: 100%;
 }
 
 
