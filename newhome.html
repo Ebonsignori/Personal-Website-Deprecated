@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+
+    <style media="screen">
+      body,html {
+        height: 100%;
+        font-family: roboto;
+      }
+
+      #background-slider {
+        width:100%;
+        height:100%;
+        transition: linear all 1s;
+        -webkit-transition-delay: 1s;
+        transition-delay: 1s;
+        background-repeat: no-repeat;
+        background-size:contain;
+        position: relative;
+      }
+
+      .profile-image {
+         position: absolute;
+      }
+
+      .profile-button {
+         position: absolute;
+      }
+
+      .flip {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+
+      .flip-270 {
+        -webkit-transform: rotate(270deg);
+        -moz-transform: rotate(270deg);
+        -o-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+        transform: rotate(270deg);
+      }
+
+      /* Diamond (losange) Image */
+
+      .losange, .losange div {
+        position: absolute;
+        transform-origin: 50% 50%;
+        overflow: hidden;
+        width: 220px;
+        height: 220px;
+      }
+
+      .losange {
+        transform: rotate(45deg) translateY(10px);
+      }
+
+      .losange .los1 {
+        width: 355px;
+        height: 355px;
+        transform: rotate(-45deg) translateY(-74px);
+      }
+
+      .losange .los1 img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+      }
+
+      .losange .los1 a {
+        cursor: pointer;
+        -webkit-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+      }
+
+
+      /* Buttons */
+      .metro {
+        display: inline-block;
+        padding: 15px;
+        background: black;
+        transition: .3s;
+
+        /* Font styles */
+        color: white;
+        font-weight: bold;
+        letter-spacing: .3em;
+        line-height: 1em;
+        font-size: 1.35em;
+        text-decoration: none;
+      }
+
+      .metro:hover {
+        text-decoration: none;
+        color: #F15A08;
+       }
+
+      /* Nav Menu */
+      .nav-menu-container {
+        position: static;
+        height: 50px;
+        font-family: roboto;
+      }
+
+      #menu-placeholder {
+        height: 50px;
+        display: none;
+      }
+
+
+      .menu {
+        display: absolute;
+        left: 50%;
+        top: -40%;
+        transform: translateX(-50%);
+        box-sizing: border-box;
+        height: 87.75px;
+        width: 87.75px;
+        padding: 36px;
+        border-radius: 6px;
+        overflow: hidden;
+        position: relative;
+        transition: 1.3s cubic-bezier(0.53, 0, 0.15, 1.3);
+      }
+      .menu.expanded {
+        width: 440px;
+      }
+
+      .menu.expanded-fixed {
+        width: 440px;
+        top: 150px;
+        left: 3%;
+      }
+
+      .menu span {
+        padding: 9px;
+        white-space: nowrap;
+        visibility: visible;
+        opacity: 1;
+        transition: .4s;
+        transform: rotateY(0deg);
+      }
+      .menu span:nth-of-type(1) {
+        transition-delay: .4s;
+      }
+      .menu span:nth-of-type(2) {
+        transition-delay: .5s;
+      }
+      .menu span:nth-of-type(3) {
+        transition-delay: .6s;
+      }
+      .menu span:nth-of-type(4) {
+        transition-delay: .7s;
+      }
+      .menu span:nth-of-type(5) {
+        transition-delay: .8s;
+      }
+
+      .menu span.hidden-menu-item:nth-of-type(1) {
+        transition-delay: .4s;
+      }
+      .menu span.hidden-menu-item:nth-of-type(2) {
+        transition-delay: .3s;
+      }
+      .menu span.hidden-menu-item:nth-of-type(3) {
+        transition-delay: .2s;
+      }
+      .menu span.hidden-menu-item:nth-of-type(4) {
+        transition-delay: .1s;
+      }
+      .menu span.hidden-menu-item:nth-of-type(5) {
+        transition-delay: 0s;
+      }
+
+      .menu span.hidden-menu-item {
+        width: 0;
+        visibility: hidden;
+        opacity: 0;
+        transform: rotateY(90deg);
+      }
+
+      .menu span a {
+        color: black;
+        text-decoration: none;
+        line-height: 1em;
+        font-weight: bold;
+        font-size: 1.35em;
+        transition: .4s;
+      }
+      .menu span a:hover {
+        text-decoration: none;
+        color: #F15A08;
+      }
+
+      .menu-container {
+        display: block !important;
+        position: absolute;
+        top: 22.5px;
+        right: calc(100% - 73.125px);
+        height: 42.75px;
+        width: 58.5px;
+        transition: 1.5s;
+      }
+      .menu-container.close-menu {
+        right: 0;
+      }
+
+      .toggle {
+        position: relative;
+        height: 42.75px;
+        width: 58.5px;
+        cursor: pointer;
+      }
+      .toggle:after, .toggle:before {
+        content: '';
+        background: black;
+        width: 36px;
+        height: 4.5px;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        transition: 1.3s cubic-bezier(0.53, 0, 0.15, 1.3);
+      }
+      .toggle:before {
+        top: -30%;
+      }
+      .toggle:after {
+        top: 30%;
+      }
+      .toggle.close-menu:before {
+        transform: rotate(-225deg);
+        top: 0;
+      }
+      .toggle.close-menu:after {
+        transform: rotate(225deg);
+        top: 0;
+      }
+
+    </style>
+
+<div id="background-slider">
+  <div class="profile-image" id="center">
+    <div class="losange">
+      <div class="los1">
+        <a href="about.html"><img src="img/evan_profile_redrocks_headcrop.jpg" name="Profile Picture" alt="A picture of Evan Bonsignori" title="Evan Bonsignori" id="profile-image" /></a>
+      </div>
+    </div>
+  </div>
+  <div class="profile-button"><a href="about" class="metro flip">About</a></div>
+  <div class="profile-button"><a href="blog" class="metro">Blog</a></div>
+  <div class="profile-button"><a href="portfolionew" class="metro">Portfolio</a></div>
+  <div class="profile-button"><a href="contact" class="metro flip">Contact</a></div>
+
+</div>
+
+<!-- Nav Menu -->
+<div id="menu-placeholder"></div>
+<div class="nav-menu-container" id="sticky">
+  <nav class="menu">
+    <div class="menu-container">
+      <div class="toggle"></div>
+    </div>
+    <span class="hidden-menu-item"><a href="#background-slider"><i class="fa fa-home fa-lg"></a></i></span>
+    <span class="hidden-menu-item"><a href="#">Blog </a></span>
+    <span class="hidden-menu-item"><a href="#">Portfolio </a></span>
+    <span class="hidden-menu-item"><a href="#">About</a></span>
+    <span class="hidden-menu-item"><a href="#">Contact</a></span>
+  </nav>
+</div>
+
+<div class="container">
+  <div class="text-center">
+    <h1>Content</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+  <div class="row">
+    <h1>Content</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+<div class="text-right">
+  <h1>Content</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+<div class="jumbotron">
+  <h1>Content</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+<div class="jumbotron">
+  <h1>Content</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+<div class="jumbotron">
+  <h1>Content</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+
+</div><!-- /.container -->
+
+<script>
+  var imagesArray = [["../img/sky.jpg", false]];
+
+  $(document).ready(function () {
+    //Set the starting background
+    randomIndex = Math.floor(Math.random() * 28);
+    $("#background-slider").css("background","url('../img/homepage_backgrounds/background ("+ randomIndex.toString() +").jpg')");
+
+
+    var navMenuContainer = $('.nav-menu-container');
+    var stickToBot = $(window).height() - navMenuContainer.outerHeight(true);
+    var fixedMenu = false;
+    var menuState = false;  // False = closed, true = open
+
+    $(window).scroll(function() {
+       var scrollVal = $(this).scrollTop();
+       // Fix Menu To Top Right of Page and Rotate it 270deg
+        if ( scrollVal > stickToBot && navMenuContainer.css("position") != "fixed") {
+            fixedMenu = true;
+            navMenuContainer.fadeOut("fast", function() {
+            $('#menu-placeholder').css({'display':'block'})
+            navMenuContainer.css({'position':'fixed','top' :'0px', 'right': '0px'});
+            navMenuContainer.addClass('flip-270');
+            if (menuState == true) {
+              menuState = !menuState;
+              $('.menu').toggleClass('expanded');
+              $( 'span' ).toggleClass('hidden-menu-item');
+              $('.menu-container , .toggle').toggleClass('close-menu');
+            }
+            navMenuContainer.fadeIn("fast");
+          });
+
+        // Move Menu Back To Initial Location
+        } else if (scrollVal < stickToBot && navMenuContainer.css("position") == "fixed") {
+            fixedMenu = false;
+            navMenuContainer.fadeOut("fast", function() {
+            $('#menu-placeholder').css({'display':'none'})
+            navMenuContainer.css({'position':'static', 'top' :'initial', 'right': 'initial'});
+            navMenuContainer.removeClass('flip-270');
+            if (menuState == true) {
+              menuState = !menuState;
+              $('.menu').toggleClass('expanded-fixed');
+              $( 'span' ).toggleClass('hidden-menu-item');
+              $('.menu-container , .toggle').toggleClass('close-menu');
+            }
+            navMenuContainer.fadeIn("fast");
+          });
+        }
+    });
+
+    /* Menu Toggle */
+      $('.toggle').on('click', function() {
+        menuState = !menuState;
+        if (!fixedMenu) {
+          $('.menu').toggleClass('expanded');
+          $( 'span' ).toggleClass('hidden-menu-item');
+          $('.menu-container , .toggle').toggleClass('close-menu');
+        } else {
+          $('.menu').toggleClass('expanded-fixed');
+          $( 'span' ).toggleClass('hidden-menu-item');
+          $('.menu-container , .toggle').toggleClass('close-menu');
+        }
+      });
+
+    cycleBackgroundInit(); // Rotate background images behind profile picture
+
+    setInterval(cycleBackground, 8000);
+    centerProfile(); // Load and center profile picture and buttons
+
+  $(window).resize(function() {
+    centerProfile();
+  });
+
+  });
+
+  // Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+
+  /* Initalizes the image array from directory contents */
+  function cycleBackgroundInit() {
+    /* Retrieve all images from backgrounds directory */
+    var dir = "../img/homepage_backgrounds/";
+    var fileExtension = ".jpg";
+
+    $.ajax({
+        //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+        url: dir,
+        success: function (data) {
+            //List all .jpg file names in the page
+            $(data).find("a:contains(" + fileExtension + ")").each(function () {
+                var filename = this.href.replace(window.location.host, "").replace("http://", "");
+                // 2D Array to indicate that background hasn't been used
+                imagesArray.push([dir.toString() + filename.toString(), false]);
+            });
+        }
+    });
+  }
+
+  /* Cycles through backgrounds in imageArray randomly */
+  function cycleBackground(){
+    $("#background-slider").css("background","url('"+ randomImage() +"')");
+
+    function randomImage() {
+      if (!hasCycled()) {
+        while (true) {
+          randomPick = Math.floor(Math.random() * imagesArray.length);
+          if (imagesArray[randomPick][1] !== true) {
+            imagesArray[randomPick][1] = true;
+            return imagesArray[randomPick][0].toString();
+          }
+        }
+      } else {
+        resetImages();
+        return randomImage();
+      }
+    }
+
+    //Checks to see if every video in sitesList has been played
+    function hasCycled() {
+        for (i = 0; i < imagesArray.length; i++) {
+          if (!imagesArray[i][1]) {
+            return false;
+          }
+        }
+        return true;
+    }
+
+    //Resets all booleans in sitesList to false to reset played
+    function resetImages() {
+      for (i = 0; i < imagesArray.length; i++) {
+        imagesArray[i][1] = false;
+      }
+    }
+  }
+
+  //Centers profile image and the four buttons around it
+  function centerProfile() {
+    var radius = 150;
+    var profileImage =   $('.profile-image');
+    var losangeImage = $('.losange');
+    var profileBtns = $('.profile-button'), container = $('#background-slider'), width = container.width(), height = container.height();
+    var angle = (3/4)*Math.PI, step = (2*Math.PI) / profileBtns.length;
+    var rotateAngle = (5/4)*Math.PI, rotateStep = Math.PI/2
+
+    profileBtns.each(function() {
+    var x = Math.round(width/2 + radius * Math.cos(angle) - $(this).width()/2);
+    var y = Math.round(height/2 + radius * Math.sin(angle) - $(this).height()/2);
+
+    $(this).css({
+        left: x + 'px',
+        top: y + 'px',
+        'transform' : 'rotate(' + rotateAngle + 'rad)'
+    });
+    angle += step;
+    rotateAngle += rotateStep;
+
+    profileImage.css({
+      left: Math.round(width/2 - losangeImage.width()/2 + 7) + 'px',
+      top: Math.round(height/2 - losangeImage.height()/2) + 'px'
+    });
+  });
+  }
+</script>
+
+  </body>
+</html>

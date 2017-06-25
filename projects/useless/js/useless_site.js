@@ -15,7 +15,6 @@ function randomSite() {
       }
     }
   } else {
-    alert("here");
     resetPlayed();
     return randomSite();
   }

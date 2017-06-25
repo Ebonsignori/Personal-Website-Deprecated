@@ -32,22 +32,15 @@
   <!-- Theme CSS -->
   <link href="css/portfolio/portfolio.css" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/portfolio/normalize.css">
-	<link rel="stylesheet" href="css/portfolio/layout.css">
   <!-- Favicon Icon made by http://www.flaticon.com/authors/madebyoliver from www.flaticon.com -->
   <link rel="icon" type="image/png" href="img/favicons/folder.png" />
   <!--Pulling Awesome Font -->
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
   <script type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/vendor/jquery.mixitup.min.js"></script>
 </head>
 
 <body>
-    <! -- Page Content -->
-    <div class="dim">
-
       <!-- Portfolio Grid Section -->
       <section id="portfolio" class="bg-light-gray">
           <div class="container">
@@ -58,20 +51,17 @@
                   </div>
               </div>
               <div class="row">
-
                   <ul id="filters" class="clearfix">
-                    <li><span class="filter active" data-filter=".fullweb, .snippets, .coursework">All</span></li>
-                    <li><span class="filter" data-filter=".fullweb">Web Development</span></li>
-                    <li><span class="filter" data-filter=".snippets">Development Snippets</span></li>
-                    <li><span class="filter" data-filter=".coursework">Coursework</span></li>
+                    <li><span class="filter active" id="all">All</span></li>
+                    <li><span class="filter" data-cat="fullweb">Web Development</span></li>
+                    <li><span class="filter" data-cat="b">Development Snippets</span></li>
+                    <li><span class="filter" data-cat="c">Coursework</span></li>
                   </ul>
-
               </div>
 
-              <div id="portfoliolist">
+              <div id="portfolio-content">
               <div class="row">
-                <div class="portfolio fullweb" data-cat="fullweb">
-                  <div class="col-md-4 col-sm-6 portfolio-item">
+                  <div class="col-md-4 col-sm-6 portfolio-item" data-cat="fullweb">
                       <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                           <div class="portfolio-hover">
                               <div class="portfolio-hover-content">
@@ -81,13 +71,11 @@
                           <img src="img/portfolio/roundicons.png" class="img-responsive" alt="">
                       </a>
                       <div class="portfolio-caption">
-                          <h4>Round Icons</h4>
-                          <p class="text-muted">Graphic Design</p>
+                          <h4>Mirror Image Hair Salon</h4>
+                          <p class="text-muted">Wordpress Business Website</p>
                       </div>
                   </div>
-                  </div>
-                  <div class="portfolio fullweb" data-cat="fullweb">
-                  <div class="col-md-4 col-sm-6 portfolio-item">
+                  <div class="col-md-4 col-sm-6 portfolio-item" data-cat="fullweb">
                       <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
                           <div class="portfolio-hover">
                               <div class="portfolio-hover-content">
@@ -101,8 +89,7 @@
                           <p class="text-muted">Website Design</p>
                       </div>
                   </div>
-                  </div>
-                  <div class="col-md-4 col-sm-6 portfolio-item">
+                  <div class="col-md-4 col-sm-6 portfolio-item" data-cat="a">
                       <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
                           <div class="portfolio-hover">
                               <div class="portfolio-hover-content">
@@ -116,7 +103,7 @@
                           <p class="text-muted">Website Design</p>
                       </div>
                   </div>
-                  <div class="col-md-4 col-sm-6 portfolio-item">
+                  <div class="col-md-4 col-sm-6 portfolio-item" data-cat="b">
                       <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
                           <div class="portfolio-hover">
                               <div class="portfolio-hover-content">
@@ -130,7 +117,7 @@
                           <p class="text-muted">Website Design</p>
                       </div>
                   </div>
-                  <div class="col-md-4 col-sm-6 portfolio-item">
+                  <div class="col-md-4 col-sm-6 portfolio-item" data-cat="c">
                       <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
                           <div class="portfolio-hover">
                               <div class="portfolio-hover-content">
@@ -144,7 +131,7 @@
                           <p class="text-muted">Website Design</p>
                       </div>
                   </div>
-                  <div class="col-md-4 col-sm-6 portfolio-item">
+                  <div class="col-md-4 col-sm-6 portfolio-item" data-cat="c">
                       <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
                           <div class="portfolio-hover">
                               <div class="portfolio-hover-content">
@@ -252,14 +239,28 @@
                       <span class="copyright">Copyright &copy; Your Website 2016</span>
                   </div>
                   <div class="col-md-4">
-                      <ul class="list-inline social-buttons">
-                          <li><a href="#"><i class="fa fa-twitter"></i></a>
-                          </li>
-                          <li><a href="#"><i class="fa fa-facebook"></i></a>
-                          </li>
-                          <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                          </li>
-                      </ul>
+                          <ul class="list-inline social-network social-circle">
+                            <li>
+                              <a href="https://ebonsignori.com" target="_blank" class="icoHome">
+                                <i class="fa fa-home"></i></a>
+                            </li>
+                            <li>
+                              <a href="https://www.facebook.com/ebonsignori" target="_blank" class="icoFacebook">
+                                <i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                              <a href="https://github.com/Ebonsignori" target="_blank" class="icoGithub">
+                                <i class="fa fa-github"></i></a>
+                            </li>
+                            <li>
+                              <a href="https://www.linkedin.com/in/evan-bonsignori-33167787" target="_blank" class="icoLinkedin">
+                                <i class="fa fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                              <a href="https://www.instagram.com/ebonsignori/" target="_blank" class="icoInstagram">
+                                <i class="fa fa-instagram"></i></a>
+                            </li>
+                          </ul>
                   </div>
                   <div class="col-md-4">
                       <ul class="list-inline quicklinks">
@@ -457,68 +458,106 @@
 
       <!-- Bootstrap Core JavaScript -->
       <script src="js/vendor/bootstrap.min.js"></script>
+      <script src="js/portfolio_sort.js"></script>
 
+      <!--<div class="container">
 
-      <div id="footer">
+        <ul id="filters" class="clearfix">
+          <li><span class="filter active" data-filter=".fullweb, .snippets, .coursework">All</span></li>
+          <li><span class="filter" data-filter=".fullweb">Web Development</span></li>
+          <li><span class="filter" data-filter=".snippets">Development Snippets</span></li>
+          <li><span class="filter" data-filter=".coursework">Coursework</span></li>
+        </ul>
 
-			<div class="social-icons">
-            <ul class="social-network social-circle">
-              <li>
-                <a href="https://ebonsignori.com" target="_blank" class="icoHome">
-                  <i class="fa fa-home"></i></a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/ebonsignori" target="_blank" class="icoFacebook">
-                  <i class="fa fa-facebook"></i></a>
-              </li>
-              <li>
-                <a href="https://github.com/Ebonsignori" target="_blank" class="icoGithub">
-                  <i class="fa fa-github"></i></a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/evan-bonsignori-33167787" target="_blank" class="icoLinkedin">
-                  <i class="fa fa-linkedin"></i></a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/ebonsignori/" target="_blank" class="icoInstagram">
-                  <i class="fa fa-instagram"></i></a>
-              </li>
-            </ul>
-				</div>
+        <div id="portfoliolist">
 
-      </div> <!-- Footer -->
-    </div> <!-- Dim Wrapper -->
+          <div class="portfolio fullweb" data-cat="fullweb">
+            <div class="portfolio-wrapper">
+              <img src="img/portfolio/mirror_image.jpg"
+              alt="Mirror Image Hair Salon Logo for Evan Bonsignori's Portfolio" />
+              <div class="label">
+                <div class="label-text">
+                  <p class="text-title">Mirror Image Hair Salon</p>
+                  <span class="text-category">Wordpress Business Website</span>
+                </div>
+                <div class="label-bg"></div>
+              </div>
+            </div>
+          </div>
 
+          <div class="portfolio fullweb" data-cat="fullweb">
+            <div class="portfolio-wrapper">
+              <img src="img/portfolio/georgetteford.png"
+              alt="Georgetteford.com for Evan Bonsignori's Portfolio" />
+              <div class="label">
+                <div class="label-text">
+                  <a class="text-title">Georgette Ford Oil Distributor</a>
+                  <span class="text-category">HTML5 Business Website</span>
+                </div>
+                <div class="label-bg"></div>
+              </div>
+            </div>
+          </div>
 
-    <script type="text/javascript" src="js/main.js">  </script>
-    <script type="text/javascript">
-    $(function () {
+          <div class="portfolio snippets" data-cat="snippets">
+            <div class="portfolio-wrapper">
+              <img src="img/portfolio/invoice.png"
+              alt="Invoice PHP and MySQL Demo for Evan Bonsignori's Portfolio" />
+              <div class="label">
+                <div class="label-text">
+                  <a class="text-title">Invoice Demo</a>
+                  <span class="text-category">PHP and MySQL Development</span>
+                </div>
+                <div class="label-bg"></div>
+              </div>
+            </div>
+          </div>
 
-      var filterList = {
+          <div class="portfolio snippets" data-cat="snippets">
+            <div class="portfolio-wrapper">
+              <img src="img/portfolio/useless_videos.png"
+              alt="Youtube API JS Demo for Evan Bonsignori's Portfolio" />
+              <div class="label">
+                <div class="label-text">
+                  <a class="text-title">Randomized Youtube Videos</a>
+                  <span class="text-category">Youtube API JS Demo</span>
+                </div>
+                <div class="label-bg"></div>
+              </div>
+            </div>
+          </div>
 
-        init: function () {
+          <div class="portfolio snippets" data-cat="snippets">
+            <div class="portfolio-wrapper">
+              <img src="img/portfolio/useless_sites.png"
+              alt="JS Demo for Evan Bonsignori's Portfolio" />
+              <div class="label">
+                <div class="label-text">
+                  <a class="text-title">Randomized Websites</a>
+                  <span class="text-category">JS Demo</span>
+                </div>
+                <div class="label-bg"></div>
+              </div>
+            </div>
+          </div>
 
-          // MixItUp plugin
-          // http://mixitup.io
-          $('#portfoliolist').mixItUp({
-            selectors: {
-              target: '.portfolio',
-              filter: '.filter'
-            },
-            load: {
-              filter: '.fullweb, .snippets, .coursework'
-            }
-          });
+          <div class="portfolio fullweb" data-cat="fullweb">
+            <div class="portfolio-wrapper">
+              <img src="img/portfolio/evan_profile_redrocks_headcrop.jpg"
+              alt="Ebonsignori.com for Evan Bonsignori's Portfolio" />
+              <div class="label">
+                <div class="label-text">
+                  <a class="text-title">Ebonsignori.com</a>
+                  <span class="text-category">Yes, This Website</span>
+                </div>
+                <div class="label-bg"></div>
+              </div>
+            </div>
+          </div>
 
-        }
+        </div>
 
-      };
-
-      // Run the show!
-      filterList.init();
-
-    });
-    </script>
+      </div> container -->
 
 </body>
 </html>

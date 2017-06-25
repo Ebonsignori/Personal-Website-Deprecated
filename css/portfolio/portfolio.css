@@ -172,6 +172,50 @@ section h3.section-subheading {
   margin: 15px 0;
   text-transform: none;
 }
+
+/* Old portfolio */
+#filters {
+	margin:1%;
+	padding:0;
+	list-style:none;
+}
+
+	#filters li {
+		float:left;
+	}
+
+	#filters li span {
+		display: block;
+		padding:5px 20px;
+		text-decoration:none;
+		color:#666;
+		cursor: pointer;
+	}
+
+	#filters li span.active {
+		background: black;
+		color:#fff;
+	}
+
+/* Sort Filters */
+#portfolio-sort {
+    text-align: center;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #999;
+    margin-bottom: 1em;
+}
+
+#portfolio-sort a {
+    color: #fff;
+    background: #a00;
+    display: inline-block;
+    padding: 3px 9px;
+    text-decoration: none;
+    margin-right: 1em;
+}
+
+
+
 #portfolio .portfolio-item {
   margin: 0 0 15px;
   right: 0;
@@ -422,28 +466,73 @@ footer ul.quicklinks {
   text-transform: uppercase;
   text-transform: none;
 }
-ul.social-buttons {
-  margin-bottom: 0;
+/* footer social icons */
+.social-network a.icoHome:hover {
+	background-color: #F56505;
 }
-ul.social-buttons li a {
-  display: block;
-  background-color: #222222;
-  height: 40px;
-  width: 40px;
-  border-radius: 100%;
-  font-size: 20px;
-  line-height: 40px;
-  color: white;
-  outline: none;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
+.social-network a.icoFacebook:hover {
+	background-color:#3B5998;
 }
-ul.social-buttons li a:hover,
-ul.social-buttons li a:focus,
-ul.social-buttons li a:active {
-  background-color: #fed136;
+.social-network a.icoGithub:hover {
+	background-color:black;
 }
+.social-network a.icoLinkedin:hover {
+	background-color:#007bb7;
+}
+.social-network a.icoInstagram:hover {
+	background-color:#833ab4;
+}
+
+.social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+.social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
+	color:#fff;
+}
+a.socialIcon:hover, .socialHoverClass {
+	color:#44BCDD;
+}
+
+.social-circle li a {
+	display:inline-block;
+	position:relative;
+	margin:0 auto 0 auto;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	text-align:center;
+	width: 50px;
+	height: 50px;
+	font-size:20px;
+}
+.social-circle li i {
+	margin:0;
+	line-height:50px;
+	text-align: center;
+}
+
+.social-circle li a:hover i, .triggeredHover {
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-ms--transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.social-circle i {
+	color: #fff;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+}
+
+.social-network a {
+ background-color: #D3D3D3;
+}
+
 .btn:focus,
 .btn:active,
 .btn.active,
