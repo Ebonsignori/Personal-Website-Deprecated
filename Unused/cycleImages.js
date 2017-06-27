@@ -66,7 +66,7 @@ function cycleBackground(){
   }
 
   //Resets all booleans in sitesList to false to reset played
-  function resetPlayed() {
+  function resetImages() {
     for (i = 0; i < imagesArray.length; i++) {
       imagesArray[i][1] = false;
     }
