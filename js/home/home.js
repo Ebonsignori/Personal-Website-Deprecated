@@ -1,53 +1,46 @@
-$(document).ready(function () {
-  window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-  }
-
-  loadingScreen = $('#loading_wrap');
-  loadingScreen.fadeTo( 3000, 0 );
-});
-
-
-/* Loading Spinner to Slow revolution */
-$('body').delay(3000)
-.queue(function (next) {
-loadingScreen.css({'z-index' : '0'});
-$(this).css({'overflow' : 'visible' });
-loadingScreen.css({'display' : 'none'});
-$('.circle-text-container').css({'z-index' : '0'});
-next();
-});
+$(window).on('load', function () {
+  $('#background-slider').css('background-image', "url('img/homepage_backgrounds/background (2).png')");
+ });
 
 var circleText = $('.circle-text span');
 $('.circle-text-seperator').click(function() {
   if (circleText.css('animation-play-state') == 'running') {
     circleText.css({'animation-play-state' : 'paused'});
     $(this).removeClass('go');
+    $(this).css({'animation' : 'pulse 3s infinite'});
+    $(this).removeClass('pulse-grow');
+    $(this).removeClass('bb');
     $(this).addClass('stop');
   } else {
     circleText.css({'animation-play-state' : 'running'});
     $(this).removeClass('stop');
+    $(this).css({'animation' : 'none'});
     $(this).addClass('go');
+    $(this).addClass('pulse-grow');
+    $(this).addClass('bb');
   }
 });
 
+$('#triangle').css("top", $('#background-slider').height()-70 + "px");
 
-
+ /*
   // Initalize background image 2D array, the second column to prevent repeats during cycle
   var imagesArray;
-  imagesArray = [['../img/homepage_backgrounds/background-init.png', false]];
-  for (i = 1; i < 6; i++) {
+  imagesArray = [['../img/homepage_backgrounds/background (2).png', false]];
+  for (i = 1; i < 3; i++) {
     imagesArray.push(['img/homepage_backgrounds/background (' + i + ').png',false]);
   }
   cycleBackground();
 
   setInterval(cycleBackground, 5000);
+  */
 
   var navMenuContainer = $('.nav-menu-container');
   var stickToBot = $(window).height() - navMenuContainer.outerHeight(true);
   var fixedMenu = false;
   var menuState = false;  // False = closed, true = open
 
+/* Nav Menu Readjust on Scroll-Past */
   $(window).scroll(function() {
      var scrollVal = $(this).scrollTop();
      // Fix Menu To Top Right of Page and Rotate it 270deg
@@ -63,6 +56,7 @@ $('.circle-text-seperator').click(function() {
             $( 'span' ).toggleClass('hidden-menu-item');
             $('.menu-container , .toggle').toggleClass('close-menu');
           }
+          $('.toggle').addClass('flip-90');
           navMenuContainer.fadeIn("fast");
         });
 
@@ -79,6 +73,7 @@ $('.circle-text-seperator').click(function() {
             $( 'span' ).toggleClass('hidden-menu-item');
             $('.menu-container , .toggle').toggleClass('close-menu');
           }
+          $('.toggle').removeClass('flip-90');
           navMenuContainer.fadeIn("fast");
         });
       }
@@ -101,6 +96,7 @@ $('.circle-text-seperator').click(function() {
   centerProfile(); // Load and center profile picture and buttons
 
 $(window).resize(function() {
+  $('#triangle').css("top", $('#background-slider').height()-70 + "px");
   centerProfile();
 });
 

@@ -11,8 +11,23 @@ a:hover {
   text-decoration: none;
 }
 
-body {
-  overflow:hidden;
+body::-webkit-scrollbar{
+	width: 10px;
+}
+
+body::-webkit-scrollbar-track-piece{
+	background-color: #FFF;
+}
+
+body::-webkit-scrollbar-thumb{
+	background-color: #CBCBCB;
+	outline: 2px solid #FFF;
+	outline-offset: -2px;
+	border: .1px solid #B7B7B7;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+	background-color: #909090;
 }
 
 p {
@@ -26,8 +41,25 @@ p {
   -webkit-transition-delay: 1s;
   transition-delay: 1s;
   background-repeat: no-repeat;
-  background-size:contain;
+  background-size:fill;
   position: relative;
+}
+
+#triangle {
+    content: '';
+    position: absolute;
+    left: 50%;
+    margin-left: -70px;
+    width: 0;
+    height: 0;
+    border-top: solid 70px black;
+    border-left: solid 70px transparent;
+    border-right: solid 70px transparent;
+     -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 .profile-image {
@@ -44,6 +76,14 @@ p {
   -o-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+
+.flip-90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .flip-270 {
@@ -109,6 +149,71 @@ p {
   text-decoration: none;
   color: #F15A08;
  }
+
+ /* Scroll Down Button */
+ .arrow a {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	z-index: 2;
+	display: inline-block;
+	-webkit-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	color: #fff;
+	font : normal 400 20px/1 'Josefin Sans', sans-serif;
+	letter-spacing: .1em;
+	text-decoration: none;
+	transition: opacity .3s;
+}
+.arrow a:hover {
+	opacity: .5;
+}
+
+ #profile-scroll a {
+ 	padding-top: 26px;
+ }
+ #profile-scroll a span {
+ 	position: absolute;
+ 	top: 0;
+ 	left: 50%;
+ 	width: 24px;
+ 	height: 24px;
+ 	margin-left: -12px;
+ 	border-left: 1px solid #fff;
+ 	border-bottom: 1px solid #fff;
+ 	-webkit-transform: rotate(-45deg);
+ 	transform: rotate(-45deg);
+ 	-webkit-animation: sdb05 1.5s infinite;
+ 	animation: sdb05 1.5s infinite;
+ 	box-sizing: border-box;
+ }
+ @-webkit-keyframes sdb05 {
+ 	0% {
+ 		-webkit-transform: rotate(-45deg) translate(0, 0);
+ 		opacity: 0;
+ 	}
+ 	50% {
+ 		opacity: 1;
+ 	}
+ 	100% {
+ 		-webkit-transform: rotate(-45deg) translate(-20px, 20px);
+ 		opacity: 0;
+ 	}
+ }
+ @keyframes sdb05 {
+ 	0% {
+ 		transform: rotate(-45deg) translate(0, 0);
+ 		opacity: 0;
+ 	}
+ 	50% {
+ 		opacity: 1;
+ 	}
+ 	100% {
+ 		transform: rotate(-45deg) translate(-20px, 20px);
+ 		opacity: 0;
+ 	}
+ }
+
 
 /* Nav Menu */
 .nav-menu-container {
@@ -225,7 +330,20 @@ p {
   height: 42.75px;
   width: 58.5px;
   cursor: pointer;
+  animation-name: flip-90;
+  animation-duration: 1s;
+  animation-timing-function: linear;
 }
+
+@keyframes flip-90 {
+ from {
+     transform:rotate(0deg);
+ }
+ to {
+     transform:rotate(90deg);
+ }
+}
+
 .toggle:after, .toggle:before {
   content: '';
   background: black;
@@ -339,87 +457,12 @@ a.socialIcon:hover, .socialHoverClass {
  background-color: #D3D3D3;
 }
 
-/* Scroll Down Button */
-
-.arrow a {
-position: absolute;
-bottom: 20px;
-left: 50%;
-z-index: 2;
-display: inline-block;
--webkit-transform: translate(0, -50%);
-transform: translate(0, -50%);
-color: #fff;
-font : normal 400 20px/1 'Josefin Sans', sans-serif;
-letter-spacing: .1em;
-text-decoration: none;
-transition: opacity .3s;
-}
-.arrow a:hover {
-opacity: .5;
-}
-#profile-scroll a {
-padding-top: 40px;
-}
-#profile-scroll a span {
-position: absolute;
-top: 0;
-left: 50%;
-width: 24px;
-height: 24px;
-margin-left: -12px;
-border-left: 1px solid #fff;
-border-bottom: 1px solid #fff;
--webkit-transform: rotate(-45deg);
-transform: rotate(-45deg);
--webkit-animation: sdb07 2s infinite;
-animation: sdb07 2s infinite;
-opacity: 0;
-box-sizing: border-box;
-}
-#profile-scroll a span:nth-of-type(1) {
--webkit-animation-delay: 0s;
-animation-delay: 0s;
-}
-#profile-scroll a span:nth-of-type(2) {
-top: 16px;
--webkit-animation-delay: .15s;
-animation-delay: .15s;
-}
-#profile-scroll a span:nth-of-type(3) {
-top: 32px;
--webkit-animation-delay: .3s;
-animation-delay: .3s;
-}
-@-webkit-keyframes sdb07 {
-0% {
-  opacity: 0;
-}
-50% {
-  opacity: 1;
-}
-100% {
-  opacity: 0;
-}
-}
-@keyframes sdb07 {
-0% {
-  opacity: 0;
-}
-50% {
-  opacity: 1;
-}
-100% {
-  opacity: 0;
-}
-}
 
 /* Circle Lettering */
 .circle-text-container {
   position: absolute;
   width: 400px;
   transform: translateX(-50%) rotate(-50deg);
-  z-index: 901;
 }
 
 .circle-text span {
@@ -432,42 +475,101 @@ animation-delay: .3s;
   left: 0;
   top: 0;
   transform-origin: bottom center;
-  animation-delay: 2s;
+  animation-play-state : paused;
 }
 
 .circle-text-seperator {
-    text-decoration: none;
-    color: black;
+    text-decoration: none !important;
+    background-color: red !important;
+}
+
+.pulse {
+  transition: ease-in-out all 1s;
+  display: block;
+  margin-top: 20px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(0,0,0, 0.4);
+  animation: pulse 3s infinite;
+}
+.pulse:hover {
+  animation: none;
+  background-color: white !important;
+}
+
+.pulse-grow {
+  transition: ease-in-out all 1s;
+  margin-top: 15px;
+  height: 25px;
+  width: 25px;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(0,0,0, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(0,0,0, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(0,0,0, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(0,0,0, 0.4);
+    box-shadow: 0 0 0 0 rgba(0,0,0, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(0,0,0, 0);
+      box-shadow: 0 0 0 10px rgba(0,0,0, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(0,0,0, 0);
+      box-shadow: 0 0 0 0 rgba(0,0,0, 0);
+  }
 }
 
 .circle-text-seperator:hover {
     text-decoration: none;
-    color: white;
+    background-color: white;
+}
+
+.circle-text-seperator:focus {
+    text-decoration: none;
+    background-color: white;
+}
+
+.circle-text-seperator:target {
+    text-decoration: none;
+    background-color: white;
 }
 
 .stop {
   text-decoration: none !important;
-  color: red !important;
+  background-color: red !important;
 }
 
 .stop:hover {
   text-decoration: none !important;
-  color: white !important;
+  background-color: white !important;
 }
 
 .go {
   text-decoration: none !important;
-  color: green !important;
+  background-color: green !important;
 }
 
 .go:hover {
   text-decoration: none !important;
-  color: white !important;
+  background-color: white !important;
 }
 
-
 .char1 {
-  transform: rotate(-25deg);
+  transform: rotate(-23.5deg);
   /* Animate spin */
    animation-name: spin1;
    animation-duration: 25s;
@@ -477,15 +579,15 @@ animation-delay: .3s;
 
   @keyframes spin1 {
    from {
-       transform:rotate(-25deg);
+       transform:rotate(-23.5deg);
    }
    to {
-       transform:rotate(335deg);
+       transform:rotate(336.5deg);
    }
   }
 
 .char2 {
-  transform: rotate(-15deg);
+  transform: rotate(-13deg);
   /* Animate spin */
    animation-name: spin2;
    animation-duration: 25s;
@@ -495,15 +597,15 @@ animation-delay: .3s;
 
   @keyframes spin2 {
    from {
-       transform:rotate(-15deg);
+       transform:rotate(-13deg);
    }
    to {
-       transform:rotate(345deg);
+       transform:rotate(347deg);
    }
   }
 
 .char3 {
-  transform: rotate(-5deg);
+  transform: rotate(-4deg);
   /* Animate spin */
    animation-name: spin3;
    animation-duration: 25s;
@@ -513,10 +615,10 @@ animation-delay: .3s;
 
   @keyframes spin3 {
    from {
-       transform:rotate(-5deg);
+       transform:rotate(-4deg);
    }
    to {
-       transform:rotate(355deg);
+       transform:rotate(356deg);
    }
   }
 
@@ -540,7 +642,7 @@ animation-delay: .3s;
 
 /* Middle Inital Positioning and Rotating */
 .char5 {
-  transform: rotate(20deg);
+  transform: rotate(21deg);
   /* Animate spin */
    animation-name: spin5;
    animation-duration: 25s;
@@ -550,10 +652,10 @@ animation-delay: .3s;
 
   @keyframes spin5 {
    from {
-       transform:rotate(20deg);
+       transform:rotate(21deg);
    }
    to {
-       transform:rotate(380deg);
+       transform:rotate(381deg);
    }
   }
 
@@ -581,7 +683,7 @@ animation-delay: .3s;
   }
 
 .char8 {
-  transform: rotate(45deg);
+  transform: rotate(46deg);
   /* Animate spin */
    animation-name: spin8;
    animation-duration: 25s;
@@ -591,10 +693,10 @@ animation-delay: .3s;
 
   @keyframes spin8 {
    from {
-       transform:rotate(45deg);
+       transform:rotate(46deg);
    }
    to {
-       transform:rotate(405deg);
+       transform:rotate(406deg);
    }
   }
 
@@ -653,7 +755,7 @@ animation-delay: .3s;
 }
 
 .char12 {
-  transform: rotate(85deg);
+  transform: rotate(82deg);
   /* Animate spin */
    animation-name: spin12;
    animation-duration: 25s;
@@ -663,15 +765,15 @@ animation-delay: .3s;
 
 @keyframes spin12 {
    from {
-       transform:rotate(85deg);
+       transform:rotate(82deg);
    }
    to {
-       transform:rotate(445deg);
+       transform:rotate(443deg);
    }
 }
 
 .char13 {
-  transform: rotate(95deg);
+  transform: rotate(93deg);
   /* Animate spin */
    animation-name: spin13;
    animation-duration: 25s;
@@ -681,15 +783,15 @@ animation-delay: .3s;
 
 @keyframes spin13 {
    from {
-       transform:rotate(95deg);
+       transform:rotate(93deg);
    }
    to {
-       transform:rotate(455deg);
+       transform:rotate(453deg);
    }
 }
 
 .char14 {
-  transform: rotate(105deg);
+  transform: rotate(103deg);
   /* Animate spin */
    animation-name: spin14;
    animation-duration: 25s;
@@ -699,15 +801,15 @@ animation-delay: .3s;
 
 @keyframes spin14 {
    from {
-       transform:rotate(105deg);
+       transform:rotate(103deg);
    }
    to {
-       transform:rotate(465deg);
+       transform:rotate(463deg);
    }
 }
 
 .char15 {
-  transform: rotate(115deg);
+  transform: rotate(114deg);
   /* Animate spin */
    animation-name: spin15;
    animation-duration: 25s;
@@ -717,15 +819,15 @@ animation-delay: .3s;
 
 @keyframes spin15 {
    from {
-       transform:rotate(115deg);
+       transform:rotate(114deg);
    }
    to {
-       transform:rotate(475deg);
+       transform:rotate(474deg);
    }
 }
 
 .char16 {
-  transform: rotate(125deg);
+  transform: rotate(123deg);
   /* Animate spin */
    animation-name: spin16;
    animation-duration: 25s;
@@ -735,9 +837,9 @@ animation-delay: .3s;
 
 @keyframes spin16 {
    from {
-       transform:rotate(125deg);
+       transform:rotate(123deg);
    }
    to {
-       transform:rotate(485deg);
+       transform:rotate(483deg);
    }
 }

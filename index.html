@@ -1,82 +1,189 @@
 <!DOCTYPE html>
-<!-- Evan Bonsignori's Personal Site Index -->
-<html lang="en">
+<html>
 
 <head>
-  <style>
-    body {
-      background-image: url("../img/triangle_sky.png");
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      background-position: top;
-      background-size: cover;
-      background-repeat: repeat-y;
-    }
-  </style>
   <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1,
-              user-scalable=no" />
-  <meta name="url" content="https://ebonsignori.com/">
-  <meta name="rating" content="General">
 
-  <title> Ebonsignori </title>
-  <meta name="author" content="Evan Bonsignori">
-  <meta name="description" content="Evan Bonsignori's Blog and Digital
-              Portfolio.">
+  <title>Home | Evan A. Bonsignori</title>
 
-  <!-- Open Graph Data -->
-  <meta property="og:image" content="img/evan_profile_redrocks_headcrop.jpg">
-  <meta property="og:description" content="Evan Bonsignori's Blog and
-              Digital Portfolio">
-  <meta property="og:title" content="Home Page of ebonsignori.com">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Favicon Icon made by http://www.flaticon.com/authors/alfredo-hernandez from www.flaticon.com -->
-  <link rel="icon" type="image/png" href="img/favicons/triforce.png" />
+  <link href="css/home/home.css" rel="stylesheet"> <!-- Custom CSS -->
+  <link href="css/vendor/bootstrap.min.css" rel="stylesheet">  <!-- Bootstrap Core CSS -->
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> <!-- Font-Awesome CSS -->
+
 </head>
 
 <body>
-  <div id="header">
-    <h1> Evan Bonsignori </h1>
-  </div>
-  <div id="pic-wrapper">
-    <div class="losange">
-      <div class="los1">
-        <a href="about.html"><img src="img/evan_profile_redrocks_headcrop.jpg" name="Profile Picture" alt="A picture of me" title="Me" id="profile-image" /></a>
-
+  <div id="background-slider">
+    <div class="circle-text-container">
+      <h1 class="circle-text">
+        <span class="char1">E</span>
+        <span class="char2">v</span>
+        <span class="char3">a</span>
+        <span class="char4">n</span>
+        <span class="char5"><a class="circle-text-seperator pulse" href="#"></a></span>
+        <span class="char7">B</span>
+        <span class="char8">o</span>
+        <span class="char9">n</span>
+        <span class="char10">s</span>
+        <span class="char11">i</span>
+        <span class="char12">g</span>
+        <span class="char13">n</span>
+        <span class="char14">o</span>
+        <span class="char15">r</span>
+        <span class="char16">i</span>
+      </h1>
+    </div>
+    <div class="profile-image" id="center">
+      <div class="losange">
+        <div class="los1">
+          <img src="img/evan_profile_redrocks_headcrop.jpg" name="Profile Picture" alt="A picture of Evan Bonsignori" title="Evan Bonsignori" id="profile-image" />
+        </div>
       </div>
     </div>
-  </div>
-  <div>
-    <!-- Site Navigation -->
-    <ul id="index-select">
-      <li id="a"><a href="blog" class="link">Blog</a></li>
-      <li id="b"><a href="portfolio" class="link">Portfolio</a></li>
-      <li id="c"><a href="about" class="link">About</a></li>
-      <li id="d"><a href="contact" class="link">Contact</a></li>
+    <div class="profile-button"><a href="about" class="metro flip">About</a></div>
+    <div class="profile-button"><a href="blog" class="metro">Blog</a></div>
+    <div class="profile-button"><a href="portfolionew" class="metro">Portfolio</a></div>
+    <div class="profile-button"><a href="contact" class="metro flip">Contact</a></div>
 
-    </ul>
+    <div id="profile-scroll" class="arrow">
+    	<a href="#section-nav"><span></span></a>
+    </div>
+    <div id="triangle"></div>
   </div>
-  <ul class="icons">
-    <li>
-      <a href="https://www.facebook.com/ebonsignori" target="_blank">
-        <span class="fa fa-facebook"></span></a>
-    </li>
-    <li>
-      <a href="https://github.com/Ebonsignori" target="_blank">
-        <span class="fa fa-github"></span></a>
-    </li>
-    <li>
-      <a href="https://www.linkedin.com/in/evan-bonsignori-33167787" target="_blank">
-        <span class="fa fa-linkedin"></span></a>
-    </li>
-    <li>
-      <a href="https://www.instagram.com/ebonsignori/" target="_blank">
-        <span class="fa fa-instagram"></span></a>
-    </li>
-  </ul>
 
+  <!-- Nav Menu -->
+  <div id="menu-placeholder"></div>
+  <div class="nav-menu-container" id="section-nav">
+    <nav class="menu">
+      <div class="menu-container">
+        <div class="toggle"></div>
+      </div>
+      <span class="hidden-menu-item"><a href="#background-slider"><i class="fa fa-home fa-lg"></a></i></span>
+      <span class="hidden-menu-item"><a href="#">Blog </a></span>
+      <span class="hidden-menu-item"><a href="#">Portfolio </a></span>
+      <span class="hidden-menu-item"><a href="#about-section">About</a></span>
+      <span class="hidden-menu-item"><a href="#contact-section">Contact</a></span>
+    </nav>
+  </div>
+
+  <div class="container">
+      <h1 class="text-center">Hi, my name is Evan Bonsignori.</h1>
+
+      <h2 class="text-center"> $ whoami </h2>
+      <p class="text-left"> I've yet to enter the market that defines me, so for now I'm a <strong>computer scientist in training</strong> (<em>aka Student</em>).
+      I began and completed my studies in electical engineering to an associates, and decided to change pursuits for my bachelors.
+      I plan to graduate in 2018, and until then this website and its portfolio contents are a work in progress.   - - - - - - - - - - - - - - - - - - - - -</p>
+
+      <h2 class="text-center"> $ hostname // What is this site? </h2>
+      <p class="text-left"> Here I <a href="#">publicy practice writing</a> in a domain that consists of technical tutorials, politcs, humor,
+      and unsorted life meanderings about being a student. I also host both my professional and course work in my <a href="#">portfolio</a>.</p>
+
+      <h2 class="text-center"> $ more ebonsignori.com </h2>
+      <p class="text-left"> I built this website in Python's Django framework and
+      the frontend consists of handcoded HTML, CSS (<em>w/ Bootstrap </em>), and JS (<em> w/ Jquery</em>).
+      Initially, I maintained this site on Amazon's free EC2 servers, though I recently switched to the easier shared
+      hosting that came bundled with this domain.  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - -  - - - - - - - - </p>
+
+      <h2 class="text-center"> $ history </h2>
+      <p class="text-left">I didn't even know what an HTML tag looked like until 4 months ago (as of June)! Since, I've referenced hundreds of
+      resources, pages of documentation, and a Django Udemy course to learn the basics of full stack web development.
+      Though my other work isn't as impressive as this site, you can <a href="portfolio"> check out my budding Portfolio.</a>
+      - - - - - - - - - - - - - - - - - - - -</p>
+
+      <h2 class="text-center"> $ find . -name "Evan Bonsignori" </h2>
+      <!-- Contact info hidden in javascript to prevent spam bots -->
+      <div id="contact-show" class="text-center">
+        <p> Hidden from Bots, click to show: <br />
+            <button class="btn"
+            onclick="showContactInfo()">Contact Information</button>
+        </p>
+      </div>
+
+      <h2 class="text-center"> $ mail -s "feedback" "evan@ebonsignori.com"</h2>
+      <p class="text-center"> Is something on this site out of place? Is there a design that annoys you?
+        Did you like something?
+        <br />
+      Leave me a message!
+      </p>
+
+      <!-- Contact Form -->
+      <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <form class="form-horizontal" action="newhome.html">
+              <div class="form-group">
+                <label for="exampleInputName2">Name</label>
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail2">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+              </div>
+              <div class="form-group ">
+                <label for="exampleInputText">Your Message</label>
+               <textarea  name="contact-message" class="form-control" placeholder="Description"></textarea>
+              </div>
+              <button type="submit" class="btn btn-default">Send Message</button>
+            </form>
+        </div>
+    </div>
+      <?php
+      $to      = 'evan@ebonsignori.com';
+      $subject = 'Visitor Message - Ebonsignori.com';
+      $message = "Name: " . $_POST['contact-name'] . "\nEmail: " . $_POST['contact-email'] . "\nMessage:\n" . $_POST['contact-message'] . "\n\nEnd Email.";
+
+      mail($to, $subject, $message);
+
+  ?>
+  </div><!-- /.container -->
+
+  <footer>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                  <span class="copyright">Copyright &copy; Evan Bonsignori 2017</span>
+              </div>
+              <div class="col-md-4">
+                      <ul class="list-inline social-network social-circle">
+                        <li>
+                          <a href="#background-slider" target="_blank" class="icoHome">
+                            <i class="fa fa-home"></i></a>
+                        </li>
+                        <li>
+                          <a href="https://www.facebook.com/ebonsignori" target="_blank" class="icoFacebook">
+                            <i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                          <a href="https://github.com/Ebonsignori" target="_blank" class="icoGithub">
+                            <i class="fa fa-github"></i></a>
+                        </li>
+                        <li>
+                          <a href="https://www.linkedin.com/in/evan-bonsignori-33167787" target="_blank" class="icoLinkedin">
+                            <i class="fa fa-linkedin"></i></a>
+                        </li>
+                        <li>
+                          <a href="https://www.instagram.com/ebonsignori/" target="_blank" class="icoInstagram">
+                            <i class="fa fa-instagram"></i></a>
+                        </li>
+                      </ul>
+              </div>
+              <div class="col-md-4">
+                  <ul class="list-inline quicklinks">
+                      <li><a href="#">Blog</a>
+                      </li>
+                      <li><a href="#">Portfolio</a>
+                      </li>
+                      <li><a href="#">Acknowledgements</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  <script type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/home/home.js"></script>
+
+  <!-- Google Analytics Code -->
 
 </body>
 
