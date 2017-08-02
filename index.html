@@ -3,13 +3,27 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+              user-scalable=no" />
+  <meta name="url" content="https://ebonsignori.com/">
 
   <title>Home | Evan A. Bonsignori</title>
+  <meta name="author" content="Evan A. Bonsignori">
+  <meta name="description" content="Evan Bonsignori's Website.">
+
+  <!-- Open Graph Data
+  <meta property="og:image" content="img/open_graph/portfolio.jpeg">
+  <meta property="og:description" content="Evan Bonsignori's Website.">
+  <meta property="og:title" content="Evan A. Bonsignori">
+-->
 
   <link href="css/home/home.css" rel="stylesheet"> <!-- Custom CSS -->
   <link href="css/vendor/bootstrap.min.css" rel="stylesheet">  <!-- Bootstrap Core CSS -->
+    <link href="css/home/portfolio.css" rel="stylesheet"> <!-- Portfolio CSS -->
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> <!-- Font-Awesome CSS -->
 
+  <script type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
 </head>
 
 <body>
@@ -40,13 +54,13 @@
         </div>
       </div>
     </div>
-    <div class="profile-button"><a href="about" class="metro flip">About</a></div>
+    <div class="profile-button"><a href="#about-section" class="metro flip">About</a></div>
     <div class="profile-button"><a href="blog" class="metro">Blog</a></div>
-    <div class="profile-button"><a href="portfolionew" class="metro">Portfolio</a></div>
-    <div class="profile-button"><a href="contact" class="metro flip">Contact</a></div>
+    <div class="profile-button"><a href="#portfolio-section" class="metro">Portfolio</a></div>
+    <div class="profile-button"><a href="#contact-section" class="metro flip">Contact</a></div>
 
     <div id="profile-scroll" class="arrow">
-    	<a href="#section-nav"><span></span></a>
+    	<a href="#portfolio-section"><span></span></a>
     </div>
     <div id="triangle"></div>
   </div>
@@ -59,24 +73,139 @@
         <div class="toggle"></div>
       </div>
       <span class="hidden-menu-item"><a href="#background-slider"><i class="fa fa-home fa-lg"></a></i></span>
-      <span class="hidden-menu-item"><a href="#">Blog </a></span>
-      <span class="hidden-menu-item"><a href="#">Portfolio </a></span>
+      <span class="hidden-menu-item"><a href="blog">Blog </a></span>
+      <span class="hidden-menu-item"><a href="#portfolio-section">Portfolio </a></span>
       <span class="hidden-menu-item"><a href="#about-section">About</a></span>
       <span class="hidden-menu-item"><a href="#contact-section">Contact</a></span>
     </nav>
   </div>
 
   <div class="container">
-      <h1 class="text-center">Hi, my name is Evan Bonsignori.</h1>
 
+    <!-- Portfolio Section -->
+    <section id="portfolio-section">
+      <h1 class="text-center header" style="margin-top: 0px !important;">Portfolio</h1>
+      <div class="container">
+          <div class="row">
+              <ul id="filters" class="clearfix">
+                <li><span class="filter active" id="all">All</span></li>
+                <li><span class="filter" data-cat="webdev">Web Development</span></li>
+                <li><span class="filter" data-cat="proofofconcept">Proof of Concept</span></li>
+                <li><span class="filter" data-cat="coursework">Coursework</span></li>
+              </ul>
+          </div>
+
+          <div id="portfolio-content">
+          <div class="row">
+              <!-- Mirror Image Hair Salon Wordpress -->
+              <div class="col-md-4 col-sm-6 portfolio-item" data-cat="webdev">
+                  <a href="#mirrorimagemodal" class="portfolio-link" data-toggle="modal">
+                      <div class="portfolio-hover">
+                          <div class="portfolio-hover-content">
+                              <i class="fa fa-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img src="img/portfolio_real/mirror_image.jpg" class="img-responsive" alt="">
+                  </a>
+                  <div class="portfolio-caption">
+                      <h4>Mirror Image Hair Salon</h4>
+                      <p class="text-muted">Business Website in Wordpress</p>
+                  </div>
+              </div>
+              <!-- Georgette Ford Essential Oils -->
+              <div class="col-md-4 col-sm-6 portfolio-item" data-cat="webdev">
+                  <a href="#georgettefordmodal" class="portfolio-link" data-toggle="modal">
+                      <div class="portfolio-hover">
+                          <div class="portfolio-hover-content">
+                              <i class="fa fa-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img src="img/portfolio_real/georgette_ford.jpg" class="img-responsive" alt="">
+                  </a>
+                  <div class="portfolio-caption">
+                      <h4>Georgette Ford - Essential Oils</h4>
+                      <p class="text-muted">Personal MLM Page in HTML5</p>
+                  </div>
+              </div>
+              <!-- PHP MySQL Invoice Form -->
+              <div class="col-md-4 col-sm-6 portfolio-item" data-cat="coursework">
+                  <a href="#invoicemodal" class="portfolio-link" data-toggle="modal">
+                      <div class="portfolio-hover">
+                          <div class="portfolio-hover-content">
+                              <i class="fa fa-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img src="img/portfolio_real/invoice.png" class="img-responsive" alt="">
+                  </a>
+                  <div class="portfolio-caption">
+                      <h4>Invoice Forms with Storage</h4>
+                      <p class="text-muted">PHP and MySQL Coursework</p>
+                  </div>
+              </div>
+              <!-- Useless Projects -->
+              <div class="col-md-4 col-sm-6 portfolio-item" data-cat="proofofconcept">
+                  <a href="#uselessmodal" class="portfolio-link" data-toggle="modal">
+                      <div class="portfolio-hover">
+                          <div class="portfolio-hover-content">
+                              <i class="fa fa-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img src="img/portfolio_real/useless_sites.png" class="img-responsive" alt="">
+                  </a>
+                  <div class="portfolio-caption">
+                      <h4>"Useless" Sites and Videos</h4>
+                      <p class="text-muted">Randomized Sites and Videos</p>
+                  </div>
+              </div>
+              <!-- Unused
+              <div class="col-md-4 col-sm-6 portfolio-item" data-cat="c">
+                  <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                      <div class="portfolio-hover">
+                          <div class="portfolio-hover-content">
+                              <i class="fa fa-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img src="img/portfolio_real/mirror_image.jpg" class="img-responsive" alt="">
+                  </a>
+                  <div class="portfolio-caption">
+                      <h4>Escape</h4>
+                      <p class="text-muted">Website Design</p>
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-6 portfolio-item" data-cat="c">
+                  <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                      <div class="portfolio-hover">
+                          <div class="portfolio-hover-content">
+                              <i class="fa fa-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img src="img/portfolio_real/mirror_image.jpg" class="img-responsive" alt="">
+                  </a>
+                  <div class="portfolio-caption">
+                      <h4>Dreams</h4>
+                      <p class="text-muted">Website Design</p>
+                  </div>
+              </div>
+              -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- About Section -->
+    <section id="about-section">
+      <h1 class="text-center header">About</h1>
       <h2 class="text-center"> $ whoami </h2>
       <p class="text-left"> I've yet to enter the market that defines me, so for now I'm a <strong>computer scientist in training</strong> (<em>aka Student</em>).
       I began and completed my studies in electical engineering to an associates, and decided to change pursuits for my bachelors.
       I plan to graduate in 2018, and until then this website and its portfolio contents are a work in progress.   - - - - - - - - - - - - - - - - - - - - -</p>
 
       <h2 class="text-center"> $ hostname // What is this site? </h2>
-      <p class="text-left"> Here I <a href="#">publicy practice writing</a> in a domain that consists of technical tutorials, politcs, humor,
-      and unsorted life meanderings about being a student. I also host both my professional and course work in my <a href="#">portfolio</a>.</p>
+      <p class="text-left"> Here I <a href="blog"> publicly practice writing</a> in a domain that consists of technical tutorials, politcs, humor,
+      and unsorted meanderings about being a student. I also host both my professional and course work in my <a href="#portfolio">portfolio</a>.</p>
 
       <h2 class="text-center"> $ more ebonsignori.com </h2>
       <p class="text-left"> I built this website in Python's Django framework and
@@ -85,11 +214,15 @@
       hosting that came bundled with this domain.  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - -  - - - - - - - - </p>
 
       <h2 class="text-center"> $ history </h2>
-      <p class="text-left">I didn't even know what an HTML tag looked like until 4 months ago (as of June)! Since, I've referenced hundreds of
+      <p class="text-left">I didn't know what an HTML tag looked like until March of 2017! Since, I've referenced hundreds of
       resources, pages of documentation, and a Django Udemy course to learn the basics of full stack web development.
-      Though my other work isn't as impressive as this site, you can <a href="portfolio"> check out my budding Portfolio.</a>
+      Though my other work isn't as "from scratch" as this site, you can <a href="#portfolio"> check out my budding Portfolio.</a>
       - - - - - - - - - - - - - - - - - - - -</p>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact-section">
+      <h1 class="text-center header">Contact</h1>
       <h2 class="text-center"> $ find . -name "Evan Bonsignori" </h2>
       <!-- Contact info hidden in javascript to prevent spam bots -->
       <div id="contact-show" class="text-center">
@@ -133,9 +266,12 @@
 
       mail($to, $subject, $message);
 
-  ?>
+      ?>
+  </section>
+
   </div><!-- /.container -->
 
+  <!-- Footer Section -->
   <footer>
       <div class="container">
           <div class="row">
@@ -168,11 +304,9 @@
               </div>
               <div class="col-md-4">
                   <ul class="list-inline quicklinks">
-                      <li><a href="#">Blog</a>
+                      <li><a href="blog">Blog</a>
                       </li>
-                      <li><a href="#">Portfolio</a>
-                      </li>
-                      <li><a href="#">Acknowledgements</a>
+                      <li><a href="acknowledgements">Acknowledgements</a>
                       </li>
                   </ul>
               </div>
@@ -180,8 +314,224 @@
       </div>
   </footer>
 
+  <!-- Portfolio Modals -->
+
+  <!-- (1) Mirror Image Portfolio Modal-->
+  <div class="portfolio-modal modal fade" id="mirrorimagemodal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="close-modal" data-dismiss="modal">
+                  <div class="lr">
+                      <div class="rl">
+                      </div>
+                  </div>
+              </div>
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-8 col-lg-offset-2">
+                          <div class="modal-body">
+                              <h2>Mirror Image Hair Salon</h2>
+                              <p class="item-intro text-muted">A Hair Salon Business Website In Wordpress</p>
+                              <img class="img-responsive img-centered" src="img/portfolio_real/mirror_image_big.PNG" alt="">
+
+                              <p>
+                                Given an inspiration page by the client, I created a theme that satisfied the style that the client desired, while delivering all of the essential information that I deemed necessary to the client's visitors.
+
+                                <br/ > <br/ >The site is created in Wordpress and hosted on shared hosting. I used the X-Theme for the front end design and plugins for most of the functionality- such as a social media page linked to Facebook, a gallery page linked to Instagram, and a slider on the front page.
+                                <br/ > <br/ >As my first paid freelancing expierence, I learned how to remain flexible on the project by adjusting the project based on regular feedback from my client. I learned how to implment already-made wordpress plugins to ease development, and how to optimize page speed and SEO using feedback tools.
+                                <br/ > <br/ >The website is within the top five results for "hair salons in Rincon GA" or "hair cuts in rincon GA" and in the first three results for "Mirror image hair salon." The page is monitored by google analytics and is secured through regular updates and security plugins.
+                              </p>
+
+                              <p><strong>See the website live </strong><a href="https://mirrorimagerincon.com">here</a>.</p>
+                              <ul class="list-inline">
+                                  <li>Date: May-June 2017</li>
+                                  <li>Client: Mirror Image Hair Salon</li>
+                                  <li>Category: Web Development</li>
+                              </ul>
+                              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- (2) Georgette Ford Portfolio Modal -->
+  <div class="portfolio-modal modal fade" id="georgettefordmodal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="close-modal" data-dismiss="modal">
+                  <div class="lr">
+                      <div class="rl">
+                      </div>
+                  </div>
+              </div>
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-8 col-lg-offset-2">
+                          <div class="modal-body">
+                              <h2>Georgette Ford - Oils Distributor</h2>
+                              <p class="item-intro text-muted">Multi-Level-Marketing Website in HTML5, CSS, and JS</p>
+                              <img class="img-responsive img-centered" src="img/portfolio_real/georgetteford.png" alt="">
+                              <p>
+                                With little direction from the client, I researched essential oils and browsed independent distributor websites before creating this from an HTML5 template that can be found <a href="https://html5up.net/dimension"> here</a>.
+                                <br /> <br /> This site was my first expierence in web design and naturally has a few bugs. I've had to return to the page to improve load times and functionality, but each time has been a learning expierence.
+                                <br /> <br /> The content of the page is hard coded and maintained semi-annually without a CMS. I initially hosted the page on an Ubuntu server using a dedicated server "droplet" from Digintal Ocean. Since, I've simplified the process and transfered the site to automated shared hosting.
+                              </p>
+                              <p><strong>See the website live </strong><a href="http://www.georgetteford.com/">here</a>.</p>
+                              <ul class="list-inline">
+                                  <li>Date: April 2017</li>
+                                  <li>Client: Georgette Ford</li>
+                                  <li>Category: Web Development</li>
+                              </ul>
+                              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- (3) PHP Invoices Portfolio Modal -->
+  <div class="portfolio-modal modal fade" id="invoicemodal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="close-modal" data-dismiss="modal">
+                  <div class="lr">
+                      <div class="rl">
+                      </div>
+                  </div>
+              </div>
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-8 col-lg-offset-2">
+                          <div class="modal-body">
+                              <h2>Invoice Forms</h2>
+                              <p class="item-intro text-muted">With Server and Database Storage</p>
+                              <img class="img-responsive img-centered" src="img/portfolio_real/invoice.png" alt="">
+                              <p>
+                                My first time learning about HTML, CSS, and JS and my first time implmenting PHP and MySQL with front end languages.
+                                <br/ > <br /> The assignment was broken into two segments: <br />
+                                  (1) Create invoice front end and use PHP to save invoices to a file
+                                  <br />
+                                  (2) Add functionality to save invoices to database using MySQL and create a script that saves 100 random invoices to the database
+                              </p>
+                              <p> I went beyond the assignment and added additional functionality such as randimizing values, resetting forms, and removing all invoices with one click. These improvments eased development and testing and earned me a 100% on the assignment.</p>
+                              <p><strong>Example coming soon, but for now view the sourcecode </strong><a href="https://github.com/Ebonsignori/invoiceForm">here</a>.</p>
+                              <ul class="list-inline">
+                                  <li>Date: March-April 2017</li>
+                                  <li>Client: School</li>
+                                  <li>Category: Coursework</li>
+                              </ul>
+                              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- (4) "Useless" Portfolio Modal -->
+  <div class="portfolio-modal modal fade" id="uselessmodal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="close-modal" data-dismiss="modal">
+                  <div class="lr">
+                      <div class="rl">
+                      </div>
+                  </div>
+              </div>
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-8 col-lg-offset-2">
+                          <div class="modal-body">
+                              <!-- Project Details Go Here -->
+                              <h2>"Useless" Sites and Videos</h2>
+                              <p class="item-intro text-muted">Randomized Sites and Videos</p>
+                              <img class="img-responsive img-centered" src="img/portfolio_real/its-useless.jpg" alt="">
+                              <p>
+                                A fun project demonstrating javascript arrays, randomization, and YouTube API integration. Repeats are avoided until every video or site is played/visted.
+                              </p>
+                              <p>Visit useless <strong>sites</strong> <a href="projects/useless/uselesssite.html">here</a>, or view the <a href="https://github.com/Ebonsignori/useless">sourcecode</a>.</p>
+                              <p>Visit useless <strong>videos</strong> <a href="projects/useless/uselessvideo.html">here</a>, or view the <a href="https://github.com/Ebonsignori/useless">sourcecode</a>.</p>
+                              <ul class="list-inline">
+                                  <li>Date: June 2017</li>
+                                  <li>Client: Self</li>
+                                  <li>Category: Proof of Concept</li>
+                              </ul>
+                              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Portfolio Modal 5 and 6-->
+  <!-- Unused
+  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="close-modal" data-dismiss="modal">
+                  <div class="lr">
+                      <div class="rl">
+                      </div>
+                  </div>
+              </div>
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-8 col-lg-offset-2">
+                          <div class="modal-body">
+                              <h2>Project Name</h2>
+                              <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                              <img class="img-responsive img-centered" src="img/portfolio/escape-preview.png" alt="">
+                              <p>Escape is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking for a simple one page solution to describe your business and offer your services.</p>
+                              <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/">FreebiesXpress.com</a>.</p>
+                              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="close-modal" data-dismiss="modal">
+                  <div class="lr">
+                      <div class="rl">
+                      </div>
+                  </div>
+              </div>
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-8 col-lg-offset-2">
+                          <div class="modal-body">
+                              <h2>Project Name</h2>
+                              <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                              <img class="img-responsive img-centered" src="img/portfolio/dreams-preview.png" alt="">
+                              <p>Dreams is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Dreams is a modern one page web template designed for almost any purpose. It’s a beautiful template that’s designed with the Bootstrap framework in mind.</p>
+                              <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
+                              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+-->
+
   <script type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/home/home.js"></script>
+  <script type="text/javascript" src="js/home/portfolio_sort.js"></script>
 
   <!-- Google Analytics Code -->
 

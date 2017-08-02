@@ -23,18 +23,6 @@ $('.circle-text-seperator').click(function() {
 
 $('#triangle').css("top", $('#background-slider').height()-70 + "px");
 
- /*
-  // Initalize background image 2D array, the second column to prevent repeats during cycle
-  var imagesArray;
-  imagesArray = [['../img/homepage_backgrounds/background (2).png', false]];
-  for (i = 1; i < 3; i++) {
-    imagesArray.push(['img/homepage_backgrounds/background (' + i + ').png',false]);
-  }
-  cycleBackground();
-
-  setInterval(cycleBackground, 5000);
-  */
-
   var navMenuContainer = $('.nav-menu-container');
   var stickToBot = $(window).height() - navMenuContainer.outerHeight(true);
   var fixedMenu = false;
@@ -100,49 +88,13 @@ $(window).resize(function() {
   centerProfile();
 });
 
+/*
 // Select all links with hashes and add smoothscroll
 $('a[href*="#"]').on('click', function(e) {
   e.preventDefault();
   $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
 });
-
-
-/* Cycles through backgrounds in imageArray randomly */
-function cycleBackground(){
-  $("#background-slider").css("background","url('"+ randomImage() +"')");
-
-  function randomImage() {
-    if (!hasCycled()) {
-      while (true) {
-        randomPick = Math.floor(Math.random() * imagesArray.length);
-        if (imagesArray[randomPick][1] !== true) {
-          imagesArray[randomPick][1] = true;
-          return imagesArray[randomPick][0].toString();
-        }
-      }
-    } else {
-      resetImages();
-      return randomImage();
-    }
-  }
-
-  //Checks to see if every video in sitesList has been played
-  function hasCycled() {
-      for (i = 0; i < imagesArray.length; i++) {
-        if (!imagesArray[i][1]) {
-          return false;
-        }
-      }
-      return true;
-  }
-
-  //Resets all booleans in sitesList to false to reset played
-  function resetImages() {
-    for (i = 0; i < imagesArray.length; i++) {
-      imagesArray[i][1] = false;
-    }
-  }
-}
+*/
 
 //Centers profile image and the four buttons around it
 function centerProfile() {
