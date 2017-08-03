@@ -20,7 +20,6 @@
 
   <link href="css/home/home.css" rel="stylesheet"> <!-- Custom CSS -->
   <link href="css/vendor/bootstrap.min.css" rel="stylesheet">  <!-- Bootstrap Core CSS -->
-    <link href="css/home/portfolio.css" rel="stylesheet"> <!-- Portfolio CSS -->
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> <!-- Font-Awesome CSS -->
 
   <script type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
@@ -56,11 +55,11 @@
     </div>
     <div class="profile-button"><a href="#about-section" class="metro flip">About</a></div>
     <div class="profile-button"><a href="blog" class="metro">Blog</a></div>
-    <div class="profile-button"><a href="#portfolio-section" class="metro">Portfolio</a></div>
+    <div class="profile-button"><a href="#portfolio" class="metro">Portfolio</a></div>
     <div class="profile-button"><a href="#contact-section" class="metro flip">Contact</a></div>
 
     <div id="profile-scroll" class="arrow">
-    	<a href="#portfolio-section"><span></span></a>
+    	<a href="#portfolio"><span></span></a>
     </div>
     <div id="triangle"></div>
   </div>
@@ -74,16 +73,14 @@
       </div>
       <span class="hidden-menu-item"><a href="#background-slider"><i class="fa fa-home fa-lg"></a></i></span>
       <span class="hidden-menu-item"><a href="blog">Blog </a></span>
-      <span class="hidden-menu-item"><a href="#portfolio-section">Portfolio </a></span>
+      <span class="hidden-menu-item"><a href="#portfolio">Portfolio </a></span>
       <span class="hidden-menu-item"><a href="#about-section">About</a></span>
       <span class="hidden-menu-item"><a href="#contact-section">Contact</a></span>
     </nav>
   </div>
 
-  <div class="container">
-
     <!-- Portfolio Section -->
-    <section id="portfolio-section">
+    <section id="portfolio">
       <h1 class="text-center header" style="margin-top: 0px !important;">Portfolio</h1>
       <div class="container">
           <div class="row">
@@ -192,32 +189,31 @@
       </div>
     </section>
 
-
-
-
     <!-- About Section -->
     <section id="about-section">
       <h1 class="text-center header">About</h1>
-      <h2 class="text-center"> $ whoami </h2>
-      <p class="text-left"> I've yet to enter the market that defines me, so for now I'm a <strong>computer scientist in training</strong> (<em>aka Student</em>).
-      I began and completed my studies in electical engineering to an associates, and decided to change pursuits for my bachelors.
-      I plan to graduate in 2018, and until then this website and its portfolio contents are a work in progress.   - - - - - - - - - - - - - - - - - - - - -</p>
+      <div class="container">
+        <h2 class="text-center"> $ whoami </h2>
+        <p class="text-left"> I've yet to enter the market that defines me, so for now I'm a <strong>computer scientist in training</strong> (<em>aka Student</em>).
+        I began and completed my studies in electical engineering to an associates, and decided to change pursuits for my bachelors.
+        I plan to graduate in 2018, and until then this website and its portfolio contents are a work in progress.   - - - - - - - - - - - - - - - - - - - - -</p>
 
-      <h2 class="text-center"> $ hostname // What is this site? </h2>
-      <p class="text-left"> Here I <a href="blog"> publicly practice writing</a> in a domain that consists of technical tutorials, politcs, humor,
-      and unsorted meanderings about being a student. I also host both my professional and course work in my <a href="#portfolio">portfolio</a>.</p>
+        <h2 class="text-center"> $ hostname // What is this site? </h2>
+        <p class="text-left"> Here I <a href="blog"> publicly practice writing</a> in a domain that consists of technical tutorials, politcs, humor,
+        and unsorted meanderings about being a student. I also host both my professional and course work in my <a href="#portfolio">portfolio</a>.</p>
 
-      <h2 class="text-center"> $ more ebonsignori.com </h2>
-      <p class="text-left"> I built this website in Python's Django framework and
-      the frontend consists of handcoded HTML, CSS (<em>w/ Bootstrap </em>), and JS (<em> w/ Jquery</em>).
-      Initially, I maintained this site on Amazon's free EC2 servers, though I recently switched to the easier shared
-      hosting that came bundled with this domain.  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - -  - - - - - - - - </p>
+        <h2 class="text-center"> $ more ebonsignori.com </h2>
+        <p class="text-left"> I built this website in Python's Django framework and
+        the frontend consists of handcoded HTML, CSS (<em>w/ Bootstrap </em>), and JS (<em> w/ Jquery</em>).
+        Initially, I maintained this site on Amazon's free EC2 servers, though I recently switched to the easier shared
+        hosting that came bundled with this domain.  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - -  - - - - - - - - </p>
 
-      <h2 class="text-center"> $ history </h2>
-      <p class="text-left">I didn't know what an HTML tag looked like until March of 2017! Since, I've referenced hundreds of
-      resources, pages of documentation, and a Django Udemy course to learn the basics of full stack web development.
-      Though my other work isn't as "from scratch" as this site, you can <a href="#portfolio"> check out my budding Portfolio.</a>
-      - - - - - - - - - - - - - - - - - - - -</p>
+        <h2 class="text-center"> $ history </h2>
+        <p class="text-left">I didn't know what an HTML tag looked like until March of 2017! Since, I've referenced hundreds of
+        resources, pages of documentation, and a Django Udemy course to learn the basics of full stack web development.
+        Though my other work isn't as "from scratch" as this site, you can <a href="#portfolio"> check out my budding Portfolio.</a>
+        - - - - - - - - - - - - - - - - - - - -</p>
+      </div>
     </section>
 
     <!-- Contact Section -->
@@ -419,7 +415,7 @@
                                   (2) Add functionality to save invoices to database using MySQL and create a script that saves 100 random invoices to the database
                               </p>
                               <p> I went beyond the assignment and added additional functionality such as randimizing values, resetting forms, and removing all invoices with one click. These improvments eased development and testing and earned me a 100% on the assignment.</p>
-                              <p><strong>Example coming soon, but for now view the sourcecode </strong><a href="https://github.com/Ebonsignori/invoiceForm">here</a>.</p>
+                              <p><a href="projects/invoices/index.html">View the project</a> or <a href="https://github.com/Ebonsignori/invoiceForm">view the sourcecode</a>.</p>
                               <ul class="list-inline">
                                   <li>Date: March-April 2017</li>
                                   <li>Client: School</li>
