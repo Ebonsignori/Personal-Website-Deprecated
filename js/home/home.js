@@ -1,7 +1,3 @@
-$(window).on('load', function () {
-  $('#background-slider').css('background-image', "url('img/homepage_backgrounds/background (2).png')");
- });
-
 var circleText = $('.circle-text span');
 $('.circle-text-seperator').click(function() {
   if (circleText.css('animation-play-state') == 'running') {
