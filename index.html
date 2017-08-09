@@ -12,11 +12,11 @@
   <meta name="author" content="Evan A. Bonsignori">
   <meta name="description" content="Evan Bonsignori's Website.">
 
-  <!-- Open Graph Data
-  <meta property="og:image" content="img/open_graph/portfolio.jpeg">
+
+  <!--<meta property="og:image" content="img/open_graph/portfolio.jpeg"> -->
   <meta property="og:description" content="Evan Bonsignori's Website.">
   <meta property="og:title" content="Evan A. Bonsignori">
--->
+
 
   <link href="css/home/home.css" rel="stylesheet"> <!-- Custom CSS -->
   <link href="css/vendor/bootstrap.min.css" rel="stylesheet">  <!-- Bootstrap Core CSS -->
@@ -53,13 +53,14 @@
         </div>
       </div>
     </div>
-    <div class="profile-button"><a href="#about-section" class="metro flip">About</a></div>
+
+    <div class="profile-button"><a href="#about-section" class="metro flip smooth-scroll">About</a></div>
     <div class="profile-button"><a href="blog" class="metro">Blog</a></div>
-    <div class="profile-button"><a href="#portfolio" class="metro">Portfolio</a></div>
-    <div class="profile-button"><a href="#contact-section" class="metro flip">Contact</a></div>
+    <div class="profile-button"><a href="#portfolio" class="metro smooth-scroll">Portfolio</a></div>
+    <div class="profile-button"><a href="#contact-section" class="metro flip smooth-scroll">Contact</a></div>
 
     <div id="profile-scroll" class="arrow">
-    	<a href="#portfolio"><span></span></a>
+    	<a class="smooth-scroll" href="#portfolio"><span></span></a>
     </div>
     <div id="triangle"></div>
   </div>
@@ -71,11 +72,11 @@
       <div class="menu-container">
         <div class="toggle"></div>
       </div>
-      <span class="hidden-menu-item"><a href="#background-slider"><i class="fa fa-home fa-lg"></a></i></span>
+      <span class="hidden-menu-item menu-home"><a href="#background-slider"><i class="fa fa-home fa-lg"></a></i></span>
       <span class="hidden-menu-item"><a href="blog">Blog </a></span>
-      <span class="hidden-menu-item"><a href="#portfolio">Portfolio </a></span>
-      <span class="hidden-menu-item"><a href="#about-section">About</a></span>
-      <span class="hidden-menu-item"><a href="#contact-section">Contact</a></span>
+      <span class="hidden-menu-item"><a class="smooth-scroll" href="#portfolio">Portfolio </a></span>
+      <span class="hidden-menu-item"><a class="smooth-scroll" href="#about-section">About</a></span>
+      <span class="hidden-menu-item"><a class="smooth-scroll" href="#contact-section">Contact</a></span>
     </nav>
   </div>
 
@@ -95,7 +96,7 @@
           <div id="portfolio-content">
           <div class="row">
               <!-- Mirror Image Hair Salon Wordpress -->
-              <div class="col-md-4 col-sm-6 portfolio-item" data-cat="webdev">
+              <div class="col-lg-4 col-md-4 col-sm-6 portfolio-item" data-cat="webdev">
                   <a href="#mirrorimagemodal" class="portfolio-link" data-toggle="modal">
                       <div class="portfolio-hover">
                           <div class="portfolio-hover-content">
@@ -106,11 +107,11 @@
                   </a>
                   <div class="portfolio-caption">
                       <h4>Mirror Image Hair Salon</h4>
-                      <p class="text-muted">Business Website in Wordpress</p>
+                      <p class="text-muted">Wordpress Salon Site</p>
                   </div>
               </div>
               <!-- Georgette Ford Essential Oils -->
-              <div class="col-md-4 col-sm-6 portfolio-item" data-cat="webdev">
+              <div class="col-lg-4 col-md-4 col-sm-6 portfolio-item" data-cat="webdev">
                   <a href="#georgettefordmodal" class="portfolio-link" data-toggle="modal">
                       <div class="portfolio-hover">
                           <div class="portfolio-hover-content">
@@ -120,12 +121,12 @@
                       <img src="img/portfolio_real/georgette_ford.jpg" class="img-responsive" alt="">
                   </a>
                   <div class="portfolio-caption">
-                      <h4>Georgette Ford - Essential Oils</h4>
-                      <p class="text-muted">Personal MLM Page in HTML5</p>
+                      <h4>Georgette Ford - Distributor</h4>
+                      <p class="text-muted">HTML5 MLM Page</p>
                   </div>
               </div>
               <!-- PHP MySQL Invoice Form -->
-              <div class="col-md-4 col-sm-6 portfolio-item" data-cat="coursework">
+              <div class="col-lg-4 col-md-4 col-sm-6 portfolio-item" data-cat="coursework">
                   <a href="#invoicemodal" class="portfolio-link" data-toggle="modal">
                       <div class="portfolio-hover">
                           <div class="portfolio-hover-content">
@@ -136,11 +137,11 @@
                   </a>
                   <div class="portfolio-caption">
                       <h4>Invoice Forms with Storage</h4>
-                      <p class="text-muted">PHP and MySQL Coursework</p>
+                      <p class="text-muted">PHP and MySQL</p>
                   </div>
               </div>
               <!-- Useless Projects -->
-              <div class="col-md-4 col-sm-6 portfolio-item" data-cat="proofofconcept">
+              <div class="col-lg-4 col-md-4 col-sm-6 portfolio-item" data-cat="proofofconcept">
                   <a href="#uselessmodal" class="portfolio-link" data-toggle="modal">
                       <div class="portfolio-hover">
                           <div class="portfolio-hover-content">

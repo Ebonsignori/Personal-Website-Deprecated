@@ -88,13 +88,13 @@ $(window).resize(function() {
   centerProfile();
 });
 
-/*
+
 // Select all links with hashes and add smoothscroll
-$('a[href*="#"]').on('click', function(e) {
+$('.smooth-scroll').on('click', function(e) {
   e.preventDefault();
   $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
 });
-*/
+
 
 //Centers profile image and the four buttons around it
 function centerProfile() {
