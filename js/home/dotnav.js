@@ -15,8 +15,6 @@ $(document).ready(function(){
         $('section').each(function(i,item){
           var ele = $(item), nextTop;
 
-          console.log(ele.next().html());
-
           if (typeof ele.next().offset() != "undefined") {
             nextTop = ele.next().offset().top;
           }
