@@ -18,11 +18,11 @@
   <meta property="og:title" content="Evan A. Bonsignori">
 
 
-  <link href="css/home/home.css" rel="stylesheet"> <!-- Custom CSS -->
-  <link href="css/vendor/bootstrap.min.css" rel="stylesheet">  <!-- Bootstrap Core CSS -->
+  <link href="<?php echo get_bloginfo('template_directory'); ?>/css/home/home.css" rel="stylesheet"> <!-- Custom CSS -->
+  <link href="<?php echo get_bloginfo('template_directory'); ?>/css/vendor/bootstrap.min.css" rel="stylesheet">  <!-- Bootstrap Core CSS -->
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> <!-- Font-Awesome CSS -->
 
-  <script type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/vendor/jquery-3.2.1.min.js"></script>
 </head>
 
 <body>
@@ -79,7 +79,7 @@
     <div class="profile-image" id="center">
       <div class="losange">
         <div class="los1">
-          <img src="img/evan_profile_redrocks_headcrop.jpg" name="Profile Picture" alt="A picture of Evan Bonsignori" title="Evan Bonsignori" id="profile-image" />
+          <img src="<?php echo get_bloginfo('template_directory'); ?>/img/evan_profile_redrocks_headcrop.jpg" name="Profile Picture" alt="A picture of Evan Bonsignori" title="Evan Bonsignori" id="profile-image" />
         </div>
       </div>
     </div>
@@ -157,7 +157,7 @@
                               <i class="fa fa-plus fa-3x"></i>
                           </div>
                       </div>
-                      <img src="img/portfolio_real/mirror_image.jpg" class="img-responsive" alt="">
+                      <img src="<?php echo get_bloginfo('template_directory'); ?>/img/portfolio_real/mirror_image.jpg" class="img-responsive" alt="">
                   </a>
                   <div class="portfolio-caption">
                       <h4>Mirror Image Hair Salon</h4>
@@ -172,7 +172,7 @@
                               <i class="fa fa-plus fa-3x"></i>
                           </div>
                       </div>
-                      <img src="img/portfolio_real/georgette_ford.jpg" class="img-responsive" alt="">
+                      <img src="<?php echo get_bloginfo('template_directory'); ?>/img/portfolio_real/georgette_ford.jpg" class="img-responsive" alt="">
                   </a>
                   <div class="portfolio-caption">
                       <h4>Georgette Ford - Distributor</h4>
@@ -187,7 +187,7 @@
                               <i class="fa fa-plus fa-3x"></i>
                           </div>
                       </div>
-                      <img src="img/portfolio_real/invoice.png" class="img-responsive" alt="">
+                      <img src="<?php echo get_bloginfo('template_directory'); ?>/img/portfolio_real/invoice.png" class="img-responsive" alt="">
                   </a>
                   <div class="portfolio-caption">
                       <h4>Invoice Forms with Storage</h4>
@@ -202,7 +202,7 @@
                               <i class="fa fa-plus fa-3x"></i>
                           </div>
                       </div>
-                      <img src="img/portfolio_real/useless_sites.png" class="img-responsive" alt="">
+                      <img src="<?php echo get_bloginfo('template_directory'); ?>/img/portfolio_real/useless_sites.png" class="img-responsive" alt="">
                   </a>
                   <div class="portfolio-caption">
                       <h4>"Useless" Sites and Videos</h4>
@@ -356,7 +356,7 @@
                           <div class="modal-body">
                               <h2>Mirror Image Hair Salon</h2>
                               <p class="item-intro text-muted">A Hair Salon Business Website In Wordpress</p>
-                              <img class="img-responsive img-centered" src="img/portfolio_real/mirror_image_big.PNG" alt="">
+                              <img class="img-responsive img-centered" src="<?php echo get_bloginfo('template_directory'); ?>/img/portfolio_real/mirror_image_big.PNG" alt="">
 
                               <p>
                                 Given an inspiration page by the client, I created a theme that satisfied the style that the client desired, while delivering all of the essential information that I deemed necessary to the client's visitors.
@@ -397,7 +397,7 @@
                           <div class="modal-body">
                               <h2>Georgette Ford - Oils Distributor</h2>
                               <p class="item-intro text-muted">Multi-Level-Marketing Website in HTML5, CSS, and JS</p>
-                              <img class="img-responsive img-centered" src="img/portfolio_real/georgetteford.png" alt="">
+                              <img class="img-responsive img-centered" src="<?php echo get_bloginfo('template_directory'); ?>/img/portfolio_real/georgetteford.png" alt="">
                               <p>
                                 With little direction from the client, I researched essential oils and browsed independent distributor websites before creating this from an HTML5 template that can be found <a href="https://html5up.net/dimension"> here</a>.
                                 <br /> <br /> This site was my first expierence in web design and naturally has a few bugs. I've had to return to the page to improve load times and functionality, but each time has been a learning expierence.
@@ -434,7 +434,7 @@
                           <div class="modal-body">
                               <h2>Invoice Forms</h2>
                               <p class="item-intro text-muted">With Server and Database Storage</p>
-                              <img class="img-responsive img-centered" src="img/portfolio_real/invoice.png" alt="">
+                              <img class="img-responsive img-centered" src="<?php echo get_bloginfo('template_directory'); ?>/img/portfolio_real/invoice.png" alt="">
                               <p>
                                 My first time learning about HTML, CSS, and JS and my first time implmenting PHP and MySQL with front end languages.
                                 <br/ > <br /> The assignment was broken into two segments: <br />
@@ -443,7 +443,7 @@
                                   (2) Add functionality to save invoices to database using MySQL and create a script that saves 100 random invoices to the database
                               </p>
                               <p> I went beyond the assignment and added additional functionality such as randimizing values, resetting forms, and removing all invoices with one click. These improvments eased development and testing and earned me a 100% on the assignment.</p>
-                              <p><a href="projects/invoices/index.html">View the project</a> or <a href="https://github.com/Ebonsignori/invoiceForm">view the sourcecode</a>.</p>
+                              <p><a href="<?php echo get_bloginfo('template_directory'); ?>/projects/invoices/index.html">View the project</a> or <a href="https://github.com/Ebonsignori/invoiceForm">view the sourcecode</a>.</p>
                               <ul class="list-inline">
                                   <li>Date: March-April 2017</li>
                                   <li>Client: School</li>
@@ -475,12 +475,12 @@
                               <!-- Project Details Go Here -->
                               <h2>"Useless" Sites and Videos</h2>
                               <p class="item-intro text-muted">Randomized Sites and Videos</p>
-                              <img class="img-responsive img-centered" src="img/portfolio_real/its-useless.jpg" alt="">
+                              <img class="img-responsive img-centered" src="<?php echo get_bloginfo('template_directory'); ?>/img/portfolio_real/its-useless.jpg" alt="">
                               <p>
                                 A fun project demonstrating javascript arrays, randomization, and YouTube API integration. Repeats are avoided until every video or site is played/visted.
                               </p>
-                              <p>Visit useless <strong>sites</strong> <a href="projects/useless/uselesssite.html">here</a>, or view the <a href="https://github.com/Ebonsignori/useless">sourcecode</a>.</p>
-                              <p>Visit useless <strong>videos</strong> <a href="projects/useless/uselessvideo.html">here</a>, or view the <a href="https://github.com/Ebonsignori/useless">sourcecode</a>.</p>
+                              <p>Visit useless <strong>sites</strong> <a href="<?php echo get_bloginfo('template_directory'); ?>/projects/useless/uselesssite.html">here</a>, or view the <a href="https://github.com/Ebonsignori/useless">sourcecode</a>.</p>
+                              <p>Visit useless <strong>videos</strong> <a href="<?php echo get_bloginfo('template_directory'); ?>/projects/useless/uselessvideo.html">here</a>, or view the <a href="https://github.com/Ebonsignori/useless">sourcecode</a>.</p>
                               <ul class="list-inline">
                                   <li>Date: June 2017</li>
                                   <li>Client: Self</li>
@@ -552,13 +552,13 @@
   </div>
 -->
 
-  <script type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/vendor/typed.min.js"></script>
-  <script type="text/javascript" src="js/home/home.js"></script>
-  <script type="text/javascript" src="js/home/dotnav.js"></script>
-  <script type="text/javascript" src="js/home/terminal.js"></script>
-  <script type="text/javascript" src="js/home/portfolio_sort.js"></script>
+  <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/vendor/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/vendor/bootstrap.min.js"></script>
+  <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/vendor/typed.min.js"></script>
+  <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/home/home.js"></script>
+  <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/home/dotnav.js"></script>
+  <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/home/terminal.js"></script>
+  <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/js/home/portfolio_sort.js"></script>
 
   <!-- Google Analytics Code -->
 
