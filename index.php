@@ -266,30 +266,31 @@
       <!-- Contact Form -->
       <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
-            <form class="form-horizontal" action="newhome.html">
+            <form class="form-horizontal" action="index.html">
               <div class="form-group">
-                <label for="exampleInputName2">Name</label>
-                <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                <label for="contact-name">Name</label>
+                <input type="text" name="contact-name" class="form-control" id="contact-name"  placeholder="Jane Doe">
               </div>
               <div class="form-group">
-                <label for="exampleInputEmail2">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                <label for="contact-email">Email</label>
+                <input type="email"  name="contact-email" class="form-control" id="contact-email" placeholder="jane.doe@example.com">
               </div>
               <div class="form-group ">
-                <label for="exampleInputText">Your Message</label>
-               <textarea  name="contact-message" class="form-control" placeholder="Description"></textarea>
+                <label for="contact-message">Your Message</label>
+               <textarea  name="contact-message" class="form-control" id="contact-message" placeholder="Message Contents"></textarea>
               </div>
               <button type="submit" class="btn btn-default">Send Message</button>
             </form>
         </div>
     </div>
       <?php
-      $to      = 'evan@ebonsignori.com';
-      $subject = 'Visitor Message - Ebonsignori.com';
-      $message = "Name: " . $_POST['contact-name'] . "\nEmail: " . $_POST['contact-email'] . "\nMessage:\n" . $_POST['contact-message'] . "\n\nEnd Email.";
+      if (isset($_POST["contact-name"]) && !empty($_POST["contact-name"])) {
+          $to      = 'evan@ebonsignori.com';
+          $subject = 'Visitor Message - Ebonsignori.com';
+          $message = "Name: " . $_POST['contact-name'] . "\nEmail: " . $_POST['contact-email'] . "\nMessage:\n" . $_POST['contact-message'] . "\n\nEnd Email.";
 
-      mail($to, $subject, $message);
-
+          mail($to, $subject, $message);
+      }
       ?>
   </section>
 
