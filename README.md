@@ -1,25 +1,4 @@
-# Ebonsignori.com 
-*A site with content by Evan Bonsignori*
+# My First Website
+This repository is an archive of my first attempt at a personal website, and exists more for sentiment than anything else.
 
-## Goals:
-- [ ] Blog With Bootstrap and Python
-- [ ] Add Menu Navigation to each page
-- [ ] Star wars intro to first page- volume option off/on transition to corner
-- [ ] SEO
-
-## Fix:
-- [ ] Useless sites default load page
-- [ ] Load background image before page
-
-## Add:
-- [ ] Usless Games: Space game
-- [ ] Credits to footer
-
-## Ideas:
-- Guided Tour
-
-## Blog Ideas:
-- Political News site ranking using page scanner and bias phrase selecting in two categories (right/left leaning)
-- Micro vs Macro life improvement
-- Onion Like Articles and fun stuff
-- Categories: Political, self improvement, CS tutorials, comedy 
+It's a working website, but it follows poor practices and isn't an accurate representation of my current practices and web development knowledge. 
